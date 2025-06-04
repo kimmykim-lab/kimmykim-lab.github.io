@@ -1,21 +1,49 @@
-<div class="main-content">
-  <h1>📊 Data Projects</h1>
-
-  <div class="project-card">
-    <h2>Netflix Recommendation System</h2>
-    <p><strong>Summary:</strong> ...</p>
-    <p><strong>Tools & Methods:</strong> ...</p>
-    <p><strong>Key Insight:</strong> ...</p>
-    <a href="#">View ERD Diagram (PDF)</a>
-    <a href="#">View Presentation Slides (PPTX)</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Projects | Kimmy Kim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Kimmy Kim</h2>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li>
+        Projects
+        <ul class="submenu">
+          <li><a href="data-projects.html">📊 Data</a></li>
+          <li><a href="library-projects.html">📚 Library</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 
-  <div class="project-card">
-    <h2>Online Retail SQL Database Project</h2>
-    <p><strong>Summary:</strong> ...</p>
-    <p><strong>Tools & Methods:</strong> ...</p>
-    <p><strong>Key Insight:</strong> ...</p>
-    <a href="#">View Final ERD (PDF)</a>
-    <a href="#">View Final Presentation (PPTX)</a>
+  <div class="main-content">
+    <h1>📊 Data Projects</h1>
+
+    <div class="project-card">
+      <h2>Netflix Recommendation System</h2>
+      <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing its hybrid algorithm, combining content-based and collaborative filtering. Focused on user behavior tracking and the structure of movie metadata.</p>
+      <p><strong>Tools & Methods:</strong> Metadata analysis, Diagram modeling, Behavioral data interpretation</p>
+      <p><strong>Key Insight:</strong> Netflix does not rely on explicit user input; instead, it tracks user behavior (watch history, duration, clicks) to dynamically adjust genre classification and deliver personalized recommendations.</p>
+      <a href="Netflix Diagram.pdf">📎 View ERD Diagram (PDF)</a><br>
+      <a href="Netflix.pptx">📎 View Presentation Slides (PPTX)</a>
+    </div>
+
+    <div class="project-card">
+      <h2>Online Retail SQL Database Project</h2>
+      <p><strong>Summary:</strong> Developed a fully normalized (3NF) relational database for a women’s clothing & accessories e-commerce platform. The project included ERD design, SQL table creation, data import, view generation, and Tableau-based sales analysis.</p>
+      <p><strong>Tools & Methods:</strong> SQL Server, DBeaver, ERD (Crow’s Foot Notation), Tableau, Excel</p>
+      <p><strong>Key Insights:</strong> Sales peaked in Q2 2024 with strong demand for seasonal apparel. High return rates due to “Wrong Size” issues correlated with low average ratings (2.33), indicating user experience challenges.</p>
+      <a href="Online Retail_Final ERD.pdf">📎 View Final ERD (PDF)</a><br>
+      <a href="P2_ Database Design and Initial ERD Assignment.pdf">📎 View Initial ERD & Design Proposal (PDF)</a><br>
+      <a href="Online Retail_Final SQL.pdf">📎 View SQL Implementation (PDF)</a><br>
+      <a href="Group 7 Final Presentation.pptx">📎 View Final Presentation (PPTX)</a>
+    </div>
+
   </div>
-</div>
+</body>
+</html>
