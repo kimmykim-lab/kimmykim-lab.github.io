@@ -3,16 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <title>Minju Kim Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      width: 220px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 30px 20px;
+      position: fixed;
+      height: 100vh;
+    }
+
+    nav h2 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 40px;
+      flex: 1;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #1a1a1a;
+    }
+
+    .project-card p {
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    a.project-link {
+      color: #1abc9c;
+      text-decoration: none;
+    }
+
+    a.project-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, I'm Minju Kim!</h1>
-  <p>MLIS Student | Data Analyst | Inclusive Library Advocate</p>
-  <ul>
-    <li><strong>Netflix Recommendation System</strong> - Data Modeling, User Analysis</li>
-    <li><strong>Retail SQL Database Project</strong> - SQL, ERD, Tableau</li>
-    <li><strong>Language Circles at King Library</strong> - Strategic Planning, Community Engagement</li>
-  </ul>
-  <p>📫 Contact: <a href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a></p>
-  <p><a href="https://www.linkedin.com/in/minju-kim-5b593a318/">LinkedIn</a></p>
+
+  <nav>
+    <h2>Minju Kim</h2>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="content">
+    <section id="about">
+      <h1>Hello, I'm Minju Kim!</h1>
+      <p>MLIS Student at University of Washington<br>
+         Data Analyst | Inclusive Library Advocate</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>Netflix Recommendation System</h3>
+        <p>Data Modeling, User Behavior Analysis</p>
+        <a href="#" class="project-link">View Presentation</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Retail SQL Database Project</h3>
+        <p>SQL, ERD, Tableau</p>
+        <a href="#" class="project-link">View Final ERD</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Language Circles at King Library</h3>
+        <p>Strategic Planning, Community Engagement</p>
+        <a href="#" class="project-link">Read Full Proposal (PDF)</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📫 <a href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/minju-kim-5b593a318" target="_blank">LinkedIn Profile</a></p>
+      <p>📂 <a href="https://github.com/kimmykim-lab" target="_blank">GitHub Profile</a></p>
+    </section>
+  </div>
+
 </body>
 </html>
