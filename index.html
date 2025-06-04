@@ -1,173 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Minju Kim Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      min-height: 100vh;
-      background-color: #f4f4f4;
-    }
-
-    nav {
-      width: 220px;
-      background-color: #2c3e50;
-      color: white;
-      padding: 30px 20px;
-      position: fixed;
-      height: 100vh;
-    }
-
-    nav h2 {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    nav a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #1abc9c;
-    }
-
-    .content {
-      margin-left: 240px;
-      padding: 40px;
-      flex: 1;
-    }
-
-    section {
-      margin-bottom: 80px;
-    }
-
-    h1, h2 {
-      color: #333;
-    }
-
-    .project-card {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-      color: #1a1a1a;
-    }
-
-    .project-card p {
-      margin-bottom: 5px;
-      color: #555;
-    }
-
-    a.project-link {
-      color: #1abc9c;
-      text-decoration: none;
-    }
-
-    a.project-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minju Kim | Projects</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <nav>
+  <div class="sidebar">
     <h2>Minju Kim</h2>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="content">
-    <section id="about">
-      <h1>Hello, I'm MINJU KIM</h1>
-     <p>Master's of Library & Information Science Student at University of Washington<br>
-   Aspiring Data Analyst | Youth-Centered Information Services</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="project-card">
-  <h3>Netflix Recommendation System</h3>
-  <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing its hybrid algorithm, combining content-based and collaborative filtering. Focused on user behavior tracking and the structure of movie metadata.</p>
-  <p><strong>Tools & Methods:</strong> Metadata analysis, Diagram modeling, Behavioral data interpretation</p>
-  <p><strong>Key Insight:</strong> Netflix does not rely on explicit user input; instead, it tracks user behavior (watch history, duration, clicks) to dynamically adjust genre classification and deliver personalized recommendations.</p>
- <p>
-  <span>📎</span> <a href="Netflix%20Diagram.pdf" target="_blank">View ERD Diagram (PDF)</a><br>
-  <span>📊</span> <a href="Netflix.pptx" target="_blank">View Presentation Slides (PPTX)</a>
-</p>
-</div>
-
-      <div class="project-card">
-  <h3>Online Retail SQL Database Project</h3>
-  <p><strong>Summary:</strong> Developed a fully normalized (3NF) relational database for a women’s clothing & accessories e-commerce platform. The project included ERD design, SQL table creation, data import, view generation, and Tableau-based sales analysis.</p>
-  <p><strong>Tools & Methods:</strong> SQL Server, DBeaver, ERD (Crow’s Foot Notation), Tableau, Excel</p>
-  <p><strong>Key Insights:</strong> 
-    Sales peaked in Q2 2024 with strong demand for seasonal apparel.  
-    High return rates due to “Wrong Size” issues correlated with low average ratings (2.33), indicating user experience challenges.
-  </p>
-  <p>
-    📎 <a href="Online%20Retail_Final%20ERD.pdf" target="_blank">View Final ERD (PDF)</a><br>
-    📘 <a href="P2_%20Database%20Design%20and%20Initial%20ERD%20Assignment.pdf" target="_blank">View Initial ERD & Design Proposal (PDF)</a><br>
-    📄 <a href="Online%20Retail_Final%20SQL.pdf" target="_blank">View SQL Implementation (PDF)</a><br>
-    📊 <a href="Group%207%20Final%20Presentation.pptx" target="_blank">View Final Presentation (PPTX)</a><br>
-  </p>
-</div>
-
-     <div class="project-card">
-  <h3>Language Circles at King Library</h3>
-  <p><strong>Summary:</strong> Proposed a joint language exchange initiative between San José State University (SJSU) and San José Public Library (SJPL) to host weekly conversation circles in Vietnamese, Spanish, and Mandarin. The program would foster cultural exchange, improve language fluency, and strengthen campus-community collaboration.</p>
-  
-  <p><strong>Tools & Topics:</strong> Strategic Planning · Community Engagement · Budgeting · Public Library Outreach</p>
-  
-  <p><strong>Key Contributions:</strong> 
-    Led program design and scheduling.  
-    Authored the strategic initiative proposal including budgeting, target audience impact, and phased timeline.  
-    Collaborated with team members to align with King Library’s mission and existing SJPL programming.
-  </p>
-  
-  <p>
-    🗂️ <a href="strategic%20initiative%20write-up.pdf" target="_blank">Read Strategic Initiative Write-up (PDF)</a><br>
-    📘 <a href="Organizational%20Assets%20Summary.pdf" target="_blank">View Library Assets Summary (PDF)</a><br>
-    📊 <a href="Analyzing%20an%20Organization%20using%20SWOT%20and%20PEST.pdf" target="_blank">SWOT & PEST Analysis (PDF)</a>
-  </p>
-</div>
-
-<div class="project-card">
-  <h3>Children’s Library Services During the COVID-19 Pandemic</h3>
-  <p><strong>Summary:</strong> Explored how children’s library programming shifted during and after COVID-19. The project involved synthesizing literature, designing qualitative research instruments, and collecting data to understand the evolving needs of children ages 3–12.</p>
-
-  <p><strong>Tools & Topics:</strong> Literature Review · Survey Design · Data Collection · Public Library Services</p>
-
-  <p><strong>Key Contributions:</strong> Conducted literature synthesis and authored a research framework. Designed survey and interview instruments. Analyzed survey data to identify post-pandemic service gaps in children’s programming.</p>
-
-<p>
-📘 <a href="Literature%20Review.pdf" target="_blank">Read Literature Review (PDF)</a><br>
-🧾 <a href="Create%20Data%20Collection%20Instruments.pdf" target="_blank">View Survey & Interview Questions (PDF)</a><br>
-📊 <a href="How%20public%20library%20programming%20for%20children%20has%20changed%20since%20the%20COVID-19%20Pandemic(1-35).xlsx" target="_blank">Access Raw Survey Results (XLSX)</a><br>
-🔗 <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=W9229i_wGkSZoBYqxQYL0g91UNRhsFpFkR8WWfD1JjpUME9WVjhBMjVYUEo3RjdUWDQxWEJLOFQwVC4u" target="_blank">Microsoft Forms: Survey Form</a>
-  </p>
-</div>
-  
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>📫 <a href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/minju-kim-5b593a318" target="_blank">LinkedIn Profile</a></p>
-      <p>📂 <a href="https://github.com/kimmykim-lab" target="_blank">GitHub Profile</a></p>
-    </section>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li>
+        Projects
+        <ul class="submenu">
+          <li><a href="data-projects.html">Data</a></li>
+          <li><a href="library-projects.html">Library</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 
+  <div class="main-content">
+    <h1>Welcome to My Projects</h1>
+    <p>Select a category from the left.</p>
+  </div>
 </body>
 </html>
