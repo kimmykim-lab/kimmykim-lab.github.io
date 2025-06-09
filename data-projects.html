@@ -1,19 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Data Projects | Kimmy Kim</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Projects | Kimmy Kim</title> <!-- 또는 Library Projects -->
   <style>
-    .submenu li {
-      margin-top: 10px;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f9f9f9;
+      color: #333;
     }
+
+    .sidebar {
+      width: 220px;
+      background-color: #1e293b;
+      color: #fff;
+      padding: 30px 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
     .sidebar ul {
       list-style-type: none;
       padding-left: 0;
     }
-    .sidebar ul li {
-      margin-bottom: 10px;
+
+    .submenu li {
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .project-card {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
   </style>
 </head>
@@ -21,14 +71,11 @@
   <div class="sidebar">
     <h2>Kimmy Kim</h2>
     <ul>
-      <li><a href="about.html">About</a></li>
-      <li>
-        Projects
-        <ul class="submenu">
-          <li><a href="data-projects.html">📊 Data</a></li>
-          <li><a href="library-projects.html">📚 Library</a></li>
-        </ul>
-      </li>
+      <li>Projects</li>
+      <ul class="submenu">
+        <li><a href="data-projects.html">📊 Data</a></li>
+        <li><a href="library-projects.html">📚 Library</a></li>
+      </ul>
     </ul>
   </div>
 
