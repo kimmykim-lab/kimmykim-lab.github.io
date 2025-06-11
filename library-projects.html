@@ -2,80 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Data Projects | Kimmy Kim</title> <!-- 또는 Library Projects -->
+  <title>Library Projects | Kimmy Kim</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      min-height: 100vh;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    .sidebar {
-      width: 220px;
-      background-color: #1e293b;
-      color: #fff;
-      padding: 30px 20px;
-    }
-
-    .sidebar h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .sidebar ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .submenu li {
-      margin-top: 10px;
-      padding-left: 10px;
-    }
-
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 10px 0;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    .main-content {
-      flex: 1;
-      padding: 40px;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
     .project-card {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: white;
+      background-color: #f9f9f9;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .project-card h2 {
+      margin-top: 0;
+    }
+    .project-card a {
+      display: inline-block;
+      margin-right: 10px;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .project-card a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="sidebar">
-    <h2>Kimmy Kim</h2>
+    <h2><a href="index.html">Kimmy Kim</a></h2>
     <ul>
-      <li>Projects</li>
-      <ul class="submenu">
-        <li><a href="data-projects.html">📊 Data</a></li>
-        <li><a href="library-projects.html">📚 Library</a></li>
-      </ul>
+      <li><a href="data-projects.html">📊 Data</a></li>
+      <li><a href="library-projects.html">📚 Library</a></li>
     </ul>
   </div>
 
@@ -83,30 +39,28 @@
     <h1>📚 Library Projects</h1>
 
     <div class="project-card">
-      <h2>Language Circles at King Library</h2>
-      <p><strong>Summary:</strong> Proposed a joint language exchange initiative between San José State University (SJSU) and San José Public Library (SJPL) to host weekly conversation circles in Vietnamese, Spanish, and Mandarin. The program would foster cultural exchange, improve language fluency, and strengthen campus-community collaboration.</p>
-      <p><strong>Skills & Tools:</strong> Canva, Microsoft Office Suite, Organizational Analysis, Budget Estimation, Presentation Design, Strategic Planning</p>
-      <p><strong>Topics & Methods:</strong> Needs Assessment, Community Engagement, Inclusive Program Development, Stakeholder Analysis, Library Programming</p>
-      <a href="strategic initiative write-up.pdf">📎 Read Strategic Initiative Write-up (PDF)</a><br>
-      <a href="Organizational Assets Summary.pdf">📎 View Library Assets Summary (PDF)</a><br>
-      <a href="Analyzing an Organization using SWOT and PEST.pdf">📎 SWOT & PEST Analysis (PDF)</a>
-    </div>
-
-    <div class="project-card">
-      <h2>How Public Library Programming for Children Has Changed Since the COVID-19 Pandemic</h2>
-      <p><strong>Summary:</strong> Investigated how children’s participation and programming in public libraries evolved during and after the COVID-19 pandemic.</p>
-      <p><strong>Skills & Tools:</strong> Zotero, Microsoft Forms, Excel, Microsoft Office Suite, Usability Testing, Data Visualization</p>
-      <p><strong>Topics & Methods:</strong> Literature Review, Virtual Engagement Strategy, Mixed-Methods Research, Youth Programming Evaluation, Equity in Library Services, Survey Design</p>
-      <a href="How public library programming for children has changed since the COVID-19 Pandemic(1-3).pdf">📎 Read Full Paper (PDF)</a><br>
-      <a href="Literature Review.pdf">📎 Literature Review (PDF)</a>
+      <h2>Children’s Library Services During the COVID-19 Pandemic</h2>
+      <p><strong>Summary:</strong> This research explores how children's access to library resources and services evolved during the COVID-19 pandemic through survey distribution and community engagement.</p>
+      <p><strong>Skills & Tools:</strong> Survey Design, Microsoft Forms, Data Interpretation</p>
+      <p><strong>Topics & Methods:</strong> Pandemic Response, Public Library Services, Youth Engagement, Community-Based Research</p>
+      <a href="How%20public%20library%20programming%20for%20children%20has%20changed%20since%20the%20COVID-19%20Pandemic%20(Investigation%20Results).xlsx" target="_blank">View Investigation Results (xlsx)</a><br>
+      <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=W9229i_wGkSZoBYqxQYL0g91UNRhsFpFkR8WWfD1JjpUME9WVjhBMjVYUEo3RjdUWDQxWEJLOFQwVC4u" target="_blank">View Microsoft Form</a>
     </div>
 
     <div class="project-card">
       <h2>Social Information Behavior Model</h2>
-      <p><strong>Summary:</strong> Developed a conceptual model to examine how trust, anonymity, and moderation influence information sharing and verification in online communities. The project draws from Dervin’s Sense-Making Theory and Bourdieu’s Social Capital Theory to analyze behavior patterns and platform dynamics.</p>
-      <p><strong>Skills & Tools:</strong> Lucidchart, Microsoft Office Suite, Conceptual Modeling, Digital Trust, Diagram Design</p>
-      <p><strong>Topics & Methods:</strong> Sense-Making Theory, Social Capital Theory, Information Behavior, Misinformation Studies, Online Moderation</p>
-      <a href="Social Information Behavior Model- The Role of Trust, Anonymity, and Moderation in Online Communities.pdf">📎 Social Information Behavior Model (PDF)</a>
+      <p><strong>Summary:</strong> A critical analysis of how trust, anonymity, and moderation impact user engagement and knowledge exchange within online communities, particularly in library-related forums.</p>
+      <p><strong>Skills & Tools:</strong> Literature Review, Academic Writing, User Behavior Analysis</p>
+      <p><strong>Topics & Methods:</strong> Social Trust, Online Interaction, Information Behavior Models</p>
+      <a href="Social%20Information%20Behavior%20Model.pdf" target="_blank">Read Full Paper (PDF)</a>
+    </div>
+
+    <div class="project-card">
+      <h2>Strategic Plan Comparison: Boston Public Library & SDSU Library</h2>
+      <p><strong>Summary:</strong> Compared strategic goals and public service innovations of two major libraries to evaluate their commitment to access, inclusion, and digital transformation.</p>
+      <p><strong>Skills & Tools:</strong> SWOT Analysis, Comparative Evaluation, Report Writing</p>
+      <p><strong>Topics & Methods:</strong> Strategic Planning, Public Library Systems, Community Engagement</p>
+      <a href="strategic%20plan%20comparison.pdf" target="_blank">View Comparison Report (PDF)</a>
     </div>
 
   </div>
