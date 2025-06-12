@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f6f7;
-  color: #111827;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #1f2937;
 }
 
 .container {
@@ -11,84 +11,75 @@ body {
 
 .sidebar {
   width: 220px;
-  background-color: #1f2937;
+  background-color: #4c1d95; /* purple */
   color: #ffffff;
   min-height: 100vh;
   padding: 30px 20px;
   box-sizing: border-box;
 }
 
-.sidebar h1, .sidebar a.logo {
+.sidebar h1 {
   font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 24px;
-  display: block;
-  color: white;
-  text-decoration: none;
-}
-
-.sidebar p {
-  font-size: 14px;
-  color: #9ca3af;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .sidebar ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 .sidebar li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .sidebar a {
-  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+  color: #e0e0e0;
+  font-size: 16px;
+  display: block;
 }
 
 .sidebar a.active {
-  color: #3b82f6;
-}
-
-.main-content {
-  flex: 1;
-  padding: 50px;
-  box-sizing: border-box;
-}
-
-h2 {
-  font-size: 24px;
   font-weight: bold;
+  color: #38bdf8;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #f9fafb;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #1f2937;
   margin-bottom: 30px;
 }
 
-.project-card {
+.project {
   background-color: #ffffff;
-  border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   margin-bottom: 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.project-card h2 {
+.project h3 {
   font-size: 20px;
-  font-weight: bold;
+  margin-top: 0;
   margin-bottom: 10px;
+  color: #111827;
 }
 
-.project-links {
-  margin-top: 12px;
-  line-height: 1.8;
+.project p {
+  margin: 5px 0;
+  font-size: 15px;
 }
 
-.project-links a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-
-.project-links a:hover {
+.project a {
+  font-size: 14px;
+  color: #2563eb;
   text-decoration: underline;
+  display: inline-block;
+  margin-top: 5px;
 }
