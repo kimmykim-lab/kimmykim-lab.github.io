@@ -1,165 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kimmy Kim – Projects</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1f3f5;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    nav {
-      width: 220px;
-      background-color: #1f2937;
-      color: white;
-      padding: 20px;
-      min-height: 100vh;
-    }
-
-    nav h1 {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 12px;
-      font-size: 16px;
-    }
-
-    main {
-      flex: 1;
-      padding: 40px;
-    }
-
-    .section {
-      margin-bottom: 50px;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-
-    .project-card {
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      padding: 25px;
-      margin-bottom: 30px;
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-    }
-
-    .project-card p {
-      margin: 8px 0;
-    }
-
-    .project-card a {
-      text-decoration: none;
-      color: #1d4ed8;
-      display: inline-block;
-      margin-top: 5px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Library Projects</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <h1>Kimmy Kim</h1>
-    <a href="#data-projects">📊 Data</a>
-    <a href="#library-projects">📚 Library</a>
-  </nav>
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="data-projects.html">📊 Data</a></li>
+        <li><a href="library-projects.html" class="active">📚 Library</a></li>
+      </ul>
+    </nav>
 
-  <main>
-    <!-- Data Projects -->
-    <section class="section" id="data-projects">
-      <h2 class="section-title">📊 Data Projects</h2>
+    <main class="main-content">
+      <h2>📚 Library Projects</h2>
 
-      <div class="project-card">
-        <h3>Ad Click Prediction Using Cloud-Based Machine Learning</h3>
-        <p><strong>Summary:</strong> Developed a real-time ad click prediction system using Azure cloud services for the media & entertainment industry.</p>
-        <p><strong>Skills & Tools:</strong> Azure ML Designer, Stream Analytics, Power BI, Azure SQL, A/B Testing</p>
-        <p><strong>Topics & Methods:</strong> Cloud Strategy Design, ROI Optimization, Migration Planning, Project Management</p>
-        <p>
-          📄 <a href="Ad_Click_Prediction_Final_Paper.pdf" target="_blank">View Final Paper (PDF)</a><br>
-          🖥️ <a href="Ad_Click_Prediction_Slides.pdf" target="_blank">View Presentation Slides (PDF)</a>
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>Netflix Recommendation System</h3>
-        <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing hybrid algorithms and metadata structures.</p>
-        <p><strong>Skills & Tools:</strong> Lucidchart, Microsoft Office Suite, Metadata Design</p>
-        <p><strong>Topics & Methods:</strong> Recommendation Systems, Content Categorization, User Behavior Analysis</p>
-        <p>
-          📄 <a href="Netflix_ERD_Diagram.pdf" target="_blank">View ERD Diagram (PDF)</a><br>
-          🖥️ <a href="Netflix_slides.pdf" target="_blank">View Presentation Slides (PDF)</a>
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>Online Retail SQL Database Project</h3>
-        <p><strong>Summary:</strong> Developed a normalized SQL database (3NF) for a retail platform with ERD design and Tableau-based analytics.</p>
-        <p><strong>Skills & Tools:</strong> SQL, DBeaver, Tableau, Lucidchart, Excel</p>
-        <p><strong>Topics & Methods:</strong> Data Modeling, ERD Design, Customer Behavior Analysis</p>
-        <p>
-          📄 <a href="Initial_ERD_Design_Proposal.pdf" target="_blank">View Initial ERD & Design Proposal (PDF)</a><br>
-          📄 <a href="Retail_Final_ERD.pdf" target="_blank">View Final ERD (PDF)</a><br>
-          📄 <a href="Retail_SQL_Implementation.pdf" target="_blank">View SQL Implementation (PDF)</a><br>
-          🖥️ <a href="Online_Retail-slides.pdf" target="_blank">View Final Presentation (PDF)</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Library Projects -->
-    <section class="section" id="library-projects">
-      <h2 class="section-title">📚 Library Projects</h2>
-
-      <div class="project-card">
+      <section class="project-card">
         <h3>Strategic Plan Comparison: Boston Public Library & SDSU Library</h3>
         <p><strong>Summary:</strong> Compared library strategies to assess digital transformation, access, and equity goals.</p>
         <p><strong>Skills & Tools:</strong> SWOT Analysis, Comparative Evaluation, Report Writing</p>
         <p><strong>Topics & Methods:</strong> Strategic Planning, Public Library Systems, Community Engagement</p>
-        <p>
-          📄 <a href="SWOT_PEST_Analysis.pdf" target="_blank">SWOT and PEST Analysis (PDF)</a><br>
-          📄 <a href="Organizational_Assets_Summary.pdf" target="_blank">Organizational Assets Summary (PDF)</a><br>
-          📄 <a href="Strategic_Initiative_Writeup.pdf" target="_blank">Strategic Initiative Write-up (PDF)</a>
-        </p>
-      </div>
+        <ul>
+          <li>📄 <a href="Analyzing an Organization using SWOT and PEST.pdf" target="_blank">SWOT and PEST Analysis (PDF)</a></li>
+          <li>📄 <a href="Organizational Assets Summary.pdf" target="_blank">Organizational Assets Summary (PDF)</a></li>
+          <li>📄 <a href="strategic initiative write-up.pdf" target="_blank">Strategic Initiative Write-up (PDF)</a></li>
+        </ul>
+      </section>
 
-      <div class="project-card">
+      <section class="project-card">
         <h3>Social Information Behavior Model</h3>
         <p><strong>Summary:</strong> A critical analysis of how trust, anonymity, and moderation shape online information behavior in communities.</p>
         <p><strong>Skills & Tools:</strong> Literature Review, Academic Writing, User Behavior Analysis</p>
         <p><strong>Topics & Methods:</strong> Social Trust, Online Interaction, Information Behavior Models</p>
-        <p>
-          📄 <a href="Social_Information_Behavior_Model.pdf" target="_blank">Read Full Paper (PDF)</a>
-        </p>
-      </div>
-      
-      <div class="project-card">
-        <h3>Children’s Library Services During the COVID-19 Pandemic</h3>
-        <p><strong>Summary:</strong> Explores how children's access to library services evolved during COVID-19 using survey and engagement data.</p>
-        <p><strong>Skills & Tools:</strong> Survey Design, Microsoft Forms, Data Interpretation</p>
-        <p><strong>Topics & Methods:</strong> Pandemic Response, Public Library Services, Youth Engagement</p>
-        <p>
-          📄 <a href="Literature_Review.pdf" target="_blank">Read Literature Review (PDF)</a><br>
-          📊 <a href="Investigation_Results.xlsx" target="_blank">View Investigation Results (XLSX)</a><br>
-          🧾 <a href="Create_Data_Collection_Instruments.pdf" target="_blank">Create Data Collection Instruments (PDF)</a>
-        </p>
-      </div>
+        <ul>
+          <li>📄 <a href="Social Information Behavior Model.pdf" target="_blank">Read Full Paper (PDF)</a></li>
+        </ul>
+      </section>
 
-    </section>
-  </main>
+      <section class="project-card">
+        <h3>Children’s Library Services During the COVID-19 Pandemic</h3>
+        <p><strong>Summary:</strong> Investigated the impact of the COVID-19 pandemic on children’s library services, programming, and access.</p>
+        <p><strong>Skills & Tools:</strong> Survey Design, Data Analysis, Thematic Coding</p>
+        <p><strong>Topics & Methods:</strong> Children’s Literacy, Public Library Access, Pandemic Response</p>
+        <ul>
+          <li>📄 <a href="Literature Review.pdf" target="_blank">Literature Review (PDF)</a></li>
+          <li>📊 <a href="How public library programming for children has changed since the COVID-19 Pandemic (Investigation Results).xlsx" target="_blank">Investigation Results (XLSX)</a></li>
+          <li>📝 <a href="Create Data Collection Instruments.pdf" target="_blank">Create Data Collection Instruments (PDF)</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
