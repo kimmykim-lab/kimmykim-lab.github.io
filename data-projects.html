@@ -2,60 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Data Projects</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Projects - Kimmy Kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <a href="index.html" class="logo">Kimmy Kim</a>
-      <nav>
-        <p>Projects</p>
-        <ul>
-          <li><a href="data-projects.html" class="active">📊 Data</a></li>
-          <li><a href="library-projects.html">📚 Library</a></li>
-        </ul>
-      </nav>
-    </aside>
+  <div class="sidebar">
+    <h1><a href="index.html" class="logo">Kimmy Kim</a></h1>
+    <ul>
+      <li>Projects</li>
+      <ul class="submenu">
+        <li><a href="data-projects.html" class="active">📊 Data</a></li>
+        <li><a href="library-projects.html">📚 Library</a></li>
+      </ul>
+    </ul>
+  </div>
 
-    <main class="main-content">
-      <h2>📊 Data Projects</h2>
+  <div class="content">
+    <h2>📊 Data Projects</h2>
 
-      <section class="project-card">
-        <h2>Ad Click Prediction Using Cloud-Based Machine Learning</h2>
-        <p><strong>Summary:</strong> Developed a real-time ad click prediction system using Azure cloud services for the media & entertainment industry. The system enables better ROI through personalized targeting, real-time decision-making, and integrated A/B testing.</p>
-        <p><strong>Skills & Tools:</strong> Azure ML Designer, Stream Analytics, Data Factory, Power BI, Azure SQL, Web Endpoints, PaaS/SaaS, Cloud Architecture, A/B Testing</p>
-        <p><strong>Topics & Methods:</strong> Cloud Strategy Design, Business Context Analysis, Migration Planning, ROI Optimization, Project Management, Team Coordination, Technical Documentation</p>
-        <div class="project-links">
-          📄 <a href="ad-click-paper.pdf" target="_blank">View Final Paper (PDF)</a><br>
-          🖥️ <a href="ad-click-slides.pdf" target="_blank">View Presentation Slides (PDF)</a>
-        </div>
-      </section>
+    <h3>Ad Click Prediction Using Cloud-Based Machine Learning</h3>
+    <p><strong>Summary:</strong> Developed a real-time ad click prediction system using Azure cloud services for the media & entertainment industry.</p>
+    <p><strong>Skills & Tools:</strong> Azure ML Designer, Stream Analytics, Data Factory, Power BI, Azure SQL, Web Endpoints, PaaS/SaaS, Cloud Architecture, A/B Testing</p>
+    <p><strong>Topics & Methods:</strong> Cloud Strategy Design, Business Context Analysis, Migration Planning, ROI Optimization, Project Management, Team Coordination, Technical Documentation</p>
+    <ul>
+      <li><a href="AdClick_FinalPaper.pdf">📄 View Final Paper (PDF)</a></li>
+      <li><a href="AdClick_Presentation.pdf">🖥️ View Presentation Slides (PDF)</a></li>
+    </ul>
 
-      <section class="project-card">
-        <h2>Netflix Recommendation System</h2>
-        <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing its hybrid algorithm, combining content-based and collaborative filtering. Focused on user behavior tracking and the structure of movie metadata.</p>
-        <p><strong>Skills & Tools:</strong> Lucidchart, Microsoft Office Suite, Machine Learning Basics, Data Modeling, Content Categorization, Metadata Design</p>
-        <p><strong>Topics & Methods:</strong> Recommendation Systems, Content Categorization, User Behavior Analysis, Information Architecture, Data Analysis, Data Analytics</p>
-        <div class="project-links">
-          📄 <a href="Netflix Diagram.pdf" target="_blank">View ERD Diagram (PDF)</a><br>
-          🖥️ <a href="Netflix-slides.pdf" target="_blank">View Presentation Slides (PDF)</a>
-        </div>
-      </section>
+    <h3>Netflix Recommendation System</h3>
+    <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing its hybrid algorithm.</p>
+    <p><strong>Skills & Tools:</strong> Lucidchart, Microsoft Office Suite, Machine Learning Basics, Data Modeling, Content Categorization, Metadata Design</p>
+    <p><strong>Topics & Methods:</strong> Recommendation Systems, Content Categorization, User Behavior Analysis, Information Architecture, Data Analytics</p>
+    <ul>
+      <li><a href="Netflix_ERD.pdf">📄 View ERD Diagram (PDF)</a></li>
+      <li><a href="Netflix_Presentation.pdf">🖥️ View Presentation Slides (PDF)</a></li>
+    </ul>
 
-      <section class="project-card">
-        <h2>Online Retail SQL Database Project</h2>
-        <p><strong>Summary:</strong> Developed a fully normalized (3NF) relational database for a women’s clothing & accessories e-commerce platform. The project included ERD design, SQL table creation, data import, view generation, and Tableau-based sales analysis.</p>
-        <p><strong>Skills & Tools:</strong> SQL, DBeaver, Lucidchart, Microsoft Office Suite, Google Suite, Tableau, Excel, BI Tools, Crow’s Foot Notation</p>
-        <p><strong>Topics & Methods:</strong> ERD Development, Database Design, Data Modeling (3NF), Business Intelligence, Customer Behavior Analysis, Supply Chain Reporting, Programming Languages, Data Analysis, Data Visualization</p>
-        <div class="project-links">
-          📄 <a href="Initial ERD & Design Proposal.pdf" target="_blank">View Initial ERD & Design Proposal (PDF)</a><br>
-          📄 <a href="Online Retail_Final ERD.pdf" target="_blank">View Final ERD (PDF)</a><br>
-          📄 <a href="Online Retail_Final SQL.pdf" target="_blank">View SQL Implementation (PDF)</a><br>
-          🖥️ <a href="Online Retail-slides.pdf" target="_blank">View Final Presentation (PDF)</a>
-        </div>
-      </section>
-    </main>
+    <h3>Online Retail SQL Database Project</h3>
+    <p><strong>Summary:</strong> Developed a fully normalized (3NF) relational database for a women’s clothing e-commerce platform.</p>
+    <p><strong>Skills & Tools:</strong> SQL, DBeaver, Lucidchart, Microsoft Office Suite, Tableau, Excel, BI Tools, Crow’s Foot Notation</p>
+    <p><strong>Topics & Methods:</strong> ERD Development, Database Design, Business Intelligence, Customer Behavior Analysis, Data Visualization</p>
+    <ul>
+      <li><a href="Retail_ERD_Proposal.pdf">📄 View Initial ERD & Design Proposal (PDF)</a></li>
+      <li><a href="Retail_FinalPaper.pdf">📄 View Final Report (PDF)</a></li>
+      <li><a href="Retail_SQL.pdf">📄 View SQL Implementation (PDF)</a></li>
+      <li><a href="Retail_Presentation.pdf">🖥️ View Final Presentation (PDF)</a></li>
+    </ul>
   </div>
 </body>
 </html>
