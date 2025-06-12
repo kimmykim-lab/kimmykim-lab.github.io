@@ -60,6 +60,13 @@ body {
   margin-bottom: 10px;
 }
 
+.content h3 {
+  margin-top: 48px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
 .content p {
   margin-bottom: 12px;
 }
