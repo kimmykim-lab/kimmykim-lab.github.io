@@ -2,139 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Projects | Kimmy Kim</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      min-height: 100vh;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    .sidebar {
-      width: 220px;
-      background-color: #1e293b;
-      color: #fff;
-      padding: 30px 20px;
-    }
-
-    .sidebar h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .sidebar ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .submenu li {
-      margin-top: 10px;
-      padding-left: 10px;
-    }
-
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 10px 0;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    .main-content {
-      flex: 1;
-      padding: 40px;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .project-card {
-      margin-bottom: 30px;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .project-card h2 {
-      margin-top: 0;
-    }
-
-    .project-card p {
-      margin: 8px 0;
-    }
-
-    .project-card a {
-      color: #0073e6;
-      display: inline-block;
-      margin-top: 4px;
-    }
-
-    .project-card a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="sidebar">
-    <h2><a href="/" style="color: white; text-decoration: none;">Kimmy Kim</a></h2>
-    <ul>
-      <li>Projects</li>
-      <ul class="submenu">
-        <li><a href="data-projects.html">📊 Data</a></li>
+  <div class="container">
+    <div class="sidebar">
+      <h1>Kimmy Kim</h1>
+      <ul>
+        <li><a href="data-projects.html" class="active">📊 Data</a></li>
         <li><a href="library-projects.html">📚 Library</a></li>
       </ul>
-    </ul>
-  </div>
+    </div>
+    <div class="main">
+      <h2 class="section-title">📊 Data Projects</h2>
 
-  <div class="main-content">
-    <h1>📊 Data Projects</h1>
-
-    <div class="project-card">
-      <h2>Ad Click Prediction Using Cloud-Based Machine Learning</h2>
-      <p><strong>Summary:</strong> Developed a real-time ad click prediction system using Azure cloud services for the media & entertainment industry. The system enables better ROI through personalized targeting, real-time decision-making, and integrated A/B testing.</p>
-      <p><strong>Skills & Tools:</strong> Azure ML Designer, Stream Analytics, Data Factory, Power BI, Azure SQL, Web Endpoints, PaaS/SaaS, Cloud Architecture, A/B Testing</p>
-      <p><strong>Topics & Methods:</strong> Cloud Strategy Design, Business Context Analysis, Migration Planning, ROI Optimization, Project Management, Team Coordination, Technical Documentation</p>
-      <p>
-        <a href="ad-click-paper.pdf" target="_blank">📄 View Final Paper (PDF)</a><br/>
+      <div class="project">
+        <h3>Ad Click Prediction Using Cloud-Based Machine Learning</h3>
+        <p><strong>Summary:</strong> Developed a real-time ad click prediction system using Azure cloud services for the media & entertainment industry. The system enables better ROI through personalized targeting, real-time decision-making, and integrated A/B testing.</p>
+        <p><strong>Skills & Tools:</strong> Azure ML Designer, Stream Analytics, Data Factory, Power BI, Azure SQL, Web Endpoints, PaaS/SaaS, Cloud Architecture, A/B Testing</p>
+        <p><strong>Topics & Methods:</strong> Cloud Strategy Design, Business Context Analysis, Migration Planning, ROI Optimization, Project Management, Team Coordination, Technical Documentation</p>
+        <a href="ad-click-paper.pdf" target="_blank">📄 View Final Paper (PDF)</a><br>
         <a href="ad-click-slides.pdf" target="_blank">🖥️ View Presentation Slides (PDF)</a>
-      </p>
-    </div>
+      </div>
 
-    <div class="project-card">
-      <h2>Netflix Recommendation System</h2>
-      <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing its hybrid algorithm, combining content-based and collaborative filtering. Focused on user behavior tracking and the structure of movie metadata.</p>
-      <p><strong>Skills & Tools:</strong> Lucidchart, Microsoft Office Suite, Machine Learning Basics, Data Modeling, Content Categorization, Metadata Design</p>
-      <p><strong>Topics & Methods:</strong> Recommendation Systems, User Behavior Analysis, Information Architecture, Data Analysis, Data Analytics</p>
-      <p>
-        <a href="Netflix Diagram.pdf" target="_blank">📄 View ERD Diagram (PDF)</a><br/>
+      <div class="project">
+        <h3>Netflix Recommendation System</h3>
+        <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing its hybrid algorithm, combining content-based and collaborative filtering. Focused on user behavior tracking and the structure of movie metadata.</p>
+        <p><strong>Skills & Tools:</strong> Lucidchart, Microsoft Office Suite, Machine Learning Basics, Data Modeling, Content Categorization, Metadata Design</p>
+        <p><strong>Topics & Methods:</strong> Recommendation Systems, User Behavior Analysis, Information Architecture, Data Analysis, Data Analytics</p>
+        <a href="Netflix Diagram.pdf" target="_blank">📄 View ERD Diagram (PDF)</a><br>
         <a href="Netflix-slides.pdf" target="_blank">🖥️ View Presentation Slides (PDF)</a>
-      </p>
-    </div>
+      </div>
 
-    <div class="project-card">
-      <h2>Online Retail SQL Database Project</h2>
-      <p><strong>Summary:</strong> Developed a fully normalized (3NF) relational database for a women’s clothing & accessories e-commerce platform. The project included ERD design, SQL table creation, data import, view generation, and Tableau-based sales analysis.</p>
-      <p><strong>Skills & Tools:</strong> SQL, DBeaver, Lucidchart, Microsoft Office Suite, Google Suite, Tableau, Excel, BI Tools, Crow’s Foot Notation</p>
-      <p><strong>Topics & Methods:</strong> ERD Development, Database Design, Data Modeling (3NF), Business Intelligence, Customer Behavior Analysis, Supply Chain Reporting, Programming Languages, Data Analysis, Data Visualization</p>
-      <p>
-        <a href="Initial ERD & Design Proposal.pdf" target="_blank">📄 View Initial ERD & Design Proposal (PDF)</a><br/>
-        <a href="Online Retail_Final ERD.pdf" target="_blank">📄 View Final ERD (PDF)</a><br/>
-        <a href="Online Retail_Final SQL.pdf" target="_blank">📄 View Final SQL (PDF)</a><br/>
+      <div class="project">
+        <h3>Online Retail SQL Database Project</h3>
+        <p><strong>Summary:</strong> Developed a fully normalized (3NF) relational database for a women’s clothing & accessories e-commerce platform. The project included ERD design, SQL table creation, data import, view generation, and Tableau-based sales analysis.</p>
+        <p><strong>Skills & Tools:</strong> SQL, DBeaver, Lucidchart, Microsoft Office Suite, Google Suite, Tableau, Excel, BI Tools, Crow’s Foot Notation</p>
+        <p><strong>Topics & Methods:</strong> ERD Development, Database Design, Data Modeling (3NF), Business Intelligence, Customer Behavior Analysis, Supply Chain Reporting, Programming Languages, Data Analysis, Data Visualization</p>
+        <a href="Initial ERD & Design Proposal.pdf" target="_blank">📄 View Initial ERD & Design Proposal (PDF)</a><br>
+        <a href="Online Retail Final ERD.pdf" target="_blank">📄 View Final ERD (PDF)</a><br>
+        <a href="Online Retail Final SQL.pdf" target="_blank">📄 View Final SQL (PDF)</a><br>
         <a href="Online Retail-slides.pdf" target="_blank">🖥️ View Final Presentation (PDF)</a>
-      </p>
+      </div>
     </div>
-
   </div>
 </body>
 </html>
