@@ -18,9 +18,13 @@ body {
   box-sizing: border-box;
 }
 
-.sidebar h1 {
+.sidebar h1, .sidebar a.logo {
   font-size: 22px;
+  font-weight: bold;
   margin-bottom: 24px;
+  display: block;
+  color: white;
+  text-decoration: none;
 }
 
 .sidebar p {
