@@ -11,84 +11,40 @@ body {
 
 .sidebar {
   width: 220px;
-  background-color: #1f2937;
-  color: #ffffff;
+  background-color: #4B2E83;
+  color: white;
   min-height: 100vh;
   padding: 30px 20px;
   box-sizing: border-box;
 }
 
-.sidebar h1, .sidebar a.logo {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 24px;
-  display: block;
-  color: white;
+.sidebar h1,
+.sidebar a.logo {
+  color: #B7A57A;
+  font-size: 20px;
   text-decoration: none;
-}
-
-.sidebar p {
-  font-size: 14px;
-  color: #9ca3af;
-  margin-bottom: 10px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  display: block;
 }
 
 .sidebar a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
-  font-weight: 500;
+  display: block;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #B7A57A;
 }
 
 .sidebar a.active {
-  color: #3b82f6;
+  color: #B7A57A;
+  font-weight: bold;
 }
 
-.main-content {
+.content {
   flex: 1;
-  padding: 50px;
-  box-sizing: border-box;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.project-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.project-card h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.project-links {
-  margin-top: 12px;
-  line-height: 1.8;
-}
-
-.project-links a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-
-.project-links a:hover {
-  text-decoration: underline;
+  padding: 40px;
 }
