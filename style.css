@@ -63,8 +63,14 @@ body {
 .content h3 {
   margin-top: 48px;
   margin-bottom: 10px;
-  padding-top: 20px;
-  border-top: 1px solid #ccc;
+  padding-top: 0; /* 선이 없어졌으므로 패딩 제거 */
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+  font-weight: normal;
+  margin-left: 8px;
 }
 
 .content p {
