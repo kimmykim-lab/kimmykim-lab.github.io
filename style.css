@@ -11,7 +11,7 @@ body {
 
 .sidebar {
   width: 220px;
-  background-color: #4c1d95; /* purple */
+  background-color: #4c1d95;
   color: #ffffff;
   min-height: 100vh;
   padding: 30px 20px;
@@ -82,4 +82,24 @@ body {
   text-decoration: underline;
   display: inline-block;
   margin-top: 5px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.about {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
 }
