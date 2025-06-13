@@ -2,55 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kimmy Kim | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kimmy Kim | Home</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .main-content {
+      padding: 60px 80px;
+      flex-grow: 1;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      max-width: 750px;
+      margin: 0 auto 16px;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 40px;
+      text-align: left;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    ul {
+      max-width: 750px;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+
+    .contact-section p {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .contact-section a {
+      margin-right: 16px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
-      <h1>Kimmy Kim</h1>
+      <h2>Kimmy Kim</h2>
       <ul>
         <li><a href="data-projects.html">📊 Data</a></li>
         <li><a href="library-projects.html">📚 Library</a></li>
       </ul>
     </div>
 
-    <div class="main">
-      <div class="profile">
-        <img src="https://kimmykim-lab.github.io/portfolio/Photo_Kimmy.jpg" alt="Profile Photo" class="profile-img" />
-        <h2>Hello, I'm Kimmy 👋</h2>
-      </div>
+    <div class="main-content">
+      <img src="portfolio/Photo_Kimmy.jpg" alt="Kimmy's Profile Photo" class="profile-img" />
+      <h1>Hello, I'm Kimmy 👋</h1>
 
-      <div class="about">
-        <p>Hello! I’m <strong>Kimmy Kim</strong>, a Master of Library and Information Science (MLIS) student at the University of Washington.</p>
-        <p>I explore how data, technology, and community-centered design can come together to improve library services—especially for children, youth, and underserved communities.</p>
-        <p>From building SQL-based dashboards to leading youth programming, I’m passionate about using information and design to make a positive impact.</p>
-      </div>
+      <p>Hello! I’m <strong>Kimmy Kim</strong>, a Master of Library and Information Science (MLIS) student at the University of Washington.</p>
+      <p>I explore how data, technology, and community-centered design can come together to improve library services—especially for children, youth, and underserved communities.</p>
+      <p>From building SQL-based dashboards to leading youth programming, I’m passionate about using information and design to make a positive impact.</p>
 
-      <div class="section">
-        <h3>🔍 Key Interests & Skills</h3>
-        <ul>
-          <li>Data Analysis & Visualization (Power BI, Tableau, Excel)</li>
-          <li>SQL & Relational Database Design (ERD, Normalization)</li>
-          <li>Cloud Computing & Infrastructure (Azure, Serverless Concepts)</li>
-          <li>Metadata Management & Information Retrieval</li>
-          <li>Children & Youth Library Services</li>
-          <li>Digital Literacy & Community Engagement</li>
-        </ul>
-      </div>
+      <h2>🔍 Key Interests & Skills</h2>
+      <ul>
+        <li>Data Analysis & Visualization (Power BI, Tableau, Excel)</li>
+        <li>SQL & Relational Database Design (ERD, Normalization)</li>
+        <li>Cloud Computing & Infrastructure (Azure, Serverless Concepts)</li>
+        <li>Metadata Management & Information Retrieval</li>
+        <li>Children & Youth Library Services</li>
+        <li>Digital Literacy & Community Engagement</li>
+      </ul>
 
-      <div class="section">
-        <h3>💡 What Drives Me</h3>
-        <p>"I believe data is not just numbers—it’s a language to understand people."</p>
-        <p>Whether through dashboards, structured databases, or youth storytime sessions, I strive to make information meaningful and inclusive.</p>
-      </div>
+      <h2>💡 What Drives Me</h2>
+      <p>"I believe data is not just numbers—it’s a language to understand people."</p>
+      <p>Whether through dashboards, structured databases, or youth storytime sessions, I strive to make information meaningful and inclusive.</p>
 
-      <div class="section">
-        <h3>📮 Let’s Connect</h3>
+      <h2>📮 Let’s Connect</h2>
+      <div class="contact-section">
         <p>
-          📧 <a href="mailto:kimmy.minju.kim@gmail.com">kimmy.minju.kim@gmail.com</a> &nbsp;|&nbsp;
-          📧 <a href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a> &nbsp;|&nbsp;
+          📧 <a href="mailto:kimmy.minju.kim@gmail.com">kimmy.minju.kim@gmail.com</a> |
+          📧 <a href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a> |
           🔗 <a href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank">LinkedIn Profile</a>
         </p>
       </div>
