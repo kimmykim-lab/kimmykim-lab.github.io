@@ -5,25 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Library Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 위와 동일한 스타일 구조 사용 */
+  </style>
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
       <h1><a href="index.html">Kimmy Kim</a></h1>
-
-      <div class="dropdown-toggle">📁 Projects</div>
-      <ul class="submenu open">
-        <li><a href="data-projects.html">Data</a></li>
-        <li><a href="library-projects.html" class="active">Library</a></li>
-      </ul>
-
-      <div class="dropdown-toggle">💬 Extra Curricular</div>
-      <ul class="submenu open">
-        <li><a href="Community.html">Community</a></li>
-        <li><a href="Certifications.html">Certifications</a></li>
+      <ul class="menu">
+        <li class="open">
+          <span class="dropdown-toggle">📁 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html"> Data</a></li>
+            <li><a href="library-projects.html" class="active"> Library</a></li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a href="Community.html"> Community</a></li>
+            <li><a href="Certifications.html"> Certifications</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
-
     <div class="main">
       <h2 class="section-title">📚 Library Projects</h2>
 
@@ -54,9 +60,7 @@
         <a href="Create Data Collection Instruments.pdf" target="_blank">📄 Create Data Collection Instruments (PDF)</a><br>
         <a href="How public library programming for children has changed since the COVID-19 Pandemic (Investigation Results).xlsx" target="_blank">📊 Investigation Results (XLSX)</a>
         </div>
-    </div>
   </div>
-
   <script>
     document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
       toggle.addEventListener('click', () => {
