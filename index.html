@@ -10,7 +10,6 @@
       padding: 60px 80px;
       flex-grow: 1;
     }
-
     .profile-img {
       width: 140px;
       height: 140px;
@@ -19,20 +18,17 @@
       display: block;
       margin: 0 auto 20px;
     }
-
     h1 {
       text-align: center;
       font-size: 28px;
       margin-bottom: 20px;
     }
-
     .main-content p {
       max-width: 750px;
       margin: 0 auto 16px;
       line-height: 1.6;
       font-size: 16px;
     }
-
     h2 {
       font-size: 20px;
       margin-top: 40px;
@@ -41,52 +37,57 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     ul {
       max-width: 750px;
       margin: 0 auto;
       padding-left: 20px;
     }
-
     .contact-section p {
       max-width: 750px;
       margin: 0 auto;
     }
-
     .contact-section a {
       margin-right: 16px;
       text-decoration: none;
     }
-
     .sidebar {
       width: 200px;
       padding: 30px 20px;
-      background-color: #4B1FA2; /* purple */
+      background-color: #4B1FA2;
       color: white;
       position: fixed;
       height: 100%;
+      overflow-y: auto;
     }
-
-    .sidebar h2 {
+    .sidebar h2, .sidebar h1 a {
       color: white;
       font-size: 20px;
-      margin-bottom: 20px;
+      text-decoration: none;
     }
-
     .sidebar ul {
       list-style: none;
       padding: 0;
     }
-
     .sidebar ul li {
       margin-bottom: 10px;
     }
-
-    .sidebar ul li a {
+    .dropdown-toggle {
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .submenu {
+      list-style: none;
+      padding-left: 16px;
+      display: none;
+    }
+    .open > .submenu {
+      display: block;
+    }
+    .sidebar a {
       color: white;
       text-decoration: none;
     }
-
     .container {
       display: flex;
     }
@@ -95,19 +96,28 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <h2>Kimmy Kim</h2>
-      <ul>
-        <li><a href="data-projects.html">📊 Data</a></li>
-        <li><a href="library-projects.html">📚 Library</a></li>
-        <li><a href="Community.html">🤝 Community</a></li>
-        <li><a href="Certifications.html">📜 Certifications</a></li>
+      <h1><a href="index.html">Kimmy Kim</a></h1>
+      <ul class="menu">
+        <li>
+          <span class="dropdown-toggle">📁 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html"> Data</a></li>
+            <li><a href="library-projects.html"> Library</a></li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a href="Community.html"> Community</a></li>
+            <li><a href="Certifications.html"> Certifications</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
 
     <div class="main-content">
       <img src="portfolio/Photo_Kimmy.jpg" alt="Kimmy's Profile Photo" class="profile-img" />
       <h1>Hello, I'm Kimmy 👋</h1>
-
       <p>Hello! I’m <strong>Kimmy Kim</strong>, a Master of Library and Information Science (MLIS) student at the University of Washington.</p>
       <p>I explore how data, technology, and community-centered design can come together to improve library services—especially for children, youth, and underserved communities.</p>
       <p>From building SQL-based dashboards to leading youth programming, I’m passionate about using information and design to make a positive impact.</p>
@@ -136,5 +146,13 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
