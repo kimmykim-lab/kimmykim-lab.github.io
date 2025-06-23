@@ -32,10 +32,11 @@ body {
 .sidebar ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .sidebar a {
@@ -46,22 +47,35 @@ body {
 }
 
 .sidebar a.active {
-  font-weight: bold;
   color: #38bdf8;
 }
 
 .dropdown-toggle {
   cursor: pointer;
-  font-weight: bold;
+  font-weight: normal;
   display: inline-block;
   color: #ffffff;
   font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .submenu {
   list-style: none;
   padding-left: 16px;
-  display: none;
+  margin-bottom: 10px;
+}
+
+.submenu a {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #e0e0e0;
+  display: block;
+  text-decoration: none;
+}
+
+.submenu a.active {
+  color: #38bdf8;
 }
 
 .open > .submenu {
