@@ -5,80 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .sidebar {
-      width: 200px;
-      padding: 30px 20px;
-      background-color: #4B1FA2;
-      color: white;
-      position: fixed;
-      height: 100%;
-      overflow-y: auto;
-    }
-    .sidebar h1 a {
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-    .sidebar ul li {
-      margin-bottom: 10px;
-    }
-    .dropdown-toggle {
-      cursor: pointer;
-      font-weight: bold;
-      display: inline-block;
-    }
-    .submenu {
-      list-style: none;
-      padding-left: 16px;
-      display: none;
-    }
-    .open > .submenu {
-      display: block;
-    }
-    .sidebar a {
-      color: white;
-      text-decoration: none;
-    }
-    .active {
-      font-weight: bold;
-      text-decoration: underline;
-    }
-    .container {
-      display: flex;
-    }
-    .main {
-      margin-left: 220px;
-      padding: 40px;
-      flex-grow: 1;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
       <h1><a href="index.html">Kimmy Kim</a></h1>
-      <ul class="menu">
-        <li class="open">
-          <span class="dropdown-toggle">📁 Projects</span>
-          <ul class="submenu">
-            <li><a href="data-projects.html" class="active"> Data</a></li>
-            <li><a href="library-projects.html"> Library</a></li>
-          </ul>
-        </li>
-        <li>
-          <span class="dropdown-toggle">💬 Extra Curricular</span>
-          <ul class="submenu">
-            <li><a href="Community.html"> Community</a></li>
-            <li><a href="Certifications.html"> Certifications</a></li>
-          </ul>
-        </li>
+
+      <div class="dropdown-toggle">📁 Projects</div>
+      <ul class="submenu open">
+        <li><a href="data-projects.html" class="active">Data</a></li>
+        <li><a href="library-projects.html">Library</a></li>
+      </ul>
+
+      <div class="dropdown-toggle">💬 Extra Curricular</div>
+      <ul class="submenu open">
+        <li><a href="Community.html">Community</a></li>
+        <li><a href="Certifications.html">Certifications</a></li>
       </ul>
     </div>
+    
     <div class="main">
       <h2 class="section-title">📊 Data Projects</h2>
 
@@ -111,6 +56,7 @@
         <a href="Online Retail-slides.pdf" target="_blank">🖥️ View Final Presentation (PDF)</a>
     </div>
   </div>
+    
   <script>
     document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
       toggle.addEventListener('click', () => {
