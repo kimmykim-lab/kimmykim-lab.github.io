@@ -1,4 +1,3 @@
-/* ===== Base ===== */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,7 +9,6 @@ body {
   display: flex;
 }
 
-/* ===== Sidebar ===== */
 .sidebar {
   width: 220px;
   background-color: #4c1d95;
@@ -46,17 +44,15 @@ body {
   color: #e0e0e0;
   font-size: 16px;
   display: block;
-  font-weight: 400;        /* 기본은 보통 두께 */
+  font-weight: 400;
 }
 
-/* 활성 링크만 굵게 + 파랑 */
 .sidebar a.active,
 .submenu a.active {
   color: #38bdf8;
   font-weight: 700;
 }
 
-/* 드롭다운 토글 */
 .dropdown-toggle {
   cursor: pointer;
   font-weight: 400;
@@ -67,16 +63,15 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===== Submenu (Projects / Extra Curricular 하위) ===== */
 .submenu {
   list-style: none;
-  padding-left: 28px;      /* 들여쓰기 강화 */
+  padding-left: 28px;
   margin-bottom: 10px;
-  display: none;           /* 기본은 닫힘 */
+  display: none;
 }
 
 .submenu li {
-  margin-left: 6px;        /* 한 단계 더 안쪽으로 */
+  margin-left: 6px;
 }
 
 .submenu a {
@@ -85,15 +80,13 @@ body {
   color: #e0e0e0;
   display: block;
   text-decoration: none;
-  font-weight: 400;        /* 하위도 기본 보통 두께 */
+  font-weight: 400;
 }
 
-/* 부모 li가 open일 때만 펼침 */
 .open > .submenu {
   display: block;
 }
 
-/* ===== Main ===== */
 .main {
   flex-grow: 1;
   padding: 40px;
@@ -106,7 +99,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* ===== Project Card ===== */
 .project {
   background-color: #ffffff;
   padding: 20px;
