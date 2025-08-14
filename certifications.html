@@ -10,49 +10,46 @@
   <div class="container">
     <div class="sidebar">
       <h1><a href="index.html">Kimmy Kim</a></h1>
-
-      <div class="dropdown-toggle">📁 Projects</div>
-      <ul class="submenu open">
-        <li><a href="data-projects.html">Data</a></li>
-        <li><a href="library-projects.html">Library</a></li>
-      </ul>
-
-      <div class="dropdown-toggle">💬 Extra Curricular</div>
-      <ul class="submenu open">
-        <li><a href="community.html">Community</a></li>
-        <li><a href="certifications.html" class="active">Certifications</a></li>
+      <ul class="menu">
+        <li>
+          <span class="dropdown-toggle">📂 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html">📊 Data</a></li>
+            <li><a href="library-projects.html">📖 Library</a></li>
+          </ul>
+        </li>
+        <li><a href="course.html">📚 Course</a></li>
+        <li class="open">
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a href="community.html">🤝 Community</a></li>
+            <li><a href="certifications.html" class="active">✅ Certifications</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
 
     <div class="main">
-      <h2 class="section-title">📜 Certifications</h2>
-      <p><em>Recognized credentials that reflect my multilingual ability and professional preparation.</em></p>
+      <h2 class="section-title">✅ Certifications</h2>
 
       <div class="project">
-        <ul>
-          <li>
-            <strong>Chinese Language Proficiency (HSK 5)</strong><br>
-            Center for Language Education and Cooperation<br>
-            <em>Issued: Aug 2022</em>
-          </li>
-          <br>
-          <li>
-            <strong>Certified Librarian</strong><br>
-            Korean Library Association<br>
-            <em>Issued: Aug 2022</em><br>
-            Credential ID: 069147
-          </li>
-        </ul>
+        <h3>Microsoft Azure Fundamentals (AZ-900)</h3>
+        <p><strong>Status:</strong> Completed/Preparing (update as needed)</p>
+        <p><strong>Skills:</strong> Cloud services, Azure architecture, pricing & SLAs, security & compliance</p>
+      </div>
+
+      <div class="project">
+        <h3>Tableau Desktop Specialist</h3>
+        <p><strong>Status:</strong> Completed/Preparing (update as needed)</p>
+        <p><strong>Skills:</strong> Data connections, charts, calculations, dashboards</p>
       </div>
     </div>
   </div>
 
   <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        toggle.nextElementSibling.classList.toggle('open');
-      });
-    });
+    document.querySelectorAll('.dropdown-toggle').forEach(t =>
+      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
+    );
   </script>
 </body>
 </html>
