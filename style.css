@@ -60,10 +60,15 @@ body {
   margin-bottom: 10px;
 }
 
+/* ✅ Projects 하위(Data, Library) 들여쓰기 강화 */
 .submenu {
   list-style: none;
-  padding-left: 16px;
+  padding-left: 28px; /* 기존 16px → 28px */
   margin-bottom: 10px;
+}
+
+.submenu li {
+  margin-left: 6px; /* 하위 항목 한 단계 더 들여쓰기 */
 }
 
 .submenu a {
