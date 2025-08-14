@@ -5,80 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .sidebar {
-      width: 200px;
-      padding: 30px 20px;
-      background-color: #4B1FA2;
-      color: white;
-      position: fixed;
-      height: 100%;
-      overflow-y: auto;
-    }
-    .sidebar h1 a {
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-    .sidebar ul li {
-      margin-bottom: 10px;
-    }
-    .dropdown-toggle {
-      cursor: pointer;
-      font-weight: bold;
-      display: inline-block;
-    }
-    .submenu {
-      list-style: none;
-      padding-left: 16px;
-      display: none;
-    }
-    .open > .submenu {
-      display: block;
-    }
-    .sidebar a {
-      color: white;
-      text-decoration: none;
-    }
-    .active {
-      font-weight: bold;
-      text-decoration: underline;
-    }
-    .container {
-      display: flex;
-    }
-    .main {
-      margin-left: 220px;
-      padding: 40px;
-      flex-grow: 1;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
+    <!-- Sidebar -->
     <div class="sidebar">
       <h1><a href="index.html">Kimmy Kim</a></h1>
       <ul class="menu">
         <li class="open">
           <span class="dropdown-toggle">📁 Projects</span>
           <ul class="submenu">
-            <li><a href="data-projects.html" class="active"> Data</a></li>
-            <li><a href="library-projects.html"> Library</a></li>
+            <li><a href="data-projects.html" class="active">📊 Data</a></li>
+            <li><a href="library-projects.html">📖 Library</a></li>
           </ul>
         </li>
-        <li>
+
+        <!-- ✅ 항상 보이도록 Course 항목 추가 -->
+        <li><a href="Course.html">📚 Course</a></li>
+
+        <li class="open">
           <span class="dropdown-toggle">💬 Extra Curricular</span>
           <ul class="submenu">
-            <li><a href="Community.html"> Community</a></li>
-            <li><a href="Certifications.html"> Certifications</a></li>
+            <li><a href="Community.html">🤝 Community</a></li>
+            <li><a href="Certifications.html">✅ Certifications</a></li>
           </ul>
         </li>
       </ul>
     </div>
+
+    <!-- Main -->
     <div class="main">
       <h2 class="section-title">📊 Data Projects</h2>
 
@@ -96,7 +51,7 @@
         <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing its hybrid algorithm, combining content-based and collaborative filtering. Focused on user behavior tracking and the structure of movie metadata.</p>
         <p><strong>Skills & Tools:</strong> Lucidchart, Microsoft Office Suite, Machine Learning Basics, Data Modeling, Content Categorization, Metadata Design</p>
         <p><strong>Topics & Methods:</strong> Recommendation Systems, User Behavior Analysis, Information Architecture, Data Analysis, Data Analytics</p>
-        <a href="Netflix Diagram.pdf" target="_blank">📄 View ERD Diagram (PDF)</a><br>
+        <a href="Netflix%20Diagram.pdf" target="_blank">📄 View ERD Diagram (PDF)</a><br>
         <a href="Netflix-slides.pdf" target="_blank">🖥️ View Presentation Slides (PDF)</a>
       </div>
 
@@ -105,17 +60,17 @@
         <p><strong>Summary:</strong> Developed a fully normalized (3NF) relational database for a women’s clothing & accessories e-commerce platform. The project included ERD design, SQL table creation, data import, view generation, and Tableau-based sales analysis.</p>
         <p><strong>Skills & Tools:</strong> SQL, DBeaver, Lucidchart, Microsoft Office Suite, Google Suite, Tableau, Excel, BI Tools, Crow’s Foot Notation</p>
         <p><strong>Topics & Methods:</strong> ERD Development, Database Design, Data Modeling (3NF), Business Intelligence, Customer Behavior Analysis, Supply Chain Reporting, Programming Languages, Data Analysis, Data Visualization</p>
-        <a href="Initial ERD & Design Proposal.pdf" target="_blank">📄 View Initial ERD & Design Proposal (PDF)</a><br>
-        <a href="Online Retail_Final ERD.pdf" target="_blank">📄 View Final ERD (PDF)</a><br>
-        <a href="Online Retail_Final SQL.pdf" target="_blank">📄 View Final SQL (PDF)</a><br>
-        <a href="Online Retail-slides.pdf" target="_blank">🖥️ View Final Presentation (PDF)</a>
-        </div>
+        <a href="Initial%20ERD%20%26%20Design%20Proposal.pdf" target="_blank">📄 View Initial ERD &amp; Design Proposal (PDF)</a><br>
+        <a href="Online%20Retail_Final%20ERD.pdf" target="_blank">📄 View Final ERD (PDF)</a><br>
+        <a href="Online%20Retail_Final%20SQL.pdf" target="_blank">📄 View Final SQL (PDF)</a><br>
+        <a href="Online%20Retail-slides.pdf" target="_blank">🖥️ View Final Presentation (PDF)</a>
+      </div>
+    </div>
   </div>
+
   <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        toggle.parentElement.classList.toggle('open');
-      });
+    document.querySelectorAll('.dropdown-toggle').forEach(t => {
+      t.addEventListener('click', () => t.parentElement.classList.toggle('open'));
     });
   </script>
 </body>
