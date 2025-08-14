@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,22 +18,23 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <h1><a href="index.html" class="home-link">Kimmy Kim</a></h1>
-
-      <div class="dropdown-toggle">📂 Projects</div>
-      <ul class="submenu open">
-        <li><a href="data-projects.html">📊 Data</a></li>
-        <li><a href="library-projects.html">📖 Library</a></li>
-      </ul>
-
-      <ul>
+      <h1><a href="index.html">Kimmy Kim</a></h1>
+      <ul class="menu">
+        <li>
+          <span class="dropdown-toggle">📂 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html">📊 Data</a></li>
+            <li><a href="library-projects.html">📖 Library</a></li>
+          </ul>
+        </li>
         <li><a href="course.html">📚 Course</a></li>
-      </ul>
-
-      <div class="dropdown-toggle">💬 Extra Curricular</div>
-      <ul class="submenu open">
-        <li><a href="community.html" class="active">🤝 Community</a></li>
-        <li><a href="certifications.html">✅ Certifications</a></li>
+        <li class="open">
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a href="community.html" class="active">🤝 Community</a></li>
+            <li><a href="certifications.html">✅ Certifications</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
 
@@ -61,9 +62,7 @@
           <li>Designed and coordinated storytelling sessions with Christian Robinson, engaging 50+ families and increasing attendance by 15% through strategic promotion.</li>
         </ul>
         <p>
-          🔗 <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">
-            Read: UW iSchool News Article about the Event
-          </a>
+          🔗 <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">Read: UW iSchool News Article about the Event</a>
         </p>
         <img src="VolunteerPhoto.jpg" alt="Christian Robinson Volunteer Event" class="project-image" />
       </div>
@@ -71,14 +70,9 @@
   </div>
 
   <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const menu = toggle.nextElementSibling;
-        if (menu && menu.classList.contains('submenu')) {
-          menu.classList.toggle('open');
-        }
-      });
-    });
+    document.querySelectorAll('.dropdown-toggle').forEach(t =>
+      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
+    );
   </script>
 </body>
 </html>
