@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="container">
+    <!-- Sidebar -->
     <div class="sidebar">
       <h1><a href="index.html" class="home-link">Kimmy Kim</a></h1>
       <ul class="menu">
@@ -29,6 +30,7 @@
       </ul>
     </div>
 
+    <!-- Main -->
     <div class="main">
       <h2 class="section-title">🤝 Community & Leadership</h2>
 
@@ -38,9 +40,9 @@
           <em>Sep 2024 – Sep 2025</em></p>
         <ul>
           <li>Designed and executed cultural events by analyzing participation to improve engagement.</li>
-          <li>Spearheaded cultural initiatives that engaged over 100 participants, fostering meaningful community connections.</li>
-          <li>Fostered teamwork by coordinating with university departments and community groups to execute events.</li>
-          <li>Revitalized event participation by 30% through effective data-driven promotion strategies and event optimization.</li>
+          <li>Spearheaded cultural initiatives that engaged 100+ participants, fostering community connections.</li>
+          <li>Coordinated across university departments and community groups to execute events smoothly.</li>
+          <li>Boosted event participation by ~30% via data‑driven promotion and program optimization.</li>
         </ul>
       </div>
 
@@ -49,12 +51,12 @@
         <p><strong>Christian Robinson Event Coordinator, University of Washington</strong><br>
           <em>Sep 2024 – Oct 2024</em></p>
         <ul>
-          <li>Managed logistics and coordination, optimizing engagement processes to ensure a seamless event experience.</li>
-          <li>Designed and coordinated storytelling sessions with Christian Robinson, engaging 50+ families and increasing attendance by 15% through strategic promotion.</li>
+          <li>Managed logistics and operations to deliver a seamless event experience.</li>
+          <li>Planned storytelling sessions with Christian Robinson, engaging 50+ families and increasing attendance by ~15%.</li>
         </ul>
         <p>
-          <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank">
-            Read: UW iSchool News Article about the Event
+          <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">
+            Read: UW iSchool news article about the event
           </a>
         </p>
         <img src="VolunteerPhoto.jpg" alt="Christian Robinson Volunteer Event" class="project-image" />
@@ -63,11 +65,9 @@
   </div>
 
   <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        toggle.parentElement.classList.toggle('open');
-      });
-    });
+    document.querySelectorAll('.dropdown-toggle').forEach(t =>
+      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
+    );
   </script>
 </body>
 </html>
