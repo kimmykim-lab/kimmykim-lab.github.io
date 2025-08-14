@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course | Kimmy Kim</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .course { margin-bottom: 22px; }
+    .course h3 { margin: 0 0 6px; font-size: 18px; color: #4B1FA2; }
+    .course p { margin: 0; line-height: 1.55; max-width: 900px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1><a href="index.html">Kimmy Kim</a></h1>
+      <ul class="menu">
+        <li>
+          <span class="dropdown-toggle">📂 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html">📊 Data</a></li>
+            <li><a href="library-projects.html">📖 Library</a></li>
+          </ul>
+        </li>
+        <li><a href="course.html" class="active">📚 Course</a></li>
+        <li>
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a href="community.html">🤝 Community</a></li>
+            <li><a href="certifications.html">✅ Certifications</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h2 class="section-title">📚 Courses</h2>
+
+      <div class="project">
+        <div class="course">
+          <h3>LIS 580A – Strategic Planning for Libraries</h3>
+          <p>Compared strategic plans (Boston Public Library & SDSU) and drafted a strategic initiative proposal.</p>
+        </div>
+        <div class="course">
+          <h3>Relational Data Modeling</h3>
+          <p>Built a normalized retail SQL database (ERD, 3NF, DDL/DML) and analytics views.</p>
+        </div>
+        <div class="course">
+          <h3>Cloud-Based ML Applications</h3>
+          <p>Designed a cloud architecture for real-time ad click prediction with Azure services and BI reporting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(t =>
+      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
+    );
+  </script>
+</body>
+</html>
