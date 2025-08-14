@@ -20,7 +20,7 @@
           </ul>
         </li>
 
-        <!-- ✅ 항상 보이도록 Course 항목 추가 -->
+        <!-- 👇 누락되어 있던 Course 항목 추가 -->
         <li><a href="Course.html">📚 Course</a></li>
 
         <li class="open">
@@ -69,9 +69,9 @@
   </div>
 
   <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(t => {
-      t.addEventListener('click', () => t.parentElement.classList.toggle('open'));
-    });
+    document.querySelectorAll('.dropdown-toggle').forEach(t =>
+      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
+    );
   </script>
 </body>
 </html>
