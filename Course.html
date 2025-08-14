@@ -10,7 +10,20 @@
     .course { margin-bottom: 26px; }
     .course h3 { margin: 0 0 6px; font-size: 18px; color: #4B1FA2; }
     .course p { margin: 0; line-height: 1.55; max-width: 900px; }
-    .sidebar a.active { font-weight: bold; text-decoration: underline; }
+
+    .sidebar { background-color:#4B1FA2; }
+    .sidebar a { color:#fff; text-decoration:none; }
+    .sidebar a.active { text-decoration: underline; }
+
+    /* ✅ 상위 메뉴 링크 굵게, 하위 메뉴 보통 굵기 */
+    .menu > li > a { font-weight: 700; display: inline-block; }
+    .submenu a { font-weight: 400; }
+
+    .dropdown-toggle { cursor:pointer; font-weight:700; display:inline-block; }
+    .submenu { list-style:none; padding-left:16px; display:none; }
+    .open > .submenu { display:block; }
+
+    .container { display:flex; }
   </style>
 </head>
 <body>
@@ -21,16 +34,19 @@
         <li>
           <span class="dropdown-toggle">📁 Projects</span>
           <ul class="submenu">
-            <li><a href="data-projects.html"> Data</a></li>
-            <li><a href="library-projects.html"> Library</a></li>
+            <li><a href="data-projects.html"> 📊 Data</a></li>
+            <li><a href="library-projects.html"> 📚 Library</a></li>
           </ul>
         </li>
-        <li><a href="courses.html" class="active">📚 Course</a></li>
+
+        <!-- ✅ 현재 페이지 활성화 -->
+        <li><a href="Course.html" class="active">📚 Course</a></li>
+
         <li>
           <span class="dropdown-toggle">💬 Extra Curricular</span>
           <ul class="submenu">
-            <li><a href="Community.html"> Community</a></li>
-            <li><a href="Certifications.html"> Certifications</a></li>
+            <li><a href="Community.html"> 🤝 Community</a></li>
+            <li><a href="Certifications.html"> 📜 Certifications</a></li>
           </ul>
         </li>
       </ul>
@@ -87,7 +103,6 @@
   </div>
 
   <script>
-    //
     document.querySelectorAll('.dropdown-toggle').forEach(t =>
       t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
     );
