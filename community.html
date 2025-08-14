@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community | Kimmy Kim</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1><a href="index.html" class="home-link">Kimmy Kim</a></h1>
+      <ul class="menu">
+        <li>
+          <span class="dropdown-toggle">📁 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html">📊 Data</a></li>
+            <li><a href="library-projects.html">📚 Library</a></li>
+            <li><a href="course.html">📚 Course</a></li>
+          </ul>
+        </li>
+        <li class="open">
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a href="community.html" class="active">🤝 Community</a></li>
+            <li><a href="certifications.html">✅ Certifications</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h2 class="section-title">🤝 Community & Leadership</h2>
+
+      <div class="project">
+        <h3>Leadership | Community Engagement</h3>
+        <p><strong>Korean Graduate Student Association Secretary, University of Washington</strong><br>
+          <em>Sep 2024 – Sep 2025</em></p>
+        <ul>
+          <li>Designed and executed cultural events by analyzing participation to improve engagement.</li>
+          <li>Spearheaded cultural initiatives that engaged over 100 participants, fostering meaningful community connections.</li>
+          <li>Fostered teamwork by coordinating with university departments and community groups to execute events.</li>
+          <li>Revitalized event participation by 30% through effective data-driven promotion strategies and event optimization.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Volunteer | Community Engagement</h3>
+        <p><strong>Christian Robinson Event Coordinator, University of Washington</strong><br>
+          <em>Sep 2024 – Oct 2024</em></p>
+        <ul>
+          <li>Managed logistics and coordination, optimizing engagement processes to ensure a seamless event experience.</li>
+          <li>Designed and coordinated storytelling sessions with Christian Robinson, engaging 50+ families and increasing attendance by 15% through strategic promotion.</li>
+        </ul>
+        <p>
+          <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank">
+            Read: UW iSchool News Article about the Event
+          </a>
+        </p>
+        <img src="VolunteerPhoto.jpg" alt="Christian Robinson Volunteer Event" class="project-image" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
