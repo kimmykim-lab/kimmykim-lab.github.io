@@ -8,7 +8,6 @@
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar -->
     <div class="sidebar">
       <h1><a href="index.html">Kimmy Kim</a></h1>
       <ul class="menu">
@@ -19,11 +18,8 @@
             <li><a href="library-projects.html">📖 Library</a></li>
           </ul>
         </li>
-
-        <!-- 👇 누락되어 있던 Course 항목 추가 -->
         <li><a href="Course.html">📚 Course</a></li>
-
-        <li class="open">
+        <li>
           <span class="dropdown-toggle">💬 Extra Curricular</span>
           <ul class="submenu">
             <li><a href="Community.html">🤝 Community</a></li>
@@ -32,8 +28,6 @@
         </li>
       </ul>
     </div>
-
-    <!-- Main -->
     <div class="main">
       <h2 class="section-title">📊 Data Projects</h2>
 
@@ -67,7 +61,6 @@
       </div>
     </div>
   </div>
-
   <script>
     document.querySelectorAll('.dropdown-toggle').forEach(t =>
       t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
