@@ -44,15 +44,18 @@ body {
   color: #e0e0e0;
   font-size: 16px;
   display: block;
+  font-weight: 400;
 }
 
-.sidebar a.active {
+.sidebar a.active,
+.submenu a.active {
   color: #38bdf8;
+  font-weight: 700;
 }
 
 .dropdown-toggle {
   cursor: pointer;
-  font-weight: normal;
+  font-weight: 400;
   display: inline-block;
   color: #ffffff;
   font-size: 16px;
@@ -60,15 +63,15 @@ body {
   margin-bottom: 10px;
 }
 
-/* ✅ Projects 하위(Data, Library) 들여쓰기 강화 */
 .submenu {
   list-style: none;
-  padding-left: 28px; /* 기존 16px → 28px */
+  padding-left: 28px;
   margin-bottom: 10px;
+  display: none;
 }
 
 .submenu li {
-  margin-left: 6px; /* 하위 항목 한 단계 더 들여쓰기 */
+  margin-left: 6px;
 }
 
 .submenu a {
@@ -77,10 +80,7 @@ body {
   color: #e0e0e0;
   display: block;
   text-decoration: none;
-}
-
-.submenu a.active {
-  color: #38bdf8;
+  font-weight: 400;
 }
 
 .open > .submenu {
