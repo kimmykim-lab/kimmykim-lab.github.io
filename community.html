@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Community | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-image {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 16px auto;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
-      <h1><a href="index.html">Kimmy Kim</a></h1>
+      <h1><a href="index.html" class="home-link">Kimmy Kim</a></h1>
 
-      <div class="dropdown-toggle">📁 Projects</div>
+      <div class="dropdown-toggle">📂 Projects</div>
       <ul class="submenu open">
-        <li><a href="data-projects.html">Data</a></li>
-        <li><a href="library-projects.html">Library</a></li>
+        <li><a href="data-projects.html">📊 Data</a></li>
+        <li><a href="library-projects.html">📖 Library</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="course.html">📚 Course</a></li>
       </ul>
 
       <div class="dropdown-toggle">💬 Extra Curricular</div>
       <ul class="submenu open">
-        <li><a href="community.html" class="active">Community</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="community.html" class="active">🤝 Community</a></li>
+        <li><a href="certifications.html">✅ Certifications</a></li>
       </ul>
     </div>
 
@@ -48,7 +61,7 @@
           <li>Designed and coordinated storytelling sessions with Christian Robinson, engaging 50+ families and increasing attendance by 15% through strategic promotion.</li>
         </ul>
         <p>
-          🔗 <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank">
+          🔗 <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">
             Read: UW iSchool News Article about the Event
           </a>
         </p>
@@ -60,7 +73,10 @@
   <script>
     document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
       toggle.addEventListener('click', () => {
-        toggle.nextElementSibling.classList.toggle('open');
+        const menu = toggle.nextElementSibling;
+        if (menu && menu.classList.contains('submenu')) {
+          menu.classList.toggle('open');
+        }
       });
     });
   </script>
