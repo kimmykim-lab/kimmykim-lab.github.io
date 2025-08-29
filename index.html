@@ -3,60 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kimmy Kim | Portfolio</title>
-  <meta name="description" content="Data × Libraries × Youth Engagement — Kimmy Kim (MLIS @ UW)" />
+  <title>Kimmy Kim | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Kimmy Kim — Data × Libraries × Youth Engagement. Building measurable systems and inclusive programs that connect people with information." />
 </head>
 <body>
   <div class="container">
+    <!-- Sidebar (공통, 기본 닫힘) -->
     <aside class="sidebar">
       <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
 
-      <details open>
-        <summary>📁 Projects</summary>
-        <ul class="subnav">
-          <li><a href="data-projects.html">📊 Data</a></li>
-          <li><a href="library-projects.html">📚 Library</a></li>
-        </ul>
-      </details>
+      <!-- Projects -->
+      <input type="checkbox" id="nav-projects" class="nav-toggle">
+      <label for="nav-projects" class="nav-group">
+        <span class="chev" aria-hidden="true">▶</span> Projects
+      </label>
+      <ul class="nav-sub">
+        <li><a href="data-projects.html" class="nav-link">Data</a></li>
+        <li><a href="library-projects.html" class="nav-link">Library</a></li>
+      </ul>
 
-      <details open>
-        <summary>💬 Extra Curricular</summary>
-        <ul class="subnav">
-          <li><a href="community.html">🤝 Community</a></li>
-          <li><a href="certifications.html">📜 Certifications</a></li>
-        </ul>
-      </details>
+      <!-- Extra Curricular -->
+      <input type="checkbox" id="nav-extra" class="nav-toggle">
+      <label for="nav-extra" class="nav-group">
+        <span class="chev" aria-hidden="true">▶</span> Extra Curricular
+      </label>
+      <ul class="nav-sub">
+        <li><a href="community.html" class="nav-link">Community</a></li>
+      </ul>
+
+      <!-- Singles -->
+      <ul class="nav-root">
+        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+        <li><a href="course.html" class="nav-link">Courses</a></li>
+      </ul>
     </aside>
 
+    <!-- Main -->
     <main class="main">
-      <div class="header">
-        <span class="badge">Home</span>
-        <div class="btn-row">
-          <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn-outline btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume – Data</a>
-          <a class="btn-outline btn" href="MINJU_KIM_Resume%20(Library).pdf" target="_blank" rel="noopener">Resume – Library</a>
-        </div>
+      <!-- top right actions -->
+      <div class="page-actions">
+        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip chip-action" href="Resume%20-%20Data.pdf" target="_blank" rel="noopener">Resume — Data</a>
+        <a class="chip chip-action" href="Resume%20-%20Library.pdf" target="_blank" rel="noopener">Resume — Library</a>
       </div>
 
-      <section class="card hero">
-        <img src="Photo_Kimmy.jpg" alt="Kimmy Kim profile photo" />
-        <div>
-          <h1>Data × Libraries × Youth Engagement</h1>
-          <p>I build simple, measurable systems that help people—especially children and teens—connect with information.</p>
-          <div class="kpis">
-            <span class="pill">Excel dashboards ↑ accuracy 15%</span>
-            <span class="pill">Reporting time ↓ 20%</span>
-            <span class="pill">Banner service TAT ↓ 25%</span>
-            <span class="pill">Guided 200+ students/quarter</span>
-          </div>
-        </div>
-      </section>
+      <div class="card">
+        <img src="Photo_Kimmy.jpg" alt="Kimmy Kim profile photo" class="rounded" style="max-width:360px;">
+        <h2 style="margin:16px 0 8px;">Data × Libraries × Youth Engagement</h2>
+        <p class="meta" style="margin-bottom:8px;">
+          I build simple, measurable systems that help people—especially children and teens—connect with information.
+        </p>
+        <p class="meta">
+          Excel dashboards ↑ accuracy 15% · Reporting time ↓ 20% · Banner service TAT ↓ 25% · Guided 200+ students/quarter
+        </p>
+      </div>
 
-      <section class="card" style="margin-top:16px;">
-        <h2>Featured Projects</h2>
-        <ul class="list">
-          <li><strong>Ad Click Prediction (Azure ML):</strong> End-to-end cloud pipeline; documented architecture; working demo.</li>
+      <section class="card">
+        <h2 style="margin:0 0 10px;">Featured Projects</h2>
+        <ul class="bullets">
+          <li><strong>Ad Click Prediction (Azure ML):</strong> End-to-end cloud pipeline; documented architecture; working prototype.</li>
           <li><strong>Nourishing Minds (Year 1–3):</strong> Coded 112+ notes across 9 libraries; evidence-aligned methods/findings; Year-3 manuscript in prep.</li>
         </ul>
       </section>
