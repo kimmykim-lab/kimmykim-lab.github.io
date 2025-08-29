@@ -1,74 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kimmy Kim | Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .main-content { padding: 60px 80px; flex-grow: 1; }
+    .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px; }
+    h1 { text-align: center; font-size: 28px; margin-bottom: 20px; }
+    .main-content p { max-width: 750px; margin: 0 auto 16px; line-height: 1.6; font-size: 16px; }
+    h2 { font-size: 20px; margin-top: 40px; text-align: left; max-width: 750px; margin-left: auto; margin-right: auto; }
+    ul { max-width: 750px; margin: 0 auto; padding-left: 20px; }
+    .contact-section p { max-width: 750px; margin: 0 auto; }
+    .contact-section a { margin-right: 16px; text-decoration: none; }
+  </style>
 </head>
 <body>
-
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="brand">Kimmy Kim</div>
-    <div class="nav-group">
-      <div class="nav-label">Projects</div>
-      <ul class="nav">
-        <li><a href="data-projects.html" id="nav-data"><span class="ico">📊</span>Data</a></li>
-        <li><a href="library-projects.html" id="nav-library"><span class="ico">📖</span>Library</a></li>
-        <li><a href="course.html" id="nav-course"><span class="ico">📚</span>Course</a></li>
+  <div class="container">
+    <div class="sidebar">
+      <h1><a href="index.html">Kimmy Kim</a></h1>
+      <ul class="menu">
+        <li>
+          <span class="dropdown-toggle">📂 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html">📊 Data</a></li>
+            <li><a href="library-projects.html">📖 Library</a></li>
+          </ul>
+        </li>
+        <li><a href="course.html">📚 Course</a></li>
+        <li>
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a href="community.html">🤝 Community</a></li>
+            <li><a href="certifications.html">✅ Certifications</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
-    <div class="nav-group">
-      <div class="nav-label dim">Extra</div>
-      <ul class="nav">
-        <li><a href="extra.html" id="nav-extra"><span class="ico">💬</span>Extra Curricular</a></li>
-        <li><a href="community.html" id="nav-community"><span class="ico">🤝</span>Community</a></li>
-        <li><a href="certifications.html" id="nav-cert"><span class="ico">✅</span>Certifications</a></li>
+
+    <div class="main-content">
+      <img
+        src="https://raw.githubusercontent.com/kimmykim-lab/portfolio/main/Photo_Kimmy.jpg"
+        alt="Kimmy's Profile Photo"
+        class="profile-img"
+        loading="lazy"
+      />
+      <h1>Hello, I'm Kimmy 👋</h1>
+      <p>Hello! I’m <strong>Kimmy Kim</strong>, a Master of Library and Information Science (MLIS) student at the University of Washington.</p>
+      <p>I explore how <strong>data, technology, and design education</strong> can come together to strengthen library and learning services, especially for children, youth, and communities.</p>
+      <p>From developing <strong>data-driven dashboards and web-based tools</strong> to leading <strong>youth engagement programs</strong> and exploring <strong>children’s and young adult literature</strong>, I’m passionate about creating inclusive and innovative ways to connect people with information.</p>
+
+      <h2>🔍 Key Interests & Skills</h2>
+      <ul>
+        <li>Data Analysis & Visualization (Power BI, Tableau, Excel)</li>
+        <li>SQL & Relational Database Design (ERD, Normalization)</li>
+        <li>Cloud Computing & Infrastructure (Azure, Serverless Concepts)</li>
+        <li>Metadata Management & Information Retrieval</li>
+        <li>Children & Youth Library Services</li>
+        <li>Digital Literacy & Community Engagement</li>
       </ul>
-    </div>
-  </aside>
 
-  <!-- Main -->
-  <main class="main">
+      <h2>💡 What Drives Me</h2>
+      <p>"I believe data is not just numbers—it’s a language to understand people."</p>
+      <p>Whether through dashboards, structured databases, or youth storytime sessions, I strive to make information meaningful and inclusive.</p>
 
-    <section class="section">
-      <div class="hero">
-        <img src="Photo_Kimmy.jpg" alt="Kimmy Kim">
-        <div>
-          <h1>Hi, I'm Kimmy Kim 👋🏻</h1>
-          <p class="lead">I believe data becomes powerful when it helps real communities thrive. I design systems, programs, and spaces where insights turn into impact.</p>
-          <div class="btns" style="margin-top:12px">
-            <a class="btn" href="resume-data.pdf">Resume – Data</a>
-            <a class="btn" href="resume-library.pdf">Resume – Library</a>
-          </div>
-        </div>
+      <h2>📮 Let’s Connect</h2>
+      <div class="contact-section">
+        <p>
+          📧 <a href="mailto:kimmy.minju.kim@gmail.com">kimmy.minju.kim@gmail.com</a> |
+          📧 <a href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a> |
+          🔗 <a href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank">LinkedIn Profile</a>
+        </p>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <section class="section">
-      <h2>Research Interests</h2>
-      <ul class="tight">
-        <li>Data Analytics and Visualization</li>
-        <li>Artificial Intelligence in Education (e.g., AI app development, learner analytics)</li>
-        <li>Educational Technology &amp; Learning Analytics</li>
-        <li>Data Science for Social Good</li>
-        <li>Data Management</li>
-        <li>Participatory Design &amp; Evaluation</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>My Story (Why I chose this path)</h2>
-      <p>I first studied Library and Information Science as an undergraduate in Korea, where I developed a strong interest in how knowledge and information can transform people’s lives. Over time, I became more drawn to the fields of data analysis, data visualization, data management, and educational technology. I realized that data is not just a record of numbers, but a tool for explaining human experiences and change.</p>
-      <p>Through hands-on experiences working with libraries, community programs, and data-related projects, I saw how even small improvements driven by data could significantly increase participation and inclusion. More recently, I’ve also become interested in combining artificial intelligence with education—for example, developing AI-powered learning apps or analyzing learner behavior data to explore how technology can create more personalized and meaningful learning experiences.</p>
-    </section>
-
-    <section class="section">
-      <h2>My Values and Personality</h2>
-      <p>I value inclusivity, curiosity, and collaboration. For me, research and technology matter most when they create spaces where people feel connected and welcomed. Whether I’m designing a database, building a dashboard, or supporting a storytime program, I make it a priority to listen closely to diverse voices and ensure they are reflected in the work I do.</p>
-    </section>
-
-  </main>
+  <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
