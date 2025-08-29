@@ -4,33 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kimmy Kim | Portfolio</title>
-  <meta name="description" content="Kimmy Kim — MLIS @ UW. Data & Library projects bridging analytics, education, and youth services." />
+  <meta name="description" content="Data × Libraries × Youth Engagement — Kimmy Kim (MLIS @ UW)" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar" id="sidebar">
+    <aside class="sidebar">
       <h1 class="brand">Kimmy Kim</h1>
+
+      <details open>
+        <summary>📁 Projects</summary>
+        <ul class="subnav">
+          <li><a href="data-projects.html">📊 Data</a></li>
+          <li><a href="library-projects.html">📚 Library</a></li>
+        </ul>
+      </details>
+
+      <div class="divider"></div>
+      <div class="group-label">💬 Extra Curricular</div>
       <ul class="nav">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li>
-          <details open>
-            <summary>Projects</summary>
-            <ul class="subnav">
-              <li><a href="data-projects.html">Data Projects</a></li>
-              <li><a href="library-projects.html">Library Projects</a></li>
-              <li><a href="community.html">Community</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a href="course.html">Courses</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="community.html">🤝 Community</a></li>
+        <li><a href="certifications.html">📜 Certifications</a></li>
       </ul>
     </aside>
 
     <main class="main">
       <div class="header">
-        <span class="badge page-title">Home</span>
+        <span class="badge">Home</span>
         <div class="btn-row">
           <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn-outline btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume – Data</a>
@@ -42,32 +42,23 @@
         <img src="Photo_Kimmy.jpg" alt="Kimmy Kim profile photo" />
         <div>
           <h1>Data × Libraries × Youth Engagement</h1>
-          <p>I design data-informed tools and programs that help people—especially children and teens—connect with information. I enjoy turning messy workflows into simple, measurable systems.</p>
+          <p>I build simple, measurable systems that help people—especially children and teens—connect with information.</p>
           <div class="kpis">
-            <span class="pill">Excel dashboards ↑ data accuracy 15%</span>
+            <span class="pill">Excel dashboards ↑ accuracy 15%</span>
             <span class="pill">Reporting time ↓ 20%</span>
-            <span class="pill">Banner service turnaround ↓ 25%</span>
+            <span class="pill">Banner service TAT ↓ 25%</span>
             <span class="pill">Guided 200+ students/quarter</span>
           </div>
         </div>
       </section>
 
-      <div class="grid" style="margin-top:18px;">
-        <div class="card span-6">
-          <h2>Featured — Ad Click Prediction</h2>
-          <p>Built a cloud-based pipeline (Azure ML Designer) for real-time ad click prediction within media & entertainment scenarios.</p>
-          <ul class="list">
-            <li>End-to-end architecture; deployed sentiment module and ML pipeline demo</li>
-            <li><strong>Result:</strong> working prototype with documented architecture and evaluation</li>
-          </ul>
-          <p class="small meta">See details: <a href="data-projects.html#ads">Data Projects</a></p>
-        </div>
-        <div class="card span-6">
-          <h2>Featured — Nourishing Minds (Year 1–3)</h2>
-          <p>Participatory design with teens across nine public libraries; coded 112+ field notes and organized multi-year participation data; supporting Year-3 manuscript.</p>
-          <p class="small meta">See details: <a href="library-projects.html#nourishing">Library Projects</a></p>
-        </div>
-      </div>
+      <section class="card" style="margin-top:16px;">
+        <h2>Featured Projects</h2>
+        <ul class="list">
+          <li><strong>Ad Click Prediction (Azure ML):</strong> End-to-end cloud pipeline; documented architecture; working demo.</li>
+          <li><strong>Nourishing Minds (Year 1–3):</strong> Coded 112+ notes across 9 libraries; evidence-aligned methods/findings; Year-3 manuscript in prep.</li>
+        </ul>
+      </section>
     </main>
   </div>
 </body>
