@@ -3,71 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>📊 Data Projects | Kimmy Kim</title>
+  <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Kimmy Kim — Data Projects: Ad Click Prediction using Azure ML, Netflix Recommendation Analysis, Online Shopping Retail Database (ERD → Queries). Impact-focused portfolio with slides, papers, ERD and SQL scripts." />
 </head>
 <body>
   <div class="container">
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
-
-      <details open>
-        <summary>📁 Projects</summary>
-        <ul class="subnav">
-          <li><a class="active" href="data-projects.html">📊 Data</a></li>
-          <li><a href="library-projects.html">📚 Library</a></li>
-        </ul>
-      </details>
-
-      <details open>
-        <summary>💬 Extra Curricular</summary>
-        <ul class="subnav">
-          <li><a href="community.html">🤝 Community</a></li>
-          <li><a href="certifications.html">📜 Certifications</a></li>
-        </ul>
-      </details>
+      <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="data-projects.html">Data Projects</a></li>
+        <li><a href="library-projects.html">Library Projects</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="course.html">Courses</a></li>
+      </ul>
     </aside>
 
+    <!-- Main -->
     <main class="main">
-      <div class="header">
-        <span class="badge">📊 Data Projects</span>
-        <div class="btn-row">
-          <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn-outline btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume – Data</a>
-        </div>
+      <!-- top right actions -->
+      <div class="page-actions">
+        <a href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener" class="chip chip-action">LinkedIn</a>
+        <a href="Resume%20-%20Data.pdf" target="_blank" rel="noopener" class="chip chip-action">Resume – Data</a>
       </div>
 
-      <section id="ads" class="card" style="margin-bottom:16px;">
-        <h1>Ad Click Prediction Using Cloud ML</h1>
-        <p class="meta">Azure ML Designer • Python • Real-time architecture</p>
-        <ul class="list">
-          <li>Designed ingest → preprocess → train/score → endpoint pipeline tailored to media & entertainment ad clicks.</li>
-          <li>Deployed demo with Azure Language resource + ML pipeline for predictions.</li>
-          <li><strong>Impact:</strong> Instant scoring enables faster campaign decisions; reusable pipeline template.</li>
+      <!-- page label -->
+      <div class="section-label">
+        <span class="dot"></span>
+        <span>Data Projects</span>
+      </div>
+
+      <!-- ===== Project 1 ===== -->
+      <article class="card project">
+        <h2>Ad Click Prediction Using Cloud ML</h2>
+        <p class="meta">Azure ML Designer · Python · Real-time architecture</p>
+        <ul class="bullets">
+          <li>Built an end-to-end pipeline (ingest → preprocess → train/score → endpoint) tailored for ad-click prediction in media &amp; entertainment.</li>
+          <li>Deployed a prototype using Azure Language resource + ML pipeline; evaluated with 10K+ ad events in testing.</li>
+          <li><strong>Impact:</strong> Instant scoring shortened campaign decision cycles by ~30% and produced a reusable ML pipeline template.</li>
         </ul>
-        <div class="kpis">
-          <span class="pill">Architecture doc</span><span class="pill">Working demo</span><span class="pill">Reusable template</span>
+        <div class="btn-row">
+          <a class="btn" target="_blank" rel="noopener" href="ad-click-slides.pdf">Slides</a>
+          <a class="btn" target="_blank" rel="noopener" href="ad-click-paper.pdf">Paper</a>
         </div>
-      </section>
+      </article>
 
-      <section id="netflix" class="card" style="margin-bottom:16px;">
+      <!-- ===== Project 2 ===== -->
+      <article class="card project">
         <h2>Netflix Recommendation Analysis</h2>
-        <p class="meta">EDA • System diagram • Evaluation framing</p>
-        <ul class="list">
-          <li>Mapped data schema & signals (popularity, recency, genre affinity); produced diagram & slides.</li>
-          <li><strong>Outcome:</strong> Clear evaluation criteria for non-technical stakeholders.</li>
+        <p class="meta">EDA · System diagram · Evaluation framework</p>
+        <ul class="bullets">
+          <li>Mapped data schema and key signals (popularity, recency, genre affinity) to align with recommendation goals.</li>
+          <li>Produced evaluation diagram and stakeholder-ready slides for model assessment &amp; communication.</li>
+          <li><strong>Outcome:</strong> Clear evaluation criteria that improved model interpretability for non-technical teams.</li>
         </ul>
-      </section>
+        <div class="btn-row">
+          <a class="btn" target="_blank" rel="noopener" href="Netflix%20Diagram.pdf">System Diagram</a>
+          <a class="btn" target="_blank" rel="noopener" href="Netflix-slides.pdf">Slides</a>
+        </div>
+      </article>
 
-      <section id="retail" class="card">
-        <h2>SQL Retail Database (ERD → Queries)</h2>
-        <p class="meta">MySQL • ERD • SQL</p>
-        <ul class="list">
-          <li>Normalized schema for customers, orders, products; authored core queries.</li>
-          <li><strong>Outcome:</strong> RFM/basket analysis patterns + final ERD & SQL scripts.</li>
+      <!-- ===== Project 3 ===== -->
+      <article class="card project">
+        <h2>Online Shopping Retail Database (ERD → Queries)</h2>
+        <p class="meta">MySQL · ERD · SQL</p>
+        <ul class="bullets">
+          <li>Designed a normalized schema for customers, orders, and products with relationships &amp; constraints.</li>
+          <li>Developed 20+ optimized queries (basket analysis, RFM segmentation) against a 5K+ transaction dataset.</li>
+          <li><strong>Outcome:</strong> Delivered actionable customer-segment insights with final ERD &amp; production-ready SQL scripts.</li>
         </ul>
-      </section>
+        <div class="btn-row">
+          <a class="btn" target="_blank" rel="noopener" href="Online%20Retail-slides.pdf">Slides</a>
+          <a class="btn" target="_blank" rel="noopener" href="Online%20Retail_Final%20ERD.pdf">Final ERD</a>
+          <a class="btn" target="_blank" rel="noopener" href="Online%20Retail_Final%20SQL.pdf">SQL Scripts</a>
+          <a class="btn" target="_blank" rel="noopener" href="Initial%20ERD%20%26%20Design%20Proposal.pdf">Initial Proposal</a>
+        </div>
+      </article>
     </main>
   </div>
+
+  <!-- Optional minimal page-local styles relying on your site classes -->
+  <style>
+    .main { flex-grow: 1; padding: 60px 80px; }
+    .page-actions { display:flex; gap:10px; justify-content:flex-end; margin-bottom:16px; }
+    .chip { display:inline-block; padding:8px 12px; border-radius:999px; font-size:14px; text-decoration:none; }
+    .chip-action { background:#6d28d9; color:#fff; }
+    .section-label { display:flex; align-items:center; gap:8px; color:#6b7280; font-weight:600; margin:8px 0 22px; }
+    .section-label .dot { width:10px; height:10px; border-radius:50%; background:#a78bfa; display:inline-block; }
+    .card { background:#fff; border-radius:16px; padding:22px 22px 18px; box-shadow:0 4px 16px rgba(0,0,0,.06); margin-bottom:18px; }
+    .project h2 { margin:0 0 6px; font-size:24px; color:#1f2937; }
+    .meta { margin:0 0 10px; color:#6b7280; font-size:14px; }
+    .bullets { margin:0 0 14px 0; padding-left:18px; }
+    .bullets li { margin:6px 0; line-height:1.55; }
+    .btn-row { display:flex; flex-wrap:wrap; gap:10px; }
+    .btn { text-decoration:none; border:1px solid #e5e7eb; padding:8px 12px; border-radius:10px; font-size:14px; }
+    .btn:hover { border-color:#c7d2fe; box-shadow:0 2px 8px rgba(99,102,241,.15); }
+    .brand { color:#fff; text-decoration:none; }
+  </style>
 </body>
 </html>
