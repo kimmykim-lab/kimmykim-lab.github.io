@@ -7,13 +7,48 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .main-content { padding: 60px 80px; flex-grow: 1; }
-    .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px; }
+    .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 16px; }
     h1 { text-align: center; font-size: 28px; margin-bottom: 20px; }
-    .main-content p { max-width: 750px; margin: 0 auto 16px; line-height: 1.6; font-size: 16px; }
-    h2 { font-size: 20px; margin-top: 40px; text-align: left; max-width: 750px; margin-left: auto; margin-right: auto; }
-    ul { max-width: 750px; margin: 0 auto; padding-left: 20px; }
-    .contact-section p { max-width: 750px; margin: 0 auto; }
+    .main-content p { max-width: 900px; margin: 0 auto 16px; line-height: 1.6; font-size: 16px; }
+    h2 { font-size: 20px; margin-top: 40px; text-align: left; max-width: 900px; margin-left: auto; margin-right: auto; }
+    ul { max-width: 900px; margin: 0 auto; padding-left: 20px; }
+    .contact-section p { max-width: 900px; margin: 0 auto; }
     .contact-section a { margin-right: 16px; text-decoration: none; }
+
+    .hero{
+      max-width: 900px; margin: 0 auto 24px; background:#fff;
+      padding: 24px; border-radius: 16px; box-shadow: 0 6px 18px rgba(15,23,42,.06);
+      text-align: center;
+    }
+    .hero h1{ margin: 0 0 8px; font-size: 26px; color:#111827; }
+    .hero p{ margin: 6px 0 0; color:#64748b; }
+    .cta{ margin-top: 14px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .btn{ display:inline-block; padding:10px 14px; border-radius:999px; text-decoration:none; font-weight:600; border:1px solid transparent; }
+    .btn-primary{ background:#2563eb; color:#fff; }
+    .btn-ghost{ background:#fff; color:#2563eb; border-color:#2563eb; }
+
+    .kpis{
+      max-width: 900px; margin: 0 auto 24px;
+      display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
+    }
+    .kpi{
+      background:#fff; padding:14px 16px; border-radius:14px;
+      box-shadow:0 4px 12px rgba(0,0,0,.05); display:flex; flex-direction:column;
+    }
+    .kpi strong{ font-size:18px; color:#059669; }
+    .kpi span{ color:#64748b; font-size:13px; margin-top:4px; }
+
+    .project {
+      background:#fff; padding:20px; margin: 0 auto 24px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.05);
+      max-width: 900px;
+    }
+    .project h3 { font-size: 20px; margin: 0 0 6px; color: #111827; }
+    .project p { margin: 6px 0; font-size: 15px; }
+    .meta{ display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 10px; }
+    .pill{ font-size:12px; border:1px solid #e5e7eb; color:#334155; padding:6px 10px; border-radius:999px; background:#fff; }
+    .outcomes{ margin:10px 0 0; padding-left:18px; }
+    .outcomes li{ margin:6px 0; }
+    .links a{ font-size:14px; color:#2563eb; text-decoration:underline; display:inline-block; margin-right:12px; margin-top:6px; }
   </style>
 </head>
 <body>
@@ -46,24 +81,47 @@
         class="profile-img"
         loading="lazy"
       />
-      <h1>Hello, I'm Kimmy 👋</h1>
-      <p>Hello! I’m <strong>Kimmy Kim</strong>, a Master of Library and Information Science (MLIS) student at the University of Washington.</p>
-      <p>I explore how <strong>data, technology, and design education</strong> can come together to strengthen library and learning services, especially for children, youth, and communities.</p>
-      <p>From developing <strong>data-driven dashboards and web-based tools</strong> to leading <strong>youth engagement programs</strong> and exploring <strong>children’s and young adult literature</strong>, I’m passionate about creating inclusive and innovative ways to connect people with information.</p>
 
-      <h2>🔍 Key Interests & Skills</h2>
-      <ul>
-        <li>Data Analysis & Visualization (Power BI, Tableau, Excel)</li>
-        <li>SQL & Relational Database Design (ERD, Normalization)</li>
-        <li>Cloud Computing & Infrastructure (Azure, Serverless Concepts)</li>
-        <li>Metadata Management & Information Retrieval</li>
-        <li>Children & Youth Library Services</li>
-        <li>Digital Literacy & Community Engagement</li>
-      </ul>
+      <div class="hero">
+        <h1>I merge <em>Data Analytics</em> with <em>Library Services</em> to connect people with information.</h1>
+        <p>MLIS @ UW. I design cloud/data systems and community-centered programs—and then measure impact.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="data-projects.html">Explore Data Projects →</a>
+          <a class="btn btn-ghost" href="library-projects.html">Explore Library Projects →</a>
+        </div>
+      </div>
 
-      <h2>💡 What Drives Me</h2>
-      <p>"I believe data is not just numbers—it’s a language to understand people."</p>
-      <p>Whether through dashboards, structured databases, or youth storytime sessions, I strive to make information meaningful and inclusive.</p>
+      <div class="kpis">
+        <div class="kpi"><strong>+12% ↑</strong><span>Ad click prediction accuracy (Azure ML)</span></div>
+        <div class="kpi"><strong>−30% ↓</strong><span>SQL query time after 3NF redesign</span></div>
+        <div class="kpi"><strong>+30% ↑</strong><span>Event participation (KGSA outreach)</span></div>
+        <div class="kpi"><strong>+10% ↑</strong><span>Virtual engagement (children’s services)</span></div>
+        <div class="kpi"><strong>2,000+</strong><span>Resources cataloged (discovery +20%)</span></div>
+        <div class="kpi"><strong>112+</strong><span>Field notes coded across 9 libraries</span></div>
+      </div>
+
+      <div class="project">
+        <h3>Highlights</h3>
+        <p>Quick snapshot of what I build and measure.</p>
+        <div class="meta">
+          <span class="pill">Azure ML</span>
+          <span class="pill">SQL • 3NF</span>
+          <span class="pill">Tableau/Power BI</span>
+          <span class="pill">Participatory Design</span>
+          <span class="pill">Youth Programs</span>
+        </div>
+        <ul class="outcomes">
+          <li>Built a real-time ad click prediction pipeline (Azure) improving accuracy <strong>+12%</strong>.</li>
+          <li>Normalized retail DB (3NF) reducing query time <strong>−30%</strong> and speeding transactions.</li>
+          <li>Co-developed multilingual conversation circles ($<strong>15K</strong>) advancing DEI with SJSU & SJPL.</li>
+          <li>Synthesized teen program data across <strong>9 libraries</strong>; coded <strong>112+</strong> field notes.</li>
+        </ul>
+        <div class="links">
+          <a href="data-projects.html">View Data Projects</a>
+          <a href="library-projects.html">View Library Projects</a>
+          <a href="community.html">Community & Leadership</a>
+        </div>
+      </div>
 
       <h2>📮 Let’s Connect</h2>
       <div class="contact-section">
