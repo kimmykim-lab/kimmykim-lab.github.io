@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Certifications | Kimmy Kim</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <h1><a href="index.html">Kimmy Kim</a></h1>
-      <ul class="menu">
-        <li>
-          <span class="dropdown-toggle">📂 Projects</span>
-          <ul class="submenu">
-            <li><a href="data-projects.html">📊 Data</a></li>
-            <li><a href="library-projects.html">📖 Library</a></li>
-          </ul>
-        </li>
-        <li><a href="course.html">📚 Course</a></li>
-        <li class="open">
-          <span class="dropdown-toggle">💬 Extra Curricular</span>
-          <ul class="submenu">
-            <li><a href="community.html">🤝 Community</a></li>
-            <li><a href="certifications.html" class="active">✅ Certifications</a></li>
-          </ul>
-        </li>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">Kimmy Kim</div>
+    <div class="nav-group">
+      <div class="nav-label">Projects</div>
+      <ul class="nav">
+        <li><a href="data-projects.html" id="nav-data"><span class="ico">📊</span>Data</a></li>
+        <li><a href="library-projects.html" id="nav-library"><span class="ico">📖</span>Library</a></li>
+        <li><a href="course.html" id="nav-course"><span class="ico">📚</span>Course</a></li>
       </ul>
     </div>
-
-    <div class="main">
-      <h2 class="section-title">✅ Certifications</h2>
-
-      <div class="project">
-        <h3>Satisfied Chinese Language Proficiency (HSK 5)</h3>
-        <p><strong>Issuer:</strong> Center for Language Education and Cooperation</p>
-        <p><strong>Issued:</strong> Aug 2022</p>
-      </div>
-
-      <div class="project">
-        <h3>Satisfied Librarian</h3>
-        <p><strong>Issuer:</strong> Korean Library Association</p>
-        <p><strong>Issued:</strong> Aug 2022</p>
-        <p><strong>Credential ID:</strong> 069147</p>
-      </div>
+    <div class="nav-group">
+      <div class="nav-label dim">Extra</div>
+      <ul class="nav">
+        <li><a href="extra.html" id="nav-extra"><span class="ico">💬</span>Extra Curricular</a></li>
+        <li><a href="community.html" id="nav-community"><span class="ico">🤝</span>Community</a></li>
+        <li><a href="certifications.html" id="nav-cert" class="active"><span class="ico">✅</span>Certifications</a></li>
+      </ul>
     </div>
-  </div>
+  </aside>
 
-  <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(t =>
-      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
-    );
-  </script>
+  <!-- Main -->
+  <main class="main">
+    <h1>✅ Certifications</h1>
+
+    <article class="card">
+      <h3>Chinese Language Proficiency Test (HSK 5)</h3>
+      <p class="lead">Issued Aug 2022 by Center for Language Education and Cooperation</p>
+      <ul class="tight">
+        <li>Achieved HSK Level 5, demonstrating advanced proficiency in Mandarin Chinese.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Professional Librarian Certification</h3>
+      <p class="lead">Issued Aug 2022 by Korean Library Association</p>
+      <ul class="tight">
+        <li>Credential ID: 069147</li>
+        <li>Certified for professional practice as a librarian in Korea.</li>
+      </ul>
+    </article>
+
+  </main>
 </body>
 </html>
