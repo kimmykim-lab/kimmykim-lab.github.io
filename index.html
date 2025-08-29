@@ -9,21 +9,25 @@
     :root{
       --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --card:#ffffff; 
       --accent:#7C3AED; --ring: rgba(124,58,237,.2);
-      --radius: 18px;
+      --radius: 18px; --sidebar:#4C1D95; --sidebarText:#EDE9FE; --sidebarMuted:#C4B5FD;
     }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 
       Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
 
+    .layout{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+    aside{background:var(--sidebar);color:var(--sidebarText);padding:28px 20px;position:sticky;top:0;height:100vh}
+    .brand{font-weight:800;font-size:20px;margin:0 0 20px}
+    .nav a{display:block;color:var(--sidebarText);text-decoration:none;padding:8px 10px;border-radius:10px;margin:2px 0}
+    .nav a:hover{background:rgba(255,255,255,.1)}
+
     main{padding:36px 28px}
     .container{max-width:920px;margin:0 auto}
 
-    /* CARDS */
     .card{background:var(--card);border-radius:var(--radius);
       box-shadow:0 10px 30px rgba(2,6,23,.06);}
 
-    /* HERO */
     .hero{display:grid;grid-template-columns:200px 1fr;gap:28px;
       padding:28px;align-items:center}
     .avatar{width:200px;height:200px;border-radius:50%;object-fit:cover;
@@ -39,7 +43,6 @@
       text-decoration:none}
     .pill:hover,.pill:focus{box-shadow:0 0 0 6px rgba(245,158,11,.2)}
 
-    /* SECTIONS */
     .section{margin-top:24px;padding:20px 24px}
     .section h2{margin:0 0 10px;font-size:20px}
     .section p{margin:8px 0;color:var(--muted)}
@@ -52,67 +55,74 @@
     footer{margin:36px auto 60px;color:var(--muted);
       text-align:center;max-width:920px}
 
-    @media (max-width:680px){
-      .hero{grid-template-columns:1fr}
-      .avatar{margin-inline:auto}
-    }
+    @media (max-width:960px){.layout{grid-template-columns:1fr}aside{position:relative;height:auto;border-bottom:1px solid #0f172a33}.brand{margin-bottom:8px}}
+    @media (max-width:680px){.hero{grid-template-columns:1fr}.avatar{margin-inline:auto}}
   </style>
 </head>
 <body>
-  <main>
-    <div class="container">
-      <!-- HERO -->
-      <section class="card hero">
-        <img src="Photo_Kimmy.jpg" 
-             alt="Kimmy (Minju) Kim portrait" 
-             width="200" height="200" 
-             loading="eager" 
-             class="avatar" />
-        <div>
-          <h2 class="title">Hi, I’m Kimmy Kim 👋🏻</h2>
-          <p class="subtitle">I believe data becomes powerful when it helps real communities thrive. I design systems, programs, and spaces where insights turn into impact.</p>
-          <div class="note">Download my resumes:
-            <a class="pill" href="assets/resume/Kimmy_Kim_Resume_Data.pdf" target="_blank" rel="noopener">Resume · Data</a>
-            <a class="pill" href="assets/resume/Kimmy_Kim_Resume_Library.pdf" target="_blank" rel="noopener">Resume · Library</a>
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside>
+      <h1 class="brand">Kimmy Kim</h1>
+      <nav class="nav">
+        <a href="data-projects.html">Data Projects</a>
+        <a href="library-projects.html">Library Projects</a>
+        <a href="community.html">Community & Leadership</a>
+        <a href="certifications.html">Certifications</a>
+      </nav>
+    </aside>
+
+    <main>
+      <div class="container">
+        <!-- HERO -->
+        <section class="card hero">
+          <img src="Photo_Kimmy.jpg" alt="Kimmy (Minju) Kim portrait" width="200" height="200" loading="eager" class="avatar" />
+          <div>
+            <h2 class="title">Hi, I’m Kimmy Kim 👋🏻</h2>
+            <p class="subtitle">I believe data becomes powerful when it helps real communities thrive. I design systems, programs, and spaces where insights turn into impact.</p>
+            <div class="note">Download my resumes:
+              <a class="pill" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume - Data</a>
+              <a class="pill" href="MINJU_KIM_Resume%20(Library).pdf" target="_blank" rel="noopener">Resume - Library</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- RESEARCH INTERESTS -->
-      <section class="card section">
-        <h2>Research Interests</h2>
-        <ul class="clean">
-          <li>Data Analytics and Visualization</li>
-          <li>Artificial Intelligence in Education (e.g., AI app development, learner analytics)</li>
-          <li>Educational Technology &amp; Learning Analytics</li>
-          <li>Data Science for Social Good</li>
-          <li>Data Management</li>
-          <li>Participatory Design &amp; Evaluation</li>
-        </ul>
-      </section>
+        <!-- RESEARCH INTERESTS -->
+        <section class="card section">
+          <h2>Research Interests</h2>
+          <ul class="clean">
+            <li>Data Analytics and Visualization</li>
+            <li>Artificial Intelligence in Education (e.g., AI app development, learner analytics)</li>
+            <li>Educational Technology &amp; Learning Analytics</li>
+            <li>Data Science for Social Good</li>
+            <li>Data Management</li>
+            <li>Participatory Design &amp; Evaluation</li>
+          </ul>
+        </section>
 
-      <!-- ABOUT ME -->
-      <section class="card section">
-        <h2>My Story (Why I chose this path)</h2>
-        <p>I first studied Library and Information Science as an undergraduate in Korea, where I developed a strong interest in how knowledge and information can transform people’s lives. Over time, I became more drawn to the fields of data analysis, data visualization, data management, and educational technology. I realized that data is not just a record of numbers, but a tool for explaining human experiences and change.</p>
-        <p>Through hands-on experiences working with libraries, community programs, and data-related projects, I saw how even small improvements driven by data could significantly increase participation and inclusion. More recently, I’ve also become interested in combining artificial intelligence with education—for example, developing AI-powered learning apps or analyzing learner behavior data to explore how technology can create more personalized and meaningful learning experiences.</p>
-      </section>
+        <!-- ABOUT ME -->
+        <section class="card section">
+          <h2>My Story (Why I chose this path)</h2>
+          <p>I first studied Library and Information Science as an undergraduate in Korea, where I developed a strong interest in how knowledge and information can transform people’s lives. Over time, I became more drawn to the fields of data analysis, data visualization, data management, and educational technology. I realized that data is not just a record of numbers, but a tool for explaining human experiences and change.</p>
+          <p>Through hands-on experiences working with libraries, community programs, and data-related projects, I saw how even small improvements driven by data could significantly increase participation and inclusion. More recently, I’ve also become interested in combining artificial intelligence with education—for example, developing AI-powered learning apps or analyzing learner behavior data to explore how technology can create more personalized and meaningful learning experiences.</p>
+        </section>
 
-      <!-- VALUES -->
-      <section class="card section">
-        <h2>My Values and Personality</h2>
-        <p>I value inclusivity, curiosity, and collaboration. For me, research and technology matter most when they create spaces where people feel connected and welcomed. Whether I’m designing a database, building a dashboard, or supporting a storytime program, I make it a priority to listen closely to diverse voices and ensure they are reflected in the work I do.</p>
-      </section>
+        <!-- VALUES -->
+        <section class="card section">
+          <h2>My Values and Personality</h2>
+          <p>I value inclusivity, curiosity, and collaboration. For me, research and technology matter most when they create spaces where people feel connected and welcomed. Whether I’m designing a database, building a dashboard, or supporting a storytime program, I make it a priority to listen closely to diverse voices and ensure they are reflected in the work I do.</p>
+        </section>
 
-      <!-- CONTACT -->
-      <section class="card section">
-        <h2>Let’s Connect</h2>
-        <p>Email: <a class="link" href="mailto:kimmy.minju.kim@gmail.com">kimmy.minju.kim@gmail.com</a> · UW: <a class="link" href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a> · <a class="link" href="https://www.linkedin.com/in/kimmykim-uw/" target="_blank" rel="noopener">LinkedIn</a></p>
-      </section>
+        <!-- CONTACT -->
+        <section class="card section">
+          <h2>Let’s Connect</h2>
+          <p>Email: <a class="link" href="mailto:kimmy.minju.kim@gmail.com">kimmy.minju.kim@gmail.com</a> · UW: <a class="link" href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a> · <a class="link" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a></p>
+        </section>
 
-      <footer>© <span id="y"></span> Kimmy Kim</footer>
-    </div>
-  </main>
+        <footer>© <span id="y"></span> Kimmy Kim</footer>
+      </div>
+    </main>
+  </div>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
