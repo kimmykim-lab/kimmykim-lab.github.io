@@ -5,40 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Data projects by Kimmy Kim — ad click prediction pipeline, Netflix recommendation analysis, SQL retail database. Outcomes with measurable impact and linked deliverables." />
+  <meta name="description" content="Ad click prediction pipeline, Netflix recommendation analysis, SQL retail database." />
 </head>
 <body>
   <div class="container">
-    <!-- === Sidebar === -->
     <aside class="sidebar">
-      <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
-      <nav class="nav">
-        <!-- Projects -->
+      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
+      <nav>
         <button class="nav-toggle" data-target="#projects-sub">
           <span class="triangle">▶</span><span>Projects</span>
         </button>
         <ul id="projects-sub" class="submenu">
-          <li><a href="data-projects.html" class="active" data-id="data">Data</a></li>
-          <li><a href="library-projects.html" data-id="library">Library</a></li>
+          <li><a class="nav-link active" href="data-projects.html" data-id="data">Data</a></li>
+          <li><a class="nav-link" href="library-projects.html" data-id="library">Library</a></li>
         </ul>
-
-        <!-- Extra Curricular -->
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
-          <li><a href="community.html" data-id="community">Community</a></li>
-          <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
+          <li><a class="nav-link" href="community.html" data-id="community">Community</a></li>
+          <li><a class="nav-link" href="certifications.html" data-id="certifications">Certifications</a></li>
         </ul>
-
-        <!-- Courses -->
-        <a href="courses.html" class="top-link" data-id="courses">Courses</a>
+        <a href="course.html" class="top-link" data-id="courses">Courses</a>
       </nav>
     </aside>
 
-    <!-- === Main === -->
     <main class="main">
-      <!-- Top-right chips -->
       <div class="page-actions">
         <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="chip chip-action" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume — Data</a>
@@ -48,16 +40,15 @@
         <div class="section-label"><span class="dot"></span>Data Projects</div>
       </header>
 
-      <!-- Card 1 -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Ad Click Prediction Using Cloud ML</h2>
           <p class="project-meta">Azure ML Designer · Python · Real-time architecture</p>
         </div>
         <ul class="project-points">
-          <li>Built an end-to-end pipeline (ingest → preprocess → train/score → endpoint) tailored for ad-click prediction in media &amp; entertainment.</li>
-          <li>Deployed a prototype using Azure Language resource + ML pipeline; evaluated with 10k+ ad events in testing.</li>
-          <li><strong>Impact:</strong> Instant scoring shortened campaign decision cycles by ~30% and produced a reusable ML pipeline template.</li>
+          <li>End-to-end pipeline (ingest → preprocess → train/score → endpoint) for ad-click prediction.</li>
+          <li>Deployed prototype with Azure Language + ML pipeline; evaluated on 10k+ events.</li>
+          <li><strong>Impact:</strong> Reduced decision cycle by ~30% and produced a reusable template.</li>
         </ul>
         <div class="btn-row">
           <a class="btn" href="ad-click-slides.pdf" target="_blank" rel="noopener">Slides</a>
@@ -65,16 +56,15 @@
         </div>
       </section>
 
-      <!-- Card 2 -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Netflix Recommendation Analysis</h2>
           <p class="project-meta">EDA · System diagram · Evaluation framework</p>
         </div>
         <ul class="project-points">
-          <li>Mapped data schema and key signals (popularity, recency, genre affinity) to align with recommendation goals.</li>
-          <li>Produced evaluation diagram and stakeholder-ready slides for model assessment &amp; communication.</li>
-          <li><strong>Outcome:</strong> Clear evaluation criteria that improved model interpretability for non-technical teams.</li>
+          <li>Mapped data schema & signals (popularity, recency, genre affinity) to goals.</li>
+          <li>Produced evaluation diagram and stakeholder-ready slides.</li>
+          <li><strong>Outcome:</strong> Clear criteria that improved interpretability.</li>
         </ul>
         <div class="btn-row">
           <a class="btn" href="Netflix%20Diagram.pdf" target="_blank" rel="noopener">System Diagram</a>
@@ -82,16 +72,15 @@
         </div>
       </section>
 
-      <!-- Card 3 -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Online Shopping Retail Database (ERD → Queries)</h2>
           <p class="project-meta">MySQL · ERD · SQL</p>
         </div>
         <ul class="project-points">
-          <li>Designed a normalized schema for customers, orders, and products with relationships &amp; constraints.</li>
-          <li>Developed 20+ optimized queries (basket analysis, RFM segmentation) against a 5k+ transaction dataset.</li>
-          <li><strong>Outcome:</strong> Delivered actionable customer-segment insights with final ERD &amp; production-ready SQL scripts.</li>
+          <li>Designed normalized schema with relationships & constraints.</li>
+          <li>Developed 20+ optimized queries (basket analysis, RFM) on 5k+ transactions.</li>
+          <li><strong>Outcome:</strong> Actionable segment insights with final ERD & SQL scripts.</li>
         </ul>
         <div class="btn-row">
           <a class="btn" href="Online%20Retail-slides.pdf" target="_blank" rel="noopener">Slides</a>
@@ -108,15 +97,10 @@
   </div>
 
   <script>
-    // 푸터 연도
     document.getElementById('year').textContent = new Date().getFullYear();
-
     (function () {
-      // 1) 기본: 서브메뉴 접기
       document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
       document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
-
-      // 2) 토글 동작
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
@@ -126,22 +110,13 @@
           tri.textContent = open ? '▶' : '▼';
         });
       });
-
-      // 3) 현재 페이지(Data) 활성화 & Projects 자동 펼침
-      const currentLink = document.querySelector('a[href="data-projects.html"]');
-      if (currentLink) {
-        currentLink.classList.add('active');
-        const projectsSub = document.querySelector('#projects-sub');
-        const projectsTri = document.querySelector('button[data-target="#projects-sub"] .triangle');
-        if (projectsSub) projectsSub.style.display = 'block';
-        if (projectsTri) projectsTri.textContent = '▼';
-      }
-
-      // 4) 라벨 고정
-      const d = document.querySelector('a[href="data-projects.html"]');
-      const l = document.querySelector('a[href="library-projects.html"]');
-      if (d) d.textContent = 'Data';
-      if (l) l.textContent = 'Library';
+      const d = document.querySelector('a[href="data-projects.html"]'); if (d) d.textContent = 'Data';
+      const l = document.querySelector('a[href="library-projects.html"]'); if (l) l.textContent = 'Library';
+      // open Projects + mark active
+      const btn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
+      const ul = document.querySelector('#projects-sub');
+      if (btn && ul) { ul.style.display = 'block'; btn.querySelector('.triangle').textContent = '▼'; }
+      const active = document.querySelector('[data-id="data"]'); if (active) active.classList.add('active');
     })();
   </script>
 </body>
