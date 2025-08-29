@@ -1,77 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Community & Leadership | Kimmy Kim</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Kimmy Kim — MLIS @ UW. Community and leadership: KGSA Secretary (+30% participation), iSchool storytelling event volunteer (+15% attendance), campus service design for RSOs (−25% turnaround, −20% processing time)." />
 </head>
 <body>
-
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="brand">Kimmy Kim</div>
-    <div class="nav-group">
-      <div class="nav-label">Projects</div>
-      <ul class="nav">
-        <li><a href="data-projects.html" id="nav-data"><span class="ico">📊</span>Data</a></li>
-        <li><a href="library-projects.html" id="nav-library"><span class="ico">📖</span>Library</a></li>
-        <li><a href="course.html" id="nav-course"><span class="ico">📚</span>Course</a></li>
+  <div class="container">
+    <div class="sidebar">
+      <h1><a href="index.html">Kimmy Kim</a></h1>
+      <ul class="menu">
+        <li>
+          <span class="dropdown-toggle">📂 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html">📊 Data</a></li>
+            <li><a href="library-projects.html">📖 Library</a></li>
+          </ul>
+        </li>
+        <li><a href="course.html">📚 Course</a></li>
+        <li class="open">
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a class="active" href="community.html" aria-current="page">🤝 Community</a></li>
+            <li><a href="certifications.html">✅ Certifications</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
-    <div class="nav-group">
-      <div class="nav-label dim">Extra</div>
-      <ul class="nav">
-        <li><a href="extra.html" id="nav-extra"><span class="ico">💬</span>Extra Curricular</a></li>
-        <li><a href="community.html" id="nav-community" class="active"><span class="ico">🤝</span>Community</a></li>
-        <li><a href="certifications.html" id="nav-cert"><span class="ico">✅</span>Certifications</a></li>
-      </ul>
+
+    <div class="main">
+      <h2 class="section-title">🤝 Community & Leadership</h2>
+
+      <!-- KGSA -->
+      <div class="project">
+        <h3>Korean Graduate Student Association (Secretary)</h3>
+        <p><strong>Summary:</strong> Led data-driven outreach and event operations for UW KGSA.</p>
+        <div class="meta">
+          <span class="pill">Budget & Ops</span>, 
+          <span class="pill">Survey-driven Outreach</span>, 
+          <span class="pill">Community Building</span>
+        </div>
+        <ul class="outcomes">
+          <li>Increased event participation <strong>+30%</strong> via targeted messaging, optimal scheduling, and channel mix.</li>
+          <li>Standardized vendor/comms workflows; reduced coordination delays across multi-event calendar.</li>
+        </ul>
+      </div>
+
+      <!-- Storytelling Event Volunteer — iSchool -->
+      <div class="project">
+        <img src="VolunteerPhoto.jpg" alt="Storytelling Event Volunteer group photo" style="max-width:900px;width:100%;display:block;margin:0 auto 14px;border-radius:12px;">
+        <h3>Storytelling Event Volunteer — iSchool Community</h3>
+        <p><strong>Summary:</strong> Coordinated logistics and supported storytelling sessions within the UW iSchool community.</p>
+        <div class="meta">
+          <span class="pill">Youth Services</span>, 
+          <span class="pill">Program Logistics</span>, 
+          <span class="pill">Family Engagement</span>
+        </div>
+        <ul class="outcomes">
+          <li>Raised session attendance by <strong>+15%</strong> through outreach and on-site facilitation.</li>
+          <li>Improved check-in flow and space setup for smoother participant experience.</li>
+        </ul>
+        <div class="links">
+          <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">
+            📄 Related News: Christian Robinson and the Power of Stories
+          </a>
+        </div>
+      </div>
+
+      <!-- Campus Service Design — Vinyl Banner (Resource Center) -->
+      <div class="project">
+        <h3>Campus Service Design — Vinyl Banner Printing (Resource Center)</h3>
+        <p><strong>Summary:</strong> Spearheaded the launch and operations of the Vinyl Banner service with Creative Communications (C2) as part of my Student Assistant role at the UW HUB Resource Center.</p>
+        <div class="meta">
+          <span class="pill">Service Design</span>, 
+          <span class="pill">Process Automation</span>, 
+          <span class="pill">Excel Dashboards</span>, 
+          <span class="pill">Workflow Optimization</span>
+        </div>
+        <ul class="outcomes">
+          <li>Implemented request forms & tracking systems, reducing turnaround time by <strong>−25%</strong> and streamlining services for <strong>200+ RSOs</strong>.</li>
+          <li>Improved data accuracy by <strong>+15%</strong> through Excel-based dashboards, reducing banner inventory and order errors.</li>
+          <li>Automated reporting workflows for order status and throughput, cutting processing time by <strong>−20%</strong> and enabling faster decisions.</li>
+          </ul>
+        <div class="links">
+          <a href="https://hub.washington.edu/get-involved/the-sorc/" target="_blank" rel="noopener">
+            🔗 UW HUB – Student Org Resource Center (SORC)
+          </a>
+        </div>
+      </div>
+
     </div>
-  </aside>
+  </div>
 
-  <!-- Main -->
-  <main class="main">
-    <h1>🤝 Community &amp; Leadership</h1>
-
-    <!-- KGSA -->
-    <article class="card">
-      <h3>Korean Graduate Student Association (Secretary)</h3>
-      <p class="lead">UW Korean Graduate Student Association — community operations & outreach</p>
-      <ul class="tight">
-        <li>Increased event participation <strong>+30%</strong> through targeted messaging, channel mix, and timing optimization.</li>
-        <li>Standardized vendor/comms workflows; accelerated approvals and reduced coordination delays across multi-event calendar.</li>
-        <li>Tracked budgets and attendance; produced quick post-event summaries for future planning.</li>
-      </ul>
-    </article>
-
-    <!-- Storytelling Event Volunteer -->
-    <article class="card">
-      <h3>Storytelling Event Volunteer — iSchool Community</h3>
-      <p class="lead">Logistics, facilitation support, and inclusive program design</p>
-      <ul class="tight">
-        <li>Coordinated room setup, run-of-show, and session timing to support smooth facilitation.</li>
-        <li>Designed welcoming check-in flow and prompts that helped raise attendance by <strong>~15%</strong>.</li>
-        <li>Collected informal feedback to refine future engagement activities.</li>
-      </ul>
-      <!-- 선택 이미지: 너무 크게 보이지 않도록 width 100% + auto height -->
-      <img src="community-photo.jpg" alt="Storytelling event" style="width:100%;height:auto;border:1px solid var(--border);border-radius:12px;margin-top:8px">
-    </article>
-
-    <!-- Vinyl Banner Printing Project (Leadership/Operations) -->
-    <article class="card">
-      <h3>Vinyl Banner Printing Project — Resource Center Service Launch</h3>
-      <p class="lead">Launched and operated a new banner printing service in partnership with Creative Communications (C2)</p>
-      <ul class="tight">
-        <li>Implemented request Forms &amp; tracking system; cut request turnaround time <strong>−25%</strong>.</li>
-        <li>Streamlined coordination &amp; approvals; reduced processing time <strong>−20%</strong>.</li>
-        <li>Served <strong>200+ RSOs</strong> with clear guidelines and predictable delivery windows.</li>
-      </ul>
-      <p class="links">
-        <a href="banner-guidelines.pdf">📄 Service Guidelines</a>
-        <a href="banner-request-form.html">📝 Request Form</a>
-      </p>
-    </article>
-
-  </main>
+  <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(t =>
+      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
+    );
+  </script>
 </body>
 </html>
