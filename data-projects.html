@@ -1,108 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Data Projects | Kimmy Kim</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — MLIS @ UW. Data projects in Azure ML, SQL/BI, and recommender systems with measurable impact: +12% model accuracy, −30% query time, retention insights." />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <h1><a href="index.html">Kimmy Kim</a></h1>
-      <ul class="menu">
-        <li class="open">
-          <span class="dropdown-toggle">📂 Projects</span>
-          <ul class="submenu">
-            <li><a class="active" href="data-projects.html">📊 Data</a></li>
-            <li><a href="library-projects.html">📖 Library</a></li>
-          </ul>
-        </li>
-        <li><a href="course.html">📚 Course</a></li>
-        <li>
-          <span class="dropdown-toggle">💬 Extra Curricular</span>
-          <ul class="submenu">
-            <li><a href="community.html">🤝 Community</a></li>
-            <li><a href="certifications.html">✅ Certifications</a></li>
-          </ul>
-        </li>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">Kimmy Kim</div>
+    <div class="nav-group">
+      <div class="nav-label">Projects</div>
+      <ul class="nav">
+        <li><a href="data-projects.html" id="nav-data" class="active"><span class="ico">📊</span>Data</a></li>
+        <li><a href="library-projects.html" id="nav-library"><span class="ico">📖</span>Library</a></li>
+        <li><a href="course.html" id="nav-course"><span class="ico">📚</span>Course</a></li>
       </ul>
     </div>
-
-    <div class="main">
-      <h2 class="section-title">📊 Data Projects</h2>
-
-      <div class="project">
-        <h3>Ad Click Prediction Using Cloud-Based Machine Learning</h3>
-        <p><strong>Summary:</strong> Built a real-time ad click prediction system on Azure for the media & entertainment context. End-to-end cloud pipeline with monitoring, A/B testing, and BI dashboards.</p>
-        <div class="meta">
-          <span class="pill">Azure ML Designer</span>, 
-          <span class="pill">Stream Analytics</span>, 
-          <span class="pill">Data Factory</span>, 
-          <span class="pill">Azure SQL</span>, 
-          <span class="pill">Power BI</span>, 
-          <span class="pill">Web Endpoints</span>
-        </div>
-        <ul class="outcomes">
-          <li>Improved click prediction accuracy <strong>+12%</strong> through feature engineering and iterative evaluation.</li>
-          <li>Designed GDPR/ISO-aligned architecture; exposed REST endpoints for product integration.</li>
-          <li>Implemented A/B testing and real-time dashboards to accelerate marketing decisions.</li>
-        </ul>
-        <div class="links">
-          <a href="ad-click-paper.pdf" target="_blank">📄 Final Paper (PDF)</a>
-          <a href="ad-click-slides.pdf" target="_blank">🖥️ Presentation Slides (PDF)</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>Online Retail SQL Database Project</h3>
-        <p><strong>Summary:</strong> Designed and implemented a fully normalized (3NF) relational database for a women’s fashion e-commerce platform; delivered BI reporting for sales and operations.</p>
-        <div class="meta">
-          <span class="pill">SQL</span>, 
-          <span class="pill">DBeaver</span>, 
-          <span class="pill">Lucidchart (ERD)</span>, 
-          <span class="pill">Tableau</span>, 
-          <span class="pill">3NF</span>
-        </div>
-        <ul class="outcomes">
-          <li>Reduced query time <strong>−30%</strong> via indexing and schema normalization; improved transaction efficiency.</li>
-          <li>Shipped dashboards for cohort trends, inventory status, and supply-chain reporting.</li>
-        </ul>
-        <div class="links">
-          <a href="Initial%20ERD%20%26%20Design%20Proposal.pdf" target="_blank">📄 Initial ERD & Design Proposal</a>
-          <a href="Online%20Retail_Final%20ERD.pdf" target="_blank">📄 Final ERD</a>
-          <a href="Online%20Retail_Final%20SQL.pdf" target="_blank">📄 Final SQL</a>
-          <a href="Online%20Retail-slides.pdf" target="_blank">🖥️ Final Presentation</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>Analyzing Netflix’s Recommendation System</h3>
-        <p><strong>Summary:</strong> Mapped Netflix’s hybrid recommendation pipeline (content-based + collaborative) and examined how metadata and behavior signals influence ranking.</p>
-        <div class="meta">
-          <span class="pill">Lucidchart</span>, 
-          <span class="pill">Information Architecture</span>, 
-          <span class="pill">Recommenders</span>, 
-          <span class="pill">Data Modeling</span>
-        </div>
-        <ul class="outcomes">
-          <li>Identified personalization bias and retention gaps; produced design recommendations to improve relevance and engagement.</li>
-          <li>Created architecture diagrams (ERD) and a stakeholder presentation.</li>
-        </ul>
-        <div class="links">
-          <a href="Netflix%20Diagram.pdf" target="_blank">📄 ERD Diagram (PDF)</a>
-          <a href="Netflix-slides.pdf" target="_blank">🖥️ Presentation Slides (PDF)</a>
-        </div>
-      </div>
-
+    <div class="nav-group">
+      <div class="nav-label dim">Extra</div>
+      <ul class="nav">
+        <li><a href="extra.html" id="nav-extra"><span class="ico">💬</span>Extra Curricular</a></li>
+        <li><a href="community.html" id="nav-community"><span class="ico">🤝</span>Community</a></li>
+        <li><a href="certifications.html" id="nav-cert"><span class="ico">✅</span>Certifications</a></li>
+      </ul>
     </div>
-  </div>
+  </aside>
 
-  <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(t =>
-      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
-    );
-  </script>
+  <!-- Main -->
+  <main class="main">
+    <h1>📊 Data Projects</h1>
+
+    <article class="card">
+      <h3>Ad Click Prediction Using Cloud-Based Machine Learning</h3>
+      <p><strong>Summary:</strong> Built a real-time ad click prediction system on Azure for the media &amp; entertainment industry.</p>
+      <ul class="tight">
+        <li>Improved click prediction accuracy by <strong>+12%</strong> using Azure ML pipelines.</li>
+        <li>Designed GDPR/ISO-aligned cloud architecture with multicloud assessment.</li>
+        <li>Implemented real-time dashboards for campaign monitoring.</li>
+      </ul>
+      <p class="links">
+        <a href="adclick-paper.pdf">📄 Final Paper (PDF)</a>
+        <a href="adclick-slides.pdf">🖥️ Presentation Slides</a>
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Online Retail SQL Database Project</h3>
+      <p><strong>Summary:</strong> Designed and implemented a normalized (3NF) retail database to analyze customer purchase patterns.</p>
+      <ul class="tight">
+        <li>Reduced query execution time by <strong>30%</strong> with optimized indexing.</li>
+        <li>Developed cohort dashboards to identify seasonal shopping trends.</li>
+      </ul>
+      <p class="links">
+        <a href="retail-erd-proposal.pdf">📄 ERD Proposal</a>
+        <a href="retail-erd.pdf">📄 Final ERD</a>
+        <a href="retail-sql.pdf">📄 SQL Code</a>
+        <a href="retail-presentation.pdf">🖥️ Final Presentation</a>
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Analyzing Netflix’s Recommendation System</h3>
+      <p><strong>Summary:</strong> Investigated Netflix’s hybrid recommendation pipeline and examined ranking signals.</p>
+      <ul class="tight">
+        <li>Identified personalization biases impacting discovery of niche titles.</li>
+        <li>Created ERD diagrams and presented insights to stakeholders.</li>
+      </ul>
+      <p class="links">
+        <a href="netflix-erd.pdf">📄 ERD Diagram</a>
+        <a href="netflix-slides.pdf">🖥️ Presentation Slides</a>
+      </p>
+    </article>
+
+  </main>
 </body>
 </html>
