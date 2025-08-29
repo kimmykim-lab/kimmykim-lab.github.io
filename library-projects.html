@@ -12,14 +12,14 @@
       <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
       <nav class="nav">
         <button class="nav-toggle" data-target="#projects-sub">
-          <span class="triangle">▶</span> <span>Projects</span>
+          <span class="triangle">▶</span><span>Projects</span>
         </button>
         <ul id="projects-sub" class="submenu">
           <li><a href="data-projects.html" data-id="data">Data</a></li>
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
         <button class="nav-toggle" data-target="#extra-sub">
-          <span class="triangle">▶</span> <span>Extra Curricular</span>
+          <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
           <li><a href="community.html" data-id="community">Community</a></li>
@@ -31,28 +31,37 @@
 
     <main class="main">
       <h2>Library Projects</h2>
-      <!-- 라이브러리 프로젝트 컨텐츠 -->
+      <!-- Your content -->
     </main>
   </div>
 
   <script>
     (function () {
       const page = 'library-projects.html';
-      const toggleBtns = document.querySelectorAll('.nav-toggle');
-      toggleBtns.forEach(btn => {
+
+      document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
-          const target = document.querySelector(btn.dataset.target);
+          const ul = document.querySelector(btn.dataset.target);
           const tri = btn.querySelector('.triangle');
-          const isOpen = target.style.display === 'block';
-          target.style.display = isOpen ? 'none' : 'block';
-          tri.textContent = isOpen ? '▶' : '▼';
+          const open = ul.style.display === 'block';
+          ul.style.display = open ? 'none' : 'block';
+          tri.textContent = open ? '▶' : '▼';
         });
       });
-      function openMenu(sel){ const btn=document.querySelector(sel); const ul=document.querySelector(btn.dataset.target); const tri=btn.querySelector('.triangle'); ul.style.display='block'; tri.textContent='▼'; }
-      openMenu('.nav-toggle[data-target="#projects-sub"]');
+
+      const btn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
+      if (btn) {
+        const ul = document.querySelector('#projects-sub');
+        const tri = btn.querySelector('.triangle');
+        ul.style.display = 'block';
+        tri.textContent = '▼';
+      }
       document.querySelector('[data-id="library"]').classList.add('active');
-      document.querySelector('a[href="data-projects.html"]').textContent='Data';
-      document.querySelector('a[href="library-projects.html"]').textContent='Library';
+
+      const d = document.querySelector('a[href="data-projects.html"]');
+      const l = document.querySelector('a[href="library-projects.html"]');
+      if (d) d.textContent = 'Data';
+      if (l) l.textContent = 'Library';
     })();
   </script>
 </body>
