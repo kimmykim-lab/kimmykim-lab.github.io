@@ -3,60 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Data Projects | Kimmy Kim</title>
+  <title>📊 Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
       <h1 class="brand">Kimmy Kim</h1>
+
+      <details open>
+        <summary>📁 Projects</summary>
+        <ul class="subnav">
+          <li><a class="active" href="data-projects.html">📊 Data</a></li>
+          <li><a href="library-projects.html">📚 Library</a></li>
+        </ul>
+      </details>
+
+      <div class="divider"></div>
+      <div class="group-label">💬 Extra Curricular</div>
       <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <details open>
-            <summary>Projects</summary>
-            <ul class="subnav">
-              <li><a class="active" href="data-projects.html">Data Projects</a></li>
-              <li><a href="library-projects.html">Library Projects</a></li>
-              <li><a href="community.html">Community</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a href="course.html">Courses</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="community.html">🤝 Community</a></li>
+        <li><a href="certifications.html">📜 Certifications</a></li>
       </ul>
     </aside>
 
     <main class="main">
       <div class="header">
-        <span class="badge page-title">Data Projects</span>
+        <span class="badge">📊 Data Projects</span>
         <div class="btn-row">
           <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn-outline btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume – Data</a>
         </div>
       </div>
 
-      <section id="ads" class="card" style="margin-bottom:18px;">
+      <section id="ads" class="card" style="margin-bottom:16px;">
         <h1>Ad Click Prediction Using Cloud ML</h1>
         <p class="meta">Azure ML Designer • Python • Real-time architecture</p>
         <ul class="list">
-          <li>Designed a full cloud architecture (ingest → preprocess → train/score → endpoint) tailored to media & entertainment ad clicks.</li>
-          <li>Deployed working demo with Azure Language resource for sentiment and ML pipeline for predictions.</li>
-          <li><strong>Impact:</strong> Documented system boosts campaign decision-speed by enabling instant scoring; architecture reusable across use cases.</li>
+          <li>Designed ingest → preprocess → train/score → endpoint pipeline tailored to media & entertainment ad clicks.</li>
+          <li>Deployed demo with Azure Language resource + ML pipeline for predictions.</li>
+          <li><strong>Impact:</strong> Instant scoring enables faster campaign decisions; reusable pipeline template.</li>
         </ul>
         <div class="kpis">
-          <span class="pill">Reusable pipeline template</span>
-          <span class="pill">End-to-end diagram completed</span>
-          <span class="pill">Demo app validated</span>
+          <span class="pill">Architecture doc</span><span class="pill">Working demo</span><span class="pill">Reusable template</span>
         </div>
       </section>
 
-      <section id="netflix" class="card" style="margin-bottom:18px;">
+      <section id="netflix" class="card" style="margin-bottom:16px;">
         <h2>Netflix Recommendation Analysis</h2>
-        <p class="meta">EDA • Diagramming • Evaluation framing</p>
+        <p class="meta">EDA • System diagram • Evaluation framing</p>
         <ul class="list">
-          <li>Mapped data schema and candidate signals for ranking (popularity, recency, user-genre affinity). Created <em>Netflix Diagram</em> and slides.</li>
-          <li><strong>Outcome:</strong> Clear evaluation criteria and system diagram to communicate trade-offs to non-technical audiences.</li>
+          <li>Mapped data schema & signals (popularity, recency, genre affinity); produced diagram & slides.</li>
+          <li><strong>Outcome:</strong> Clear evaluation criteria for non-technical stakeholders.</li>
         </ul>
       </section>
 
@@ -64,8 +62,8 @@
         <h2>SQL Retail Database (ERD → Queries)</h2>
         <p class="meta">MySQL • ERD • SQL</p>
         <ul class="list">
-          <li>Designed normalized schema and implemented SQL for an online retail dataset (customers, orders, products).</li>
-          <li><strong>Outcome:</strong> Query patterns for RFM segmentation and basket insights; final ERD + SQL scripts.</li>
+          <li>Normalized schema for customers, orders, products; authored core queries.</li>
+          <li><strong>Outcome:</strong> RFM/basket analysis patterns + final ERD & SQL scripts.</li>
         </ul>
       </section>
     </main>
