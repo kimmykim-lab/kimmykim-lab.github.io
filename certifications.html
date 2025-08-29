@@ -3,54 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Certifications | Kimmy Kim</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Courses | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — Certifications & Training" />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
-
-      <input type="checkbox" id="nav-projects" class="nav-toggle">
-      <label for="nav-projects" class="nav-group">
-        <span class="chev" aria-hidden="true">▶</span> Projects
-      </label>
-      <ul class="nav-sub">
-        <li><a href="data-projects.html" class="nav-link">Data</a></li>
-        <li><a href="library-projects.html" class="nav-link">Library</a></li>
-      </ul>
-
-      <input type="checkbox" id="nav-extra" class="nav-toggle">
-      <label for="nav-extra" class="nav-group">
-        <span class="chev" aria-hidden="true">▶</span> Extra Curricular
-      </label>
-      <ul class="nav-sub">
-        <li><a href="community.html" class="nav-link">Community</a></li>
-        <li><a href="certifications.html" class="nav-link active">Certifications</a></li>
-      </ul>
-
-      <ul class="nav-root">
-        <li><a href="course.html" class="nav-link">Courses</a></li>
-      </ul>
+      <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
+      <nav class="nav">
+        <button class="nav-toggle" data-target="#projects-sub">
+          <span class="triangle">▶</span> <span>Projects</span>
+        </button>
+        <ul id="projects-sub" class="submenu">
+          <li><a href="data-projects.html" data-id="data">Data</a></li>
+          <li><a href="library-projects.html" data-id="library">Library</a></li>
+        </ul>
+        <button class="nav-toggle" data-target="#extra-sub">
+          <span class="triangle">▶</span> <span>Extra Curricular</span>
+        </button>
+        <ul id="extra-sub" class="submenu">
+          <li><a href="community.html" data-id="community">Community</a></li>
+          <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
+        </ul>
+        <a href="courses.html" class="top-link active" data-id="courses">Courses</a>
+      </nav>
     </aside>
 
     <main class="main">
-      <div class="section-label">
-        <span class="dot"></span>
-        <span>Certifications</span>
-      </div>
-
-      <section class="card">
-        <h2 class="mb-2" style="margin-top:0;">Certifications &amp; Training</h2>
-        <ul class="bullets">
-          <li><strong>Azure ML Designer — hands-on labs</strong> (training, endpoints, evaluation) — used in Ad Click project.</li>
-          <li><strong>Qualitative Coding &amp; Analysis Workshop</strong> — applied to 112+ field notes (Nourishing Minds).</li>
-          <li><strong>Excel for Dashboards</strong> — Resource Center dashboards → accuracy <strong>+15%</strong>.</li>
-        </ul>
-      </section>
+      <h2>Courses</h2>
+      <!-- 코스 컨텐츠 -->
     </main>
   </div>
+
+  <script>
+    (function () {
+      const toggleBtns = document.querySelectorAll('.nav-toggle');
+      toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = document.querySelector(btn.dataset.target);
+          const tri = btn.querySelector('.triangle');
+          const isOpen = target.style.display === 'block';
+          target.style.display = isOpen ? 'none' : 'block';
+          tri.textContent = isOpen ? '▶' : '▼';
+        });
+      });
+      // Keep labels fixed
+      document.querySelector('a[href="data-projects.html"]').textContent='Data';
+      document.querySelector('a[href="library-projects.html"]').textContent='Library';
+    })();
+  </script>
 </body>
 </html>
