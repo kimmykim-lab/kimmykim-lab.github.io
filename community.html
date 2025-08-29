@@ -3,67 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🤝 Community | Kimmy Kim</title>
+  <title>Community | Kimmy Kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Kimmy Kim — Community & Leadership: Resource Center, KGSA, and storytelling volunteer work." />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
       <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
 
-      <details open>
-        <summary>📁 Projects</summary>
-        <ul class="subnav">
-          <li><a href="data-projects.html">📊 Data</a></li>
-          <li><a href="library-projects.html">📚 Library</a></li>
-        </ul>
-      </details>
+      <input type="checkbox" id="nav-projects" class="nav-toggle">
+      <label for="nav-projects" class="nav-group">
+        <span class="chev" aria-hidden="true">▶</span> Projects
+      </label>
+      <ul class="nav-sub">
+        <li><a href="data-projects.html" class="nav-link">Data</a></li>
+        <li><a href="library-projects.html" class="nav-link">Library</a></li>
+      </ul>
 
-      <details open>
-        <summary>💬 Extra Curricular</summary>
-        <ul class="subnav">
-          <li><a class="active" href="community.html">🤝 Community</a></li>
-          <li><a href="certifications.html">📜 Certifications</a></li>
-        </ul>
-      </details>
+      <input type="checkbox" id="nav-extra" class="nav-toggle">
+      <label for="nav-extra" class="nav-group">
+        <span class="chev" aria-hidden="true">▶</span> Extra Curricular
+      </label>
+      <ul class="nav-sub">
+        <li><a href="community.html" class="nav-link active">Community</a></li>
+        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+      </ul>
+
+      <ul class="nav-root">
+        <li><a href="course.html" class="nav-link">Courses</a></li>
+      </ul>
     </aside>
 
     <main class="main">
-      <div class="header">
-        <span class="badge">🤝 Community</span>
-        <div class="btn-row">
-          <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+      <div class="section-label">
+        <span class="dot"></span>
+        <span>Community</span>
       </div>
 
-      <section class="card" style="margin-bottom:16px;">
-        <h1>Student Assistant — UW Resource Center</h1>
-        <p class="meta">Seattle, WA • Sep 2024 – Present</p>
-        <ul class="list">
+      <article class="card project">
+        <h2>Student Assistant — UW Resource Center</h2>
+        <p class="meta">Seattle, WA · Sep 2024 – Present</p>
+        <ul class="bullets">
           <li>Built Excel dashboards → data accuracy <strong>+15%</strong>; fewer inventory errors.</li>
           <li>Automated reporting → processing time <strong>−20%</strong>.</li>
           <li>Launched Vinyl Banner Printing with C2; Forms + tracking → turnaround <strong>−25%</strong>, served <strong>200+ RSOs</strong>.</li>
-          <li>Managed <strong>500+</strong> equipment & RSO records; <strong>100% compliance</strong>; retrieval time <strong>−20%</strong>.</li>
-          <li>Guided <strong>200+ students/quarter</strong> → accessibility satisfaction <strong>+15%</strong>.</li>
+          <li>Managed <strong>500+ </strong>equipment &amp; RSO records; <strong>100% compliance</strong>; retrieval time <strong>−20%</strong>.</li>
+          <li>Guided <strong>200+ students/quarter</strong>; accessibility satisfaction <strong>+15%</strong>.</li>
           <li>Streamlined workflows for <strong>120+ RSOs</strong> → record-management efficiency ↑.</li>
         </ul>
-      </section>
+      </article>
 
-      <section class="card" style="margin-bottom:16px;">
+      <article class="card project">
         <h2>KGSA Secretary (UW)</h2>
-        <ul class="list">
-          <li>Participation ~<strong>30%</strong>↑ via targeted outreach & structured agendas.</li>
-          <li>Standardized comms (templates/branding) → faster approvals & clearer CTAs.</li>
+        <ul class="bullets">
+          <li>Participation <strong>~30%↑</strong> via targeted outreach &amp; structured agendas.</li>
+          <li>Standardized comms (templates/branding) → faster approvals &amp; clearer CTAs.</li>
         </ul>
-      </section>
+      </article>
 
-      <section class="card">
+      <article class="card project">
         <h2>Storytelling Event Volunteer (iSchool)</h2>
-        <ul class="list">
-          <li>Concise promos + accessible flow → attendance ~<strong>15%</strong>↑.</li>
+        <ul class="bullets">
+          <li>Concise promos + accessible flow → attendance <strong>~15%↑</strong>.</li>
           <li>Created a lightweight playbook (timeline, roles, assets) for continuity.</li>
         </ul>
-      </section>
+      </article>
     </main>
   </div>
 </body>
