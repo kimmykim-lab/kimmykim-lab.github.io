@@ -1,95 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Course | Kimmy Kim</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .course { margin-bottom: 22px; }
-    .course h3 { margin: 0 0 6px; font-size: 22px; color: #4B1FA2; }
-    .course p { margin: 0; line-height: 1.6; max-width: 900px; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Courses | Kimmy Kim</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <h1><a href="index.html">Kimmy Kim</a></h1>
-      <ul class="menu">
-        <li>
-          <span class="dropdown-toggle">📂 Projects</span>
-          <ul class="submenu">
-            <li><a href="data-projects.html">📊 Data</a></li>
-            <li><a href="library-projects.html">📖 Library</a></li>
-          </ul>
-        </li>
-        <li><a href="course.html" class="active">📚 Course</a></li>
-        <li>
-          <span class="dropdown-toggle">💬 Extra Curricular</span>
-          <ul class="submenu">
-            <li><a href="community.html">🤝 Community</a></li>
-            <li><a href="certifications.html">✅ Certifications</a></li>
-          </ul>
-        </li>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">Kimmy Kim</div>
+    <div class="nav-group">
+      <div class="nav-label">Projects</div>
+      <ul class="nav">
+        <li><a href="data-projects.html" id="nav-data"><span class="ico">📊</span>Data</a></li>
+        <li><a href="library-projects.html" id="nav-library"><span class="ico">📖</span>Library</a></li>
+        <li><a href="course.html" id="nav-course" class="active"><span class="ico">📚</span>Course</a></li>
       </ul>
     </div>
-
-    <div class="main">
-      <h2 class="section-title">📚 Courses</h2>
-
-      <div class="project">
-        <div class="course">
-          <h3>LIS 520 — Concepts, Services, and Issues for Information Professionals</h3>
-          <p>Explores role of information professionals in mediating between individuals and resources in an ever‑changing information environment; including information production, distribution, selection, organization, and services to facilitate access to diverse users.</p>
-        </div>
-
-        <div class="course">
-          <h3>LIS 564 — Multicultural Resources for Youth</h3>
-          <p>Facilitates development of cross‑cultural competence through authentic resources for children, tweens, and teens produced by or about ethnic minorities in the U.S. “Issues” focus: critical examination of genres and strategies to use them.</p>
-        </div>
-
-        <div class="course">
-          <h3>LIS 570 — Research, Assessment, and Design</h3>
-          <p>Students recognize research and design opportunities, translate them into researchable frameworks, and conduct research in libraries and other information agencies: problem definition, data collection/analysis, design/validation of solutions, and reporting.</p>
-        </div>
-
-        <div class="course">
-          <h3>LIS 510 — Information Behavior</h3>
-          <p>Introduction to user‑centered information behavior with theoretical and social‑justice foundations: information need, creation, seeking/sharing, assessment, management, and use. Includes synthesis of studies, fieldwork, and design implications.</p>
-        </div>
-
-        <div class="course">
-          <h3>LIS 530 — Organization of Information and Resources</h3>
-          <p>Issues in organizing information: document characteristics; surrogate creation (cataloging standards, metadata element selection); classification and indexing languages; controlled vocabularies; and ethical implications of knowledge organization.</p>
-        </div>
-
-        <div class="course">
-          <h3>LIS 543 — Relational Database Management Systems</h3>
-          <p>Relational database design, implementation, and management: data modeling, conceptual & logical design, physical implementation, SQL, data management, and DBA practices.</p>
-        </div>
-
-        <div class="course">
-          <h3>LIS 511 — Introduction to Programming for Information and Data Science</h3>
-          <p>Foundations of programming for data science: syntax, data structures, functions, command‑line environments, version control; emphasizes algorithmic thinking, abstraction, debugging, and code reuse. No prior programming required.</p>
-        </div>
-
-        <div class="course">
-          <h3>LIS 580 — Management of Information Organizations</h3>
-          <p>Internal/external management issues in information organizations: org behavior & theory, talent management, budgeting, service/operational planning, decision making, evaluation; plus environments, advocacy, strategic planning, communication, funding.</p>
-        </div>
-
-        <div class="course">
-          <h3>IMT 589 — Cloud Computing and AI: Tools, Services, and Applications</h3>
-          <p>Introduces cloud computing with focus on AI applications: SaaS/PaaS/IaaS for ML/AI; evaluation by cost, security, compliance, fault tolerance, DR; use of leading providers’ tools and pre‑built APIs (e.g., LLMs, speech/vision/language) to deploy intelligent apps.</p>
-        </div>
-      </div>
+    <div class="nav-group">
+      <div class="nav-label dim">Extra</div>
+      <ul class="nav">
+        <li><a href="extra.html" id="nav-extra"><span class="ico">💬</span>Extra Curricular</a></li>
+        <li><a href="community.html" id="nav-community"><span class="ico">🤝</span>Community</a></li>
+        <li><a href="certifications.html" id="nav-cert"><span class="ico">✅</span>Certifications</a></li>
+      </ul>
     </div>
-  </div>
+  </aside>
 
-  <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(t =>
-      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
-    );
-  </script>
+  <!-- Main -->
+  <main class="main">
+    <h1>📚 Courses</h1>
+
+    <article class="card">
+      <h3>LIS 520 — Concepts, Services, and Issues for Information Professionals</h3>
+      <p class="lead">Explores the role of information professionals and the core services they provide.</p>
+    </article>
+
+    <article class="card">
+      <h3>LIS 564 — Multicultural Resources for Youth</h3>
+      <p class="lead">Facilitates development of cross-cultural competence in serving diverse youth populations.</p>
+    </article>
+
+    <article class="card">
+      <h3>LIS 570 — Research, Assessment, and Design</h3>
+      <p class="lead">Translates emerging themes into researchable frameworks and design solutions.</p>
+    </article>
+
+    <article class="card">
+      <h3>LIS 510 — Information Behavior</h3>
+      <p class="lead">Examines user-centered information behavior with theoretical foundations and applications.</p>
+    </article>
+
+    <article class="card">
+      <h3>LIS 530 — Organization of Information and Resources</h3>
+      <p class="lead">Covers document characteristics, metadata, controlled vocabularies, and classification ethics.</p>
+    </article>
+
+    <article class="card">
+      <h3>LIS 543 — Relational Database Management Systems</h3>
+      <p class="lead">Focuses on data modeling, physical implementation, SQL querying, and DBA practices.</p>
+    </article>
+
+    <article class="card">
+      <h3>LIS 511 — Introduction to Programming for Information and Data Science</h3>
+      <p class="lead">Introduces programming foundations including syntax, data structures, and functions for data science.</p>
+    </article>
+
+    <article class="card">
+      <h3>LIS 580 — Management of Information Organizations</h3>
+      <p class="lead">Studies organizational behavior, planning, evaluation, and strategic management of information organizations.</p>
+    </article>
+
+    <article class="card">
+      <h3>IMT 589 — Cloud Computing and AI: Tools, Services, and Applications</h3>
+      <p class="lead">Provides hands-on experience with cloud computing platforms and AI applications.</p>
+    </article>
+
+  </main>
 </body>
 </html>
