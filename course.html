@@ -5,107 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Courses | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .main { flex-grow: 1; padding: 60px 80px; }
-    .course { margin-bottom: 26px; }
-    .course h3 { margin: 0 0 6px; font-size: 18px; color: #4B1FA2; }
-    .course p { margin: 0; line-height: 1.55; max-width: 900px; }
-
-    .sidebar { background-color:#4B1FA2; }
-    .sidebar a { color:#fff; text-decoration:none; }
-    .sidebar a.active { text-decoration: underline; }
-
-    /* ✅ 상위 메뉴 링크 굵게, 하위 메뉴 보통 굵기 */
-    .menu > li > a { font-weight: 700; display: inline-block; }
-    .submenu a { font-weight: 400; }
-
-    .dropdown-toggle { cursor:pointer; font-weight:700; display:inline-block; }
-    .submenu { list-style:none; padding-left:16px; display:none; }
-    .open > .submenu { display:block; }
-
-    .container { display:flex; }
-  </style>
 </head>
 <body>
   <div class="container">
-    <div class="sidebar">
-      <h1><a href="index.html">Kimmy Kim</a></h1>
-      <ul class="menu">
+    <aside class="sidebar">
+      <h1 class="brand">Kimmy Kim</h1>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
         <li>
-          <span class="dropdown-toggle">📁 Projects</span>
-          <ul class="submenu">
-            <li><a href="data-projects.html"> 📊 Data</a></li>
-            <li><a href="library-projects.html"> 📚 Library</a></li>
-          </ul>
+          <details open>
+            <summary>Projects</summary>
+            <ul class="subnav">
+              <li><a href="data-projects.html">Data Projects</a></li>
+              <li><a href="library-projects.html">Library Projects</a></li>
+              <li><a href="community.html">Community</a></li>
+            </ul>
+          </details>
         </li>
-
-        <!-- ✅ 현재 페이지 활성화 -->
-        <li><a href="Course.html" class="active">📚 Course</a></li>
-
-        <li>
-          <span class="dropdown-toggle">💬 Extra Curricular</span>
-          <ul class="submenu">
-            <li><a href="Community.html"> 🤝 Community</a></li>
-            <li><a href="Certifications.html"> 📜 Certifications</a></li>
-          </ul>
-        </li>
+        <li><a class="active" href="course.html">Courses</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
       </ul>
-    </div>
+    </aside>
 
-    <div class="main">
-      <h2 class="section-title">📚 Courses Taken</h2>
-
-      <div class="course">
-        <h3>LIS 520 — Concepts, Services, And Issues For Information Professionals</h3>
-        <p>Explores role of information professionals in mediating between individuals and resources in an ever changing information environment; including information production, distribution, selection, organization, and services to facilitate access to diverse users.</p>
+    <main class="main">
+      <div class="header">
+        <span class="badge page-title">Courses</span>
       </div>
 
-      <div class="course">
-        <h3>LIS 564 — Multicultural Resources For Youth</h3>
-        <p>Facilitates development of cross-cultural competence through authentic resources for children, tweens, and teens produced by or about ethnic minorities in the United States. "Issues" focus, providing knowledge in critical examination of various genres of multicultural resources as well as in strategies to use them.</p>
-      </div>
-
-      <div class="course">
-        <h3>LIS 570 — Research, Assessment, And Design</h3>
-        <p>Students recognize research and design opportunities, translate them into researchable frameworks, and conduct research in libraries and other information agencies. Covers problem definition, data collection and analysis, design and validation of alternative solutions, and reporting of results.</p>
-      </div>
-
-      <div class="course">
-        <h3>LIS 510 — Information Behavior</h3>
-        <p>Introduction to user-centered, information behavior. Theoretical and social justice foundations of information behavior, and people's specific behaviors regarding information need, creation, seeking and sharing, assessment, management, and use (impact). Synthesis of information behavior studies, construction of information world profiles, fieldwork, and application to designing effective information systems, services and policy.</p>
-      </div>
-
-      <div class="course">
-        <h3>LIS 530 — Organization Of Information And Resources</h3>
-        <p>Introduction to issues in organization of information and documents including: identification of intellectual and physical characteristics of documents; principles and practice in surrogate creation, including use of cataloging standards and selection of metadata elements; theory of classification and indexing languages; creation of controlled vocabularies; and ethical implications of knowledge organization.</p>
-      </div>
-
-      <div class="course">
-        <h3>LIS 543 — Relational Database Management Systems</h3>
-        <p>Introduces relational database design, implementation, and management, with a focus on using relational database management systems (DBMS) to manage data in an organization. Topics include: data modeling tools and techniques, conceptual and logical database design, physical implementation, SQL, data management, and database administration.</p>
-      </div>
-
-      <div class="course">
-        <h3>LIS 511 — Introduction To Programming For Information And Data Science</h3>
-        <p>Introduces fundamentals of computer programming as used for data science. Covers foundational skills necessary for writing stand-alone computer scripts, including programming syntax, data structuring, and procedural definition (functions). Includes programming environments (command-line) and version control. Emphasizes skills in algorithmic thinking, abstraction, debugging, and code reuse. Assumes no previous programming background.</p>
-      </div>
-
-      <div class="course">
-        <h3>LIS 580 — Management Of Information Organizations</h3>
-        <p>Introduction to internal and external management issues and practices in information organizations, including critical assessment of institutional structures. Internal issues include organizational behavior, organizational theory, talent management, budgeting, service and operational planning, decision making and evaluation. External issues include organizational environments, advocacy, strategic planning, communication, and funding sources.</p>
-      </div>
-
-      <div class="course">
-        <h3>IMT 589 — Cloud Computing and AI: Tools, Services, and Applications</h3>
-        <p>This course introduces the concept of Cloud Computing with a primary focus on how it is revolutionizing the development and deployment of Artificial Intelligence (AI) solutions. Explore the transition from on-premises systems to cloud-based infrastructures, emphasizing AI-driven applications and services. Learn about Cloud Service models, including SaaS, PaaS, and IaaS, with a focus on their role in supporting AI development. Delve into the tools, frameworks, and infrastructure provided by leading cloud providers for building, training, and deploying machine learning and AI models efficiently. Understand how to evaluate cloud services for AI applications based on costs, security, compliance, fault tolerance, and disaster recovery. Gain insights into the most consumed cloud services for deploying and maintaining virtual machine networks and AI-enabled solutions. Discover how to leverage pre-built APIs and services from major providers, such as OpenAI, to develop intelligent applications utilizing state-of-the-art large language models (LLMs). These include APIs for speech, vision, language understanding, search, knowledge extraction, and translation, enabling rapid development without extensive training or deployment overhead. By the end of the course, you will have a comprehensive understanding of how to integrate AI and cloud computing technologies to create scalable, intelligent, and innovative solutions that drive business transformation.</p>
-      </div>
-    </div>
+      <section class="card">
+        <h1>Selected Coursework</h1>
+        <ul class="list">
+          <li><strong>Cloud Computing (IMT 589)</strong> — Azure services, web apps, SQL DB, ML Designer</li>
+          <li><strong>Relational Data Modeling</strong> — ER modeling, normalization, SQL</li>
+          <li><strong>Programming Concepts</strong> — Python/Java/C++ fundamentals for interactive apps</li>
+          <li><strong>Library Services for Children</strong> — inclusive programming & evaluation</li>
+          <li><strong>Research Methods</strong> — literature review, qualitative coding, synthesis</li>
+        </ul>
+        <p class="small">Note: Full syllabus outlines available upon request.</p>
+      </section>
+    </main>
   </div>
-
-  <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(t =>
-      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
-    );
-  </script>
 </body>
 </html>
