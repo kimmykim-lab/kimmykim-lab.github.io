@@ -2,107 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — MLIS @ UW. Data projects in Azure ML, SQL/BI, and recommender systems with measurable impact: +12% model accuracy, −30% query time, retention insights." />
 </head>
 <body>
   <div class="container">
-    <div class="sidebar">
-      <h1><a href="index.html">Kimmy Kim</a></h1>
-      <ul class="menu">
-        <li class="open">
-          <span class="dropdown-toggle">📂 Projects</span>
-          <ul class="submenu">
-            <li><a class="active" href="data-projects.html">📊 Data</a></li>
-            <li><a href="library-projects.html">📖 Library</a></li>
-          </ul>
-        </li>
-        <li><a href="course.html">📚 Course</a></li>
+    <aside class="sidebar">
+      <h1 class="brand">Kimmy Kim</h1>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
         <li>
-          <span class="dropdown-toggle">💬 Extra Curricular</span>
-          <ul class="submenu">
-            <li><a href="community.html">🤝 Community</a></li>
-            <li><a href="certifications.html">✅ Certifications</a></li>
-          </ul>
+          <details open>
+            <summary>Projects</summary>
+            <ul class="subnav">
+              <li><a class="active" href="data-projects.html">Data Projects</a></li>
+              <li><a href="library-projects.html">Library Projects</a></li>
+              <li><a href="community.html">Community</a></li>
+            </ul>
+          </details>
         </li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
       </ul>
-    </div>
+    </aside>
 
-    <div class="main">
-      <h2 class="section-title">📊 Data Projects</h2>
-
-      <div class="project">
-        <h3>Ad Click Prediction Using Cloud-Based Machine Learning</h3>
-        <p><strong>Summary:</strong> Built a real-time ad click prediction system on Azure for the media & entertainment context. End-to-end cloud pipeline with monitoring, A/B testing, and BI dashboards.</p>
-        <div class="meta">
-          <span class="pill">Azure ML Designer</span>, 
-          <span class="pill">Stream Analytics</span>, 
-          <span class="pill">Data Factory</span>, 
-          <span class="pill">Azure SQL</span>, 
-          <span class="pill">Power BI</span>, 
-          <span class="pill">Web Endpoints</span>
-        </div>
-        <ul class="outcomes">
-          <li>Improved click prediction accuracy <strong>+12%</strong> through feature engineering and iterative evaluation.</li>
-          <li>Designed GDPR/ISO-aligned architecture; exposed REST endpoints for product integration.</li>
-          <li>Implemented A/B testing and real-time dashboards to accelerate marketing decisions.</li>
-        </ul>
-        <div class="links">
-          <a href="ad-click-paper.pdf" target="_blank">📄 Final Paper (PDF)</a>
-          <a href="ad-click-slides.pdf" target="_blank">🖥️ Presentation Slides (PDF)</a>
+    <main class="main">
+      <div class="header">
+        <span class="badge page-title">Data Projects</span>
+        <div class="btn-row">
+          <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn-outline btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume – Data</a>
         </div>
       </div>
 
-      <div class="project">
-        <h3>Online Retail SQL Database Project</h3>
-        <p><strong>Summary:</strong> Designed and implemented a fully normalized (3NF) relational database for a women’s fashion e-commerce platform; delivered BI reporting for sales and operations.</p>
-        <div class="meta">
-          <span class="pill">SQL</span>, 
-          <span class="pill">DBeaver</span>, 
-          <span class="pill">Lucidchart (ERD)</span>, 
-          <span class="pill">Tableau</span>, 
-          <span class="pill">3NF</span>
-        </div>
-        <ul class="outcomes">
-          <li>Reduced query time <strong>−30%</strong> via indexing and schema normalization; improved transaction efficiency.</li>
-          <li>Shipped dashboards for cohort trends, inventory status, and supply-chain reporting.</li>
+      <section id="ads" class="card" style="margin-bottom:18px;">
+        <h1>Ad Click Prediction Using Cloud ML</h1>
+        <p class="meta">Azure ML Designer • Python • Real-time architecture</p>
+        <ul class="list">
+          <li>Designed a full cloud architecture (ingest → preprocess → train/score → endpoint) tailored to media & entertainment ad clicks.</li>
+          <li>Deployed working demo with Azure Language resource for sentiment and ML pipeline for predictions.</li>
+          <li><strong>Impact:</strong> Documented system boosts campaign decision-speed by enabling instant scoring; architecture reusable across use cases.</li>
         </ul>
-        <div class="links">
-          <a href="Initial%20ERD%20%26%20Design%20Proposal.pdf" target="_blank">📄 Initial ERD & Design Proposal</a>
-          <a href="Online%20Retail_Final%20ERD.pdf" target="_blank">📄 Final ERD</a>
-          <a href="Online%20Retail_Final%20SQL.pdf" target="_blank">📄 Final SQL</a>
-          <a href="Online%20Retail-slides.pdf" target="_blank">🖥️ Final Presentation</a>
+        <div class="kpis">
+          <span class="pill">Reusable pipeline template</span>
+          <span class="pill">End-to-end diagram completed</span>
+          <span class="pill">Demo app validated</span>
         </div>
-      </div>
+      </section>
 
-      <div class="project">
-        <h3>Analyzing Netflix’s Recommendation System</h3>
-        <p><strong>Summary:</strong> Mapped Netflix’s hybrid recommendation pipeline (content-based + collaborative) and examined how metadata and behavior signals influence ranking.</p>
-        <div class="meta">
-          <span class="pill">Lucidchart</span>, 
-          <span class="pill">Information Architecture</span>, 
-          <span class="pill">Recommenders</span>, 
-          <span class="pill">Data Modeling</span>
-        </div>
-        <ul class="outcomes">
-          <li>Identified personalization bias and retention gaps; produced design recommendations to improve relevance and engagement.</li>
-          <li>Created architecture diagrams (ERD) and a stakeholder presentation.</li>
+      <section id="netflix" class="card" style="margin-bottom:18px;">
+        <h2>Netflix Recommendation Analysis</h2>
+        <p class="meta">EDA • Diagramming • Evaluation framing</p>
+        <ul class="list">
+          <li>Mapped data schema and candidate signals for ranking (popularity, recency, user-genre affinity). Created <em>Netflix Diagram</em> and slides.</li>
+          <li><strong>Outcome:</strong> Clear evaluation criteria and system diagram to communicate trade-offs to non-technical audiences.</li>
         </ul>
-        <div class="links">
-          <a href="Netflix%20Diagram.pdf" target="_blank">📄 ERD Diagram (PDF)</a>
-          <a href="Netflix-slides.pdf" target="_blank">🖥️ Presentation Slides (PDF)</a>
-        </div>
-      </div>
+      </section>
 
-    </div>
+      <section id="retail" class="card">
+        <h2>SQL Retail Database (ERD → Queries)</h2>
+        <p class="meta">MySQL • ERD • SQL</p>
+        <ul class="list">
+          <li>Designed normalized schema and implemented SQL for an online retail dataset (customers, orders, products).</li>
+          <li><strong>Outcome:</strong> Query patterns for RFM segmentation and basket insights; final ERD + SQL scripts.</li>
+        </ul>
+      </section>
+    </main>
   </div>
-
-  <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(t =>
-      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
-    );
-  </script>
 </body>
 </html>
