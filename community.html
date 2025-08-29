@@ -2,84 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Community | Kimmy Kim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community & Leadership | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* page-local safety styles (fallback if style.css misses) */
-    :root { --gap: 16px; }
-    .page { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
-    .sidebar { padding: 24px; border-right: 1px solid #eee; }
-    .sidebar a { display: block; margin: 8px 0; text-decoration: none; color: #111; }
-    .main-content { padding: 48px; }
-    .section-title { font-size: 24px; margin: 24px 0 12px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--gap); }
-    .card { background: #fff; border: 1px solid #eee; border-radius: 14px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-    .card h3 { margin: 6px 0 10px; font-size: 20px; }
-    .card p { line-height: 1.5; }
-    .card img { width: 100%; height: auto; border-radius: 12px; margin-bottom: 14px; }
-    .meta { color: #555; font-size: 14px; margin-top: 6px; }
-    .bullets { margin: 10px 0 0 16px; }
-  </style>
+  <meta name="description" content="Kimmy Kim — MLIS @ UW. Community and leadership: KGSA Secretary (+30% participation), iSchool storytelling event volunteer (+15% attendance), campus service design for RSOs (−25% turnaround, −20% processing time)." />
 </head>
 <body>
-  <div class="page">
-    <!-- Sidebar (kept lightweight; your global style.css will make it match the site) -->
-    <aside class="sidebar">
-      <h2>Kimmy Kim</h2>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="data-projects.html">Data Projects</a>
-        <a href="library-projects.html">Library Projects</a>
-        <a href="community.html" aria-current="page"><strong>Community</strong></a>
-        <a href="certifications.html">Certifications</a>
-        <a href="course.html">Course</a>
-      </nav>
-    </aside>
-
-    <main class="main-content">
-      <h1>Community & Service</h1>
-      <p class="meta">Programs and volunteer work across the UW iSchool community and HUB Resource Center.</p>
-
-      <!-- iSchool Community -->
-      <h2 class="section-title">iSchool Community</h2>
-      <div class="grid">
-        <!-- Storytelling Event Volunteer card with photo -->
-        <div class="card">
-          <img src="VolunteerPhoto.jpg" alt="Storytelling Event Volunteer group photo" />
-          <h3>Storytelling Event Volunteer — iSchool Community</h3>
-          <p><strong>Summary:</strong> Coordinated logistics and supported storytelling sessions within the UW iSchool community.<br>
-          Youth Services, Program Logistics, Family Engagement</p>
-          <ul class="bullets">
-            <li>Raised session attendance by <strong>+15%</strong> through outreach and on-site facilitation.</li>
-            <li>Improved check-in flow and space setup for smoother participant experience.</li>
+  <div class="container">
+    <div class="sidebar">
+      <h1><a href="index.html">Kimmy Kim</a></h1>
+      <ul class="menu">
+        <li>
+          <span class="dropdown-toggle">📂 Projects</span>
+          <ul class="submenu">
+            <li><a href="data-projects.html">📊 Data</a></li>
+            <li><a href="library-projects.html">📖 Library</a></li>
           </ul>
-          <p class="meta">
-            <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">Related News: Christian Robinson and the Power of Stories</a>
-          </p>
+        </li>
+        <li><a href="course.html">📚 Course</a></li>
+        <li class="open">
+          <span class="dropdown-toggle">💬 Extra Curricular</span>
+          <ul class="submenu">
+            <li><a class="active" href="community.html" aria-current="page">🤝 Community</a></li>
+            <li><a href="certifications.html">✅ Certifications</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h2 class="section-title">🤝 Community & Leadership</h2>
+
+      <!-- KGSA -->
+      <div class="project">
+        <h3>Korean Graduate Student Association (Secretary)</h3>
+        <p><strong>Summary:</strong> Led data-driven outreach and event operations for UW KGSA.</p>
+        <div class="meta">
+          <span class="pill">Budget & Ops</span>, 
+          <span class="pill">Survey-driven Outreach</span>, 
+          <span class="pill">Community Building</span>
+        </div>
+        <ul class="outcomes">
+          <li>Increased event participation <strong>+30%</strong> via targeted messaging, optimal scheduling, and channel mix.</li>
+          <li>Standardized vendor/comms workflows; reduced coordination delays across multi-event calendar.</li>
+        </ul>
+      </div>
+
+      <!-- Storytelling Event Volunteer — iSchool -->
+      <div class="project">
+        <img src="VolunteerPhoto.jpg" alt="Storytelling Event Volunteer group photo" style="width:100%;border-radius:12px;margin-bottom:14px;">
+        <h3>Storytelling Event Volunteer — iSchool Community</h3>
+        <p><strong>Summary:</strong> Coordinated logistics and supported storytelling sessions within the UW iSchool community.</p>
+        <div class="meta">
+          <span class="pill">Youth Services</span>, 
+          <span class="pill">Program Logistics</span>, 
+          <span class="pill">Family Engagement</span>
+        </div>
+        <ul class="outcomes">
+          <li>Raised session attendance by <strong>+15%</strong> through outreach and on-site facilitation.</li>
+          <li>Improved check-in flow and space setup for smoother participant experience.</li>
+        </ul>
+        <div class="links">
+          <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">
+            📄 Related News: Christian Robinson and the Power of Stories
+          </a>
         </div>
       </div>
 
-      <!-- Resource Center -->
-      <h2 class="section-title" style="margin-top:36px;">UW HUB Resource Center</h2>
-      <div class="grid">
-        <!-- Vinyl Banner Printing Project (banner-only bullets) -->
-        <div class="card">
-          <h3>Student Assistant — Vinyl Banner Printing Project (Resource Center)</h3>
-          <p><strong>Summary:</strong> Spearheaded the launch and operations of the Vinyl Banner service with Creative Communications (C2) as part of my Student Assistant role at the UW HUB Resource Center.<br>
-          Service Design, Process Automation, Excel Dashboards, Workflow Optimization</p>
-          <ul class="bullets">
-            <li>Implemented request forms & tracking systems, reducing turnaround time by <strong>−25%</strong> and streamlining services for <strong>200+ RSOs</strong>.</li>
-            <li>Improved data accuracy by <strong>+15%</strong> through Excel-based dashboards, reducing banner inventory and order errors.</li>
-            <li>Automated reporting workflows for order status and throughput, cutting processing time by <strong>−20%</strong> and enabling faster decisions.</li>
-          </ul>
-          <p class="meta">
-            <em>Related internal work:</em> service page spec & assets prepared for IT handoff; coordination with C2 (Creative Communications) for pricing, proofs, and fulfillment workflow.
-          </p>
+      <!-- Campus Service Design — Vinyl Banner (Resource Center) -->
+      <div class="project">
+        <h3>Campus Service Design — Vinyl Banner Printing (Resource Center)</h3>
+        <p><strong>Summary:</strong> Spearheaded the launch and operations of the Vinyl Banner service with Creative Communications (C2) as part of my Student Assistant role at the UW HUB Resource Center.</p>
+        <div class="meta">
+          <span class="pill">Service Design</span>, 
+          <span class="pill">Process Automation</span>, 
+          <span class="pill">Excel Dashboards</span>, 
+          <span class="pill">Workflow Optimization</span>
+        </div>
+        <ul class="outcomes">
+          <li>Improved data accuracy by <strong>+15%</strong> through Excel-based dashboards, reducing inventory errors.</li>
+          <li>Automated reporting workflows, cutting processing time by <strong>−20%</strong> and enabling faster decision-making.</li>
+          <li>Implemented request forms & tracking systems, reducing turnaround time by <strong>−25%</strong> and streamlining services for <strong>200+ RSOs</strong>.</li>
+          <li>Managed <strong>500+ equipment & RSO records</strong>, ensuring <strong>100% compliance</strong> and reducing retrieval time by <strong>−20%</strong>.</li>
+          <li>Guided <strong>200+ students/quarter</strong>, improving accessibility satisfaction by <strong>+15%</strong>.</li>
+          <li>Streamlined workflows for <strong>120+ student organizations</strong>, enhancing record management efficiency.</li>
+        </ul>
+        <div class="links">
+          <a href="https://hub.washington.edu/get-involved/the-sorc/" target="_blank" rel="noopener">
+            🔗 UW HUB – Student Org Resource Center (SORC)
+          </a>
         </div>
       </div>
 
-    </main>
+    </div>
   </div>
+
+  <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(t =>
+      t.addEventListener('click', () => t.parentElement.classList.toggle('open'))
+    );
+  </script>
 </body>
 </html>
