@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Extra Curricular | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — Extra Curricular: Vinyl Banner Printing Lead (UW Resource Center), KGSA Secretary, iSchool Storytelling Event Volunteer." />
+  <meta name="description" content="Extra Curricular: Vinyl Banner Printing Lead (UW Resource Center), KGSA Secretary, iSchool Storytelling Event Volunteer." />
   <style>
-    /* Local tweaks specific to this page */
+    /* Page-local tweaks */
     .main { flex-grow: 1; padding: 60px 80px; }
     .page-title { font-size: 24px; margin: 0 0 20px; color: #111827; }
     .card {
-      background: #ffffff; border-radius: 14px; padding: 22px 26px;
+      background: #fff; border-radius: 14px; padding: 22px 26px;
       box-shadow: 0 1px 0 rgba(17,24,39,0.04), 0 6px 20px rgba(17,24,39,0.06);
       margin-bottom: 22px;
     }
@@ -25,29 +25,48 @@
     .card li { margin: 8px 0; line-height: 1.55; }
     .flex-row { display: flex; gap: 16px; align-items: flex-start; }
     .thumb {
-      width: 120px; height: 120px; object-fit: cover; border-radius: 10px; flex-shrink: 0;
+      width: 160px; height: 140px; object-fit: cover; border-radius: 10px; flex-shrink: 0;
+      object-position: left center; /* 너가 왼쪽에 서 있는 부분이 보이도록 */
     }
     @media (max-width: 680px) {
       .main { padding: 28px 18px; }
       .flex-row { flex-direction: column; }
-      .thumb { width: 100%; height: auto; }
+      .thumb { width: 100%; height: auto; object-position: center; }
     }
     .link { color: #4f46e5; text-decoration: none; }
     .link:hover { text-decoration: underline; }
+
+    /* Sidebar: Data/Library와 동일한 그룹/드롭다운 레이아웃 */
+    .sidebar h1 { font-size: 22px; margin-bottom: 20px; }
+    .menu { list-style: none; padding: 0; margin: 0; }
+    .menu-section { margin-bottom: 18px; }
+    .menu-label { display: block; color: #e0e0e0; font-weight: 600; margin-bottom: 8px; }
+    .menu-section ul { list-style: none; padding-left: 18px; margin: 0; }
+    .sidebar a { text-decoration: none; color: #e0e0e0; display: block; margin: 6px 0; }
+    .sidebar a.active { font-weight: 700; color: #38bdf8; }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar -->
+    <!-- Sidebar (통일 버전) -->
     <aside class="sidebar">
       <h1><a href="index.html" class="link" style="color:#e0e0e0;text-decoration:none;">Kimmy Kim</a></h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="data-projects.html">Data Projects</a></li>
-        <li><a href="library-projects.html">Library Projects</a></li>
-        <li><a href="community.html" class="active">Community</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
+      <ul class="menu">
+        <li class="menu-section">
+          <span class="menu-label">Projects</span>
+          <ul>
+            <li><a href="data-projects.html">Data</a></li>
+            <li><a href="library-projects.html">Library</a></li>
+          </ul>
+        </li>
+        <li class="menu-section">
+          <span class="menu-label">Extra Curricular</span>
+          <ul>
+            <li><a href="community.html" class="active">Community</a></li>
+          </ul>
+        </li>
         <li><a href="course.html">Courses</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
       </ul>
     </aside>
 
@@ -60,12 +79,12 @@
         <h2>Vinyl Banner Printing Lead (UW Resource Center)</h2>
         <p class="subline">
           <a class="link" href="https://hub.washington.edu/get-involved/the-sorc/" target="_blank" rel="noopener">UW Resource Center — Vinyl Banner Printing</a>
-          <span class="badge">현재 업데이트 진행중</span>
+          <span class="badge">Currently being updated</span>
         </p>
         <ul>
           <li>Launched a new vinyl banner printing service with Creative Communications (C2), serving <strong>200+ RSOs</strong>.</li>
           <li>Designed Microsoft Forms for reservations and built <strong>Excel-based request-tracking dashboards</strong> to enable data-driven service design.</li>
-          <li>Reduced request turnaround time by <strong>25%</strong> through digital forms and automated workflow tracking.</li>
+          <li>Reduced request turnaround time <strong>by 25%</strong> through digital forms and automated workflow tracking.</li>
           <li>Developed a dedicated Resource Center website section (guidelines, examples, CTAs) to improve visibility and self-service access.</li>
           <li>Created sample banner posters and lightweight promo assets to accelerate adoption by campus organizations.</li>
         </ul>
@@ -78,7 +97,7 @@
           <a class="link" href="https://huskylink.washington.edu/organization/kgsa" target="_blank" rel="noopener">KGSA — HuskyLink</a>
         </p>
         <ul>
-          <li>Increased participation by <strong>~30%</strong> through structured agendas and targeted outreach.</li>
+          <li>Increased participation <strong>by 30%</strong> through structured agendas and targeted outreach.</li>
           <li>Standardized communications (templates/branding) → faster approvals and clearer CTAs.</li>
         </ul>
       </section>
@@ -95,7 +114,7 @@
           <img src="VolunteerPhoto.jpg" alt="Storytelling Event — Volunteer at UW iSchool" class="thumb" />
           <div>
             <ul>
-              <li>Concise promotions and accessible event flow boosted attendance by <strong>~15%</strong>.</li>
+              <li>Concise promotions and accessible event flow boosted attendance <strong>by 15%</strong>.</li>
               <li>Built a lightweight playbook (timeline, roles, assets) to ensure continuity for future events.</li>
             </ul>
           </div>
