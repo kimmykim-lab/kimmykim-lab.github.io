@@ -3,143 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kimmy Kim | Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Kimmy Kim | About</title>
+  <meta name="description" content="Kimmy (Minju) Kim — I connect data analytics with communities to design inclusive programs and measure impact." />
   <style>
-    .main-content { padding: 60px 80px; flex-grow: 1; }
-    .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 16px; }
-    h1 { text-align: center; font-size: 28px; margin-bottom: 20px; }
-    .main-content p { max-width: 900px; margin: 0 auto 16px; line-height: 1.6; font-size: 16px; }
-    h2 { font-size: 20px; margin-top: 40px; text-align: left; max-width: 900px; margin-left: auto; margin-right: auto; }
-    ul { max-width: 900px; margin: 0 auto; padding-left: 20px; }
-    .contact-section p { max-width: 900px; margin: 0 auto; }
-    .contact-section a { margin-right: 16px; text-decoration: none; }
+    :root{
+      --bg:#f8fafc;
+      --fg:#0f172a;
+      --muted:#475569;
+      --card:#ffffff;
+      --accent:#2563eb;
+      --ring: rgba(37,99,235,.2);
+      --radius: 18px;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+    .container{max-width:980px;margin:56px auto;padding:0 20px;}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,.06);}
+    .hero{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:28px;align-items:center}
+    .avatar{width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:50% 40%;border:4px solid #fff;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+    .title{font-size:28px;line-height:1.2;margin:0 0 8px}
+    .subtitle{font-size:16px;color:var(--muted);margin:0}
+    .note{background:#fef3c7;border:1px solid #f59e0b;color:#78350f;border-radius:12px;padding:12px 14px;margin-top:10px;display:inline-flex;gap:10px;align-items:center;}
+    .pill{display:inline-block;padding:8px 12px;border-radius:999px;border:1px solid #f59e0b;background:#fffbeb;color:#78350f;font-weight:700;text-decoration:none}
+    .pill:hover,.pill:focus{box-shadow:0 0 0 6px rgba(245,158,11,.2)}
 
-    .hero{
-      max-width: 900px; margin: 0 auto 24px; background:#fff;
-      padding: 24px; border-radius: 16px; box-shadow: 0 6px 18px rgba(15,23,42,.06);
-      text-align: center;
-    }
-    .hero h1{ margin: 0 0 8px; font-size: 26px; color:#111827; }
-    .hero p{ margin: 6px 0 0; color:#64748b; }
-    .cta{ margin-top: 14px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
-    .btn{ display:inline-block; padding:10px 14px; border-radius:999px; text-decoration:none; font-weight:600; border:1px solid transparent; }
-    .btn-primary{ background:#2563eb; color:#fff; }
-    .btn-ghost{ background:#fff; color:#2563eb; border-color:#2563eb; }
+    .section{margin-top:24px;padding:20px 24px}
+    .section h2{margin:0 0 10px;font-size:20px}
+    .section p{margin:8px 0;color:var(--muted)}
+    ul.clean{margin:8px 0 0 18px;color:var(--fg)}
+    ul.clean li{margin:8px 0}
 
-    .kpis{
-      max-width: 900px; margin: 0 auto 24px;
-      display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
-    }
-    .kpi{
-      background:#fff; padding:14px 16px; border-radius:14px;
-      box-shadow:0 4px 12px rgba(0,0,0,.05); display:flex; flex-direction:column;
-    }
-    .kpi strong{ font-size:18px; color:#059669; }
-    .kpi span{ color:#64748b; font-size:13px; margin-top:4px; }
+    .link{font-weight:600;color:var(--accent);text-decoration:none}
+    .link:focus,.link:hover{text-decoration:underline}
 
-    .project {
-      background:#fff; padding:20px; margin: 0 auto 24px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.05);
-      max-width: 900px;
+    footer{margin:36px 0 60px;color:var(--muted);text-align:center}
+
+    @media (max-width:680px){
+      .hero{grid-template-columns:1fr;}
+      .avatar{margin-inline:auto}
     }
-    .project h3 { font-size: 20px; margin: 0 0 6px; color: #111827; }
-    .project p { margin: 6px 0; font-size: 15px; }
-    .meta{ display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 10px; }
-    .pill{ font-size:12px; border:1px solid #e5e7eb; color:#334155; padding:6px 10px; border-radius:999px; background:#fff; }
-    .outcomes{ margin:10px 0 0; padding-left:18px; }
-    .outcomes li{ margin:6px 0; }
-    .links a{ font-size:14px; color:#2563eb; text-decoration:underline; display:inline-block; margin-right:12px; margin-top:6px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <h1><a href="index.html">Kimmy Kim</a></h1>
-      <ul class="menu">
-        <li>
-          <span class="dropdown-toggle">📂 Projects</span>
-          <ul class="submenu">
-            <li><a href="data-projects.html">📊 Data</a></li>
-            <li><a href="library-projects.html">📖 Library</a></li>
-          </ul>
-        </li>
-        <li><a href="course.html">📚 Course</a></li>
-        <li>
-          <span class="dropdown-toggle">💬 Extra Curricular</span>
-          <ul class="submenu">
-            <li><a href="community.html">🤝 Community</a></li>
-            <li><a href="certifications.html">✅ Certifications</a></li>
-          </ul>
-        </li>
+  <main class="container">
+    <!-- HERO -->
+    <section class="card hero">
+      <img 
+        src="assets/images/Photo_Kimmy.jpg" 
+        alt="Kimmy (Minju) Kim portrait" 
+        width="200" height="200" 
+        loading="eager" 
+        class="avatar" />
+
+      <div>
+        <h1 class="title">Hi, I’m Kimmy Kim 👋🏻</h1>
+        <p class="subtitle">I believe data becomes powerful when it helps real communities thrive. I design systems, programs, and spaces where insights turn into impact.</p>
+        <div class="note">Download my resumes:
+          <a class="pill" href="assets/resume/Kimmy_Kim_Resume_Data.pdf" target="_blank" rel="noopener">Resume · Data</a>
+          <a class="pill" href="assets/resume/Kimmy_Kim_Resume_Library.pdf" target="_blank" rel="noopener">Resume · Library</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS -->
+    <section class="card section">
+      <h2>Research Interests</h2>
+      <ul class="clean">
+        <li>Data Analytics and Visualization</li>
+        <li>Artificial Intelligence in Education (e.g., AI app development, learner analytics)</li>
+        <li>Educational Technology &amp; Learning Analytics</li>
+        <li>Data Science for Social Good</li>
+        <li>Data Management</li>
+        <li>Participatory Design &amp; Evaluation</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="main-content">
-      <img
-        src="https://raw.githubusercontent.com/kimmykim-lab/portfolio/main/Photo_Kimmy.jpg"
-        alt="Kimmy's Profile Photo"
-        class="profile-img"
-        loading="lazy"
-      />
+    <!-- ABOUT ME -->
+    <section class="card section">
+      <h2>My Story (Why I chose this path)</h2>
+      <p>I first studied Library and Information Science as an undergraduate in Korea, where I developed a strong interest in how knowledge and information can transform people’s lives. Over time, I became more drawn to the fields of data analysis, data visualization, data management, and educational technology. I realized that data is not just a record of numbers, but a tool for explaining human experiences and change.</p>
+      <p>Through hands-on experiences working with libraries, community programs, and data-related projects, I saw how even small improvements driven by data could significantly increase participation and inclusion. More recently, I’ve also become interested in combining artificial intelligence with education—for example, developing AI-powered learning apps or analyzing learner behavior data to explore how technology can create more personalized and meaningful learning experiences.</p>
+    </section>
 
-      <div class="hero">
-        <h1>I merge <em>Data Analytics</em> with <em>Library Services</em> to connect people with information.</h1>
-        <p>MLIS @ UW. I design cloud/data systems and community-centered programs—and then measure impact.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="data-projects.html">Explore Data Projects →</a>
-          <a class="btn btn-ghost" href="library-projects.html">Explore Library Projects →</a>
-        </div>
-      </div>
+    <!-- VALUES -->
+    <section class="card section">
+      <h2>My Values and Personality</h2>
+      <p>I value inclusivity, curiosity, and collaboration. For me, research and technology matter most when they create spaces where people feel connected and welcomed. Whether I’m designing a database, building a dashboard, or supporting a storytime program, I make it a priority to listen closely to diverse voices and ensure they are reflected in the work I do.</p>
+    </section>
 
-      <div class="kpis">
-        <div class="kpi"><strong>+12% ↑</strong><span>Ad click prediction accuracy (Azure ML)</span></div>
-        <div class="kpi"><strong>−30% ↓</strong><span>SQL query time after 3NF redesign</span></div>
-        <div class="kpi"><strong>+30% ↑</strong><span>Event participation (KGSA outreach)</span></div>
-        <div class="kpi"><strong>+10% ↑</strong><span>Virtual engagement (children’s services)</span></div>
-        <div class="kpi"><strong>2,000+</strong><span>Resources cataloged (discovery +20%)</span></div>
-        <div class="kpi"><strong>112+</strong><span>Field notes coded across 9 libraries</span></div>
-      </div>
+    <!-- CONTACT -->
+    <section class="card section">
+      <h2>Let’s Connect</h2>
+      <p>Email: <a class="link" href="mailto:kimmy.minju.kim@gmail.com">kimmy.minju.kim@gmail.com</a> · UW: <a class="link" href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a> · <a class="link" href="https://www.linkedin.com/in/kimmykim-uw/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </section>
 
-      <div class="project">
-        <h3>Highlights</h3>
-        <p>Quick snapshot of what I build and measure.</p>
-        <div class="meta">
-          <span class="pill">Azure ML</span>
-          <span class="pill">SQL • 3NF</span>
-          <span class="pill">Tableau/Power BI</span>
-          <span class="pill">Participatory Design</span>
-          <span class="pill">Youth Programs</span>
-        </div>
-        <ul class="outcomes">
-          <li>Built a real-time ad click prediction pipeline (Azure) improving accuracy <strong>+12%</strong>.</li>
-          <li>Normalized retail DB (3NF) reducing query time <strong>−30%</strong> and speeding transactions.</li>
-          <li>Co-developed multilingual conversation circles ($<strong>15K</strong>) advancing DEI with SJSU & SJPL.</li>
-          <li>Synthesized teen program data across <strong>9 libraries</strong>; coded <strong>112+</strong> field notes.</li>
-        </ul>
-        <div class="links">
-          <a href="data-projects.html">View Data Projects</a>
-          <a href="library-projects.html">View Library Projects</a>
-          <a href="community.html">Community & Leadership</a>
-        </div>
-      </div>
-
-      <h2>📮 Let’s Connect</h2>
-      <div class="contact-section">
-        <p>
-          📧 <a href="mailto:kimmy.minju.kim@gmail.com">kimmy.minju.kim@gmail.com</a> |
-          📧 <a href="mailto:kimmy99@uw.edu">kimmy99@uw.edu</a> |
-          🔗 <a href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank">LinkedIn Profile</a>
-        </p>
-      </div>
-    </div>
-  </div>
-
+    <footer>© <span id="y"></span> Kimmy Kim</footer>
+  </main>
   <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        toggle.parentElement.classList.toggle('open');
-      });
-    });
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
