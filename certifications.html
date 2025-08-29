@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Certifications | Kimmy Kim</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="brand">Kimmy Kim</div>
-    <div class="nav-group">
-      <div class="nav-label">Projects</div>
+  <div class="container">
+    <aside class="sidebar">
+      <h1 class="brand">Kimmy Kim</h1>
       <ul class="nav">
-        <li><a href="data-projects.html" id="nav-data"><span class="ico">📊</span>Data</a></li>
-        <li><a href="library-projects.html" id="nav-library"><span class="ico">📖</span>Library</a></li>
-        <li><a href="course.html" id="nav-course"><span class="ico">📚</span>Course</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <details open>
+            <summary>Projects</summary>
+            <ul class="subnav">
+              <li><a href="data-projects.html">Data Projects</a></li>
+              <li><a href="library-projects.html">Library Projects</a></li>
+              <li><a href="community.html">Community</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a class="active" href="certifications.html">Certifications</a></li>
       </ul>
-    </div>
-    <div class="nav-group">
-      <div class="nav-label dim">Extra</div>
-      <ul class="nav">
-        <li><a href="extra.html" id="nav-extra"><span class="ico">💬</span>Extra Curricular</a></li>
-        <li><a href="community.html" id="nav-community"><span class="ico">🤝</span>Community</a></li>
-        <li><a href="certifications.html" id="nav-cert" class="active"><span class="ico">✅</span>Certifications</a></li>
-      </ul>
-    </div>
-  </aside>
+    </aside>
 
-  <!-- Main -->
-  <main class="main">
-    <h1>✅ Certifications</h1>
+    <main class="main">
+      <div class="header">
+        <span class="badge page-title">Certifications</span>
+      </div>
 
-    <article class="card">
-      <h3>Chinese Language Proficiency Test (HSK 5)</h3>
-      <p class="lead">Issued Aug 2022 by Center for Language Education and Cooperation</p>
-      <ul class="tight">
-        <li>Achieved HSK Level 5, demonstrating advanced proficiency in Mandarin Chinese.</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h3>Professional Librarian Certification</h3>
-      <p class="lead">Issued Aug 2022 by Korean Library Association</p>
-      <ul class="tight">
-        <li>Credential ID: 069147</li>
-        <li>Certified for professional practice as a librarian in Korea.</li>
-      </ul>
-    </article>
-
-  </main>
+      <section class="card">
+        <h1>Certifications & Training</h1>
+        <p class="small">This page highlights credentials and practical trainings tied to my work. (More coming soon.)</p>
+        <ul class="list">
+          <li><strong>Azure ML Designer — hands-on labs</strong> (model training, endpoints, evaluation) — project-based</li>
+          <li><strong>Qualitative Coding & Analysis Workshop</strong> — applied to teen co-design study (112+ notes)</li>
+          <li><strong>Excel for Dashboards</strong> — built Resource Center inventory & reporting dashboards (↑ accuracy 15%)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
