@@ -4,44 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Courses | Kimmy Kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Kimmy Kim — Selected coursework in cloud computing, data modeling, programming concepts, library services for children, and research methods." />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h1 class="brand">Kimmy Kim</h1>
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <details open>
-            <summary>Projects</summary>
-            <ul class="subnav">
-              <li><a href="data-projects.html">Data Projects</a></li>
-              <li><a href="library-projects.html">Library Projects</a></li>
-              <li><a href="community.html">Community</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a class="active" href="course.html">Courses</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
+      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
+
+      <input type="checkbox" id="nav-projects" class="nav-toggle">
+      <label for="nav-projects" class="nav-group">
+        <span class="chev" aria-hidden="true">▶</span> Projects
+      </label>
+      <ul class="nav-sub">
+        <li><a href="data-projects.html" class="nav-link">Data</a></li>
+        <li><a href="library-projects.html" class="nav-link">Library</a></li>
+      </ul>
+
+      <input type="checkbox" id="nav-extra" class="nav-toggle">
+      <label for="nav-extra" class="nav-group">
+        <span class="chev" aria-hidden="true">▶</span> Extra Curricular
+      </label>
+      <ul class="nav-sub">
+        <li><a href="community.html" class="nav-link">Community</a></li>
+        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+      </ul>
+
+      <ul class="nav-root">
+        <li><a href="course.html" class="nav-link active">Courses</a></li>
       </ul>
     </aside>
 
     <main class="main">
-      <div class="header">
-        <span class="badge page-title">Courses</span>
+      <div class="section-label">
+        <span class="dot"></span>
+        <span>Courses</span>
       </div>
 
       <section class="card">
-        <h1>Selected Coursework</h1>
-        <ul class="list">
+        <h2 style="margin:0 0 10px;">Selected Coursework</h2>
+        <ul class="bullets">
           <li><strong>Cloud Computing (IMT 589)</strong> — Azure services, web apps, SQL DB, ML Designer</li>
           <li><strong>Relational Data Modeling</strong> — ER modeling, normalization, SQL</li>
           <li><strong>Programming Concepts</strong> — Python/Java/C++ fundamentals for interactive apps</li>
-          <li><strong>Library Services for Children</strong> — inclusive programming & evaluation</li>
+          <li><strong>Library Services for Children</strong> — inclusive programming &amp; evaluation</li>
           <li><strong>Research Methods</strong> — literature review, qualitative coding, synthesis</li>
         </ul>
-        <p class="small">Note: Full syllabus outlines available upon request.</p>
+        <p class="meta">Note: Full syllabus outlines available upon request.</p>
       </section>
     </main>
   </div>
