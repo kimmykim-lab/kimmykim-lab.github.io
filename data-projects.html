@@ -4,93 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Projects | Kimmy Kim</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — Data Projects: Ad Click Prediction using Azure ML, Netflix Recommendation Analysis, Online Shopping Retail Database (ERD → Queries). Impact-focused portfolio with slides, papers, ERD and SQL scripts." />
+  <meta name="description" content="Data projects by Kimmy Kim — ad click prediction pipeline, Netflix recommendation analysis, SQL retail database. Outcomes with measurable impact and linked deliverables." />
 </head>
 <body>
   <div class="container">
+    <!-- === Sidebar === -->
     <aside class="sidebar">
       <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
 
-      <input type="checkbox" id="nav-projects" class="nav-toggle">
-      <label for="nav-projects" class="nav-group">
-        <span class="chev" aria-hidden="true">▶</span> Projects
-      </label>
-      <ul class="nav-sub">
-        <li><a href="data-projects.html" class="nav-link active">Data</a></li>
-        <li><a href="library-projects.html" class="nav-link">Library</a></li>
-      </ul>
+      <nav>
+        <!-- Projects -->
+        <input id="tg-projects" class="nav-toggle" type="checkbox" checked>
+        <label class="nav-group" for="tg-projects">
+          <span class="chev">▶</span> Projects
+        </label>
+        <ul class="nav-sub">
+          <li><a class="nav-link active" href="data-projects.html">Data Projects</a></li>
+          <li><a class="nav-link" href="library-projects.html">Library Projects</a></li>
+        </ul>
 
-      <input type="checkbox" id="nav-extra" class="nav-toggle">
-      <label for="nav-extra" class="nav-group">
-        <span class="chev" aria-hidden="true">▶</span> Extra Curricular
-      </label>
-      <ul class="nav-sub">
-        <li><a href="community.html" class="nav-link">Community</a></li>
-        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-      </ul>
+        <!-- Extra Curricular -->
+        <input id="tg-extra" class="nav-toggle" type="checkbox">
+        <label class="nav-group" for="tg-extra">
+          <span class="chev">▶</span> Extra Curricular
+        </label>
+        <ul class="nav-sub">
+          <li><a class="nav-link" href="community.html">Community</a></li>
+          <li><a class="nav-link" href="certifications.html">Certifications</a></li>
+        </ul>
 
-      <ul class="nav-root">
-        <li><a href="course.html" class="nav-link">Courses</a></li>
-      </ul>
+        <!-- Courses -->
+        <ul class="nav-root">
+          <li><a class="nav-link" href="course.html">Courses</a></li>
+        </ul>
+      </nav>
     </aside>
 
+    <!-- === Main === -->
     <main class="main">
+      <!-- Top-right chips -->
       <div class="page-actions">
-        <a href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener" class="chip chip-action">LinkedIn</a>
-        <a href="Resume%20-%20Data.pdf" target="_blank" rel="noopener" class="chip chip-action">Resume – Data</a>
+        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip chip-action" href="MINJU_KIM_Resume%20(Data).pdf" target="_blank" rel="noopener">Resume — Data</a>
       </div>
 
-      <div class="section-label">
-        <span class="dot"></span>
-        <span>Data Projects</span>
-      </div>
+      <header class="page-header">
+        <div class="section-label"><span class="dot"></span>Data Projects</div>
+      </header>
 
-      <article class="card project">
-        <h2>Ad Click Prediction Using Cloud ML</h2>
-        <p class="meta">Azure ML Designer · Python · Real-time architecture</p>
-        <ul class="bullets">
+      <!-- Card 1 -->
+      <section class="project-card">
+        <div class="project-head">
+          <h2 class="project-title">Ad Click Prediction Using Cloud ML</h2>
+          <p class="project-meta">Azure ML Designer · Python · Real-time architecture</p>
+        </div>
+        <ul class="project-points">
           <li>Built an end-to-end pipeline (ingest → preprocess → train/score → endpoint) tailored for ad-click prediction in media &amp; entertainment.</li>
-          <li>Deployed a prototype using Azure Language resource + ML pipeline; evaluated with 10K+ ad events in testing.</li>
+          <li>Deployed a prototype using Azure Language resource + ML pipeline; evaluated with 10k+ ad events in testing.</li>
           <li><strong>Impact:</strong> Instant scoring shortened campaign decision cycles by ~30% and produced a reusable ML pipeline template.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" target="_blank" rel="noopener" href="ad-click-slides.pdf">Slides</a>
-          <a class="btn" target="_blank" rel="noopener" href="ad-click-paper.pdf">Paper</a>
+          <a class="btn" href="AdClick_Slides.pdf" target="_blank" rel="noopener">Slides</a>
+          <a class="btn" href="AdClick_Paper.pdf" target="_blank" rel="noopener">Paper</a>
         </div>
-      </article>
+      </section>
 
-      <article class="card project">
-        <h2>Netflix Recommendation Analysis</h2>
-        <p class="meta">EDA · System diagram · Evaluation framework</p>
-        <ul class="bullets">
+      <!-- Card 2 -->
+      <section class="project-card">
+        <div class="project-head">
+          <h2 class="project-title">Netflix Recommendation Analysis</h2>
+          <p class="project-meta">EDA · System diagram · Evaluation framework</p>
+        </div>
+        <ul class="project-points">
           <li>Mapped data schema and key signals (popularity, recency, genre affinity) to align with recommendation goals.</li>
           <li>Produced evaluation diagram and stakeholder-ready slides for model assessment &amp; communication.</li>
           <li><strong>Outcome:</strong> Clear evaluation criteria that improved model interpretability for non-technical teams.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" target="_blank" rel="noopener" href="Netflix%20Diagram.pdf">System Diagram</a>
-          <a class="btn" target="_blank" rel="noopener" href="Netflix-slides.pdf">Slides</a>
+          <a class="btn" href="Netflix_SystemDiagram.pdf" target="_blank" rel="noopener">System Diagram</a>
+          <a class="btn" href="Netflix_Slides.pdf" target="_blank" rel="noopener">Slides</a>
         </div>
-      </article>
+      </section>
 
-      <article class="card project">
-        <h2>Online Shopping Retail Database (ERD → Queries)</h2>
-        <p class="meta">MySQL · ERD · SQL</p>
-        <ul class="bullets">
+      <!-- Card 3 -->
+      <section class="project-card">
+        <div class="project-head">
+          <h2 class="project-title">Online Shopping Retail Database (ERD → Queries)</h2>
+          <p class="project-meta">MySQL · ERD · SQL</p>
+        </div>
+        <ul class="project-points">
           <li>Designed a normalized schema for customers, orders, and products with relationships &amp; constraints.</li>
-          <li>Developed 20+ optimized queries (basket analysis, RFM segmentation) against a 5K+ transaction dataset.</li>
+          <li>Developed 20+ optimized queries (basket analysis, RFM segmentation) against a 5k+ transaction dataset.</li>
           <li><strong>Outcome:</strong> Delivered actionable customer-segment insights with final ERD &amp; production-ready SQL scripts.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" target="_blank" rel="noopener" href="Online%20Retail-slides.pdf">Slides</a>
-          <a class="btn" target="_blank" rel="noopener" href="Online%20Retail_Final%20ERD.pdf">Final ERD</a>
-          <a class="btn" target="_blank" rel="noopener" href="Online%20Retail_Final%20SQL.pdf">SQL Scripts</a>
-          <a class="btn" target="_blank" rel="noopener" href="Initial%20ERD%20%26%20Design%20Proposal.pdf">Initial Proposal</a>
+          <a class="btn" href="Retail_Slides.pdf" target="_blank" rel="noopener">Slides</a>
+          <a class="btn" href="Retail_ERD.pdf" target="_blank" rel="noopener">Final ERD</a>
+          <a class="btn" href="Retail_SQLScripts.sql" target="_blank" rel="noopener">SQL Scripts</a>
+          <a class="btn" href="Retail_Proposal.pdf" target="_blank" rel="noopener">Initial Proposal</a>
         </div>
-      </article>
+      </section>
+
+      <footer class="page-footer">
+        <p>© <span id="year"></span> Kimmy Kim · Data Projects</p>
+      </footer>
     </main>
   </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
