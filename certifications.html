@@ -5,12 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Certifications | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="HSK 5 (Chinese Language Proficiency) and Librarian Certification (Korean Library Association), issued Aug 2022." />
+  <style>
+    .page-title { font-size: 24px; margin: 0 0 20px; color: #111827; }
+    .cert-list { display: grid; gap: 16px; }
+    .cert {
+      background: #fff; border-radius: 14px; padding: 18px 22px;
+      box-shadow: 0 1px 0 rgba(17,24,39,0.04), 0 6px 20px rgba(17,24,39,0.06);
+    }
+    .cert h3 { margin: 0 0 6px; font-size: 18px; color:#111827; }
+    .issuer { margin: 0 0 4px; color:#6b7280; font-size: 14px; }
+    .meta { margin: 0; color:#6b7280; font-size: 13px; }
+    .page-footer { margin-top: 22px; color:#6b7280; font-size: 13px; }
+  </style>
 </head>
 <body>
   <div class="container">
+
+    <!-- === Sidebar === -->
     <aside class="sidebar">
       <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
       <nav class="nav">
+        <!-- Projects -->
         <button class="nav-toggle" data-target="#projects-sub">
           <span class="triangle">▶</span><span>Projects</span>
         </button>
@@ -19,31 +35,56 @@
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
 
+        <!-- Extra Curricular -->
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
           <li><a href="community.html" data-id="community">Community</a></li>
-          <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
+          <li><a href="certifications.html" class="active" data-id="certifications">Certifications</a></li>
         </ul>
 
+        <!-- Singles -->
         <a href="courses.html" class="top-link" data-id="courses">Courses</a>
       </nav>
     </aside>
 
+    <!-- === Main === -->
     <main class="main">
-      <h2>Certifications</h2>
-      <!-- 인증 컨텐츠 -->
+      <h1 class="page-title">Licenses &amp; Certifications</h1>
+
+      <div class="cert-list">
+        <!-- HSK 5 -->
+        <article class="cert">
+          <h3>Chinese Language Proficiency (HSK 5)</h3>
+          <p class="issuer">Center for Language Education and Cooperation</p>
+          <p class="meta">Issued Aug 2022</p>
+        </article>
+
+        <!-- Librarian Certification -->
+        <article class="cert">
+          <h3>Librarian Certification</h3>
+          <p class="issuer">Korean Library Association</p>
+          <p class="meta">Issued Aug 2022 · Credential ID 069147</p>
+        </article>
+      </div>
+
+      <footer class="page-footer">
+        © <span id="year"></span> Kimmy Kim · Certifications
+      </footer>
     </main>
   </div>
 
   <script>
+    // 연도 자동 표시
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     (function () {
       // 1) 페이지 로드시 모든 하위 메뉴 접기
       document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
       document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
 
-      // 2) 상위 메뉴 클릭 시에만 펼치기
+      // 2) 상위 메뉴 클릭 시 토글
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
@@ -54,7 +95,17 @@
         });
       });
 
-      // 3) 라벨 고정 (Data / Library)
+      // 3) 현재 페이지 활성화 & Extra Curricular 자동 펼침
+      const currentLink = document.querySelector('a[href="certifications.html"]');
+      if (currentLink) {
+        currentLink.classList.add('active');
+        const extraSub = document.querySelector('#extra-sub');
+        const extraTri = document.querySelector('button[data-target="#extra-sub"] .triangle');
+        if (extraSub) extraSub.style.display = 'block';
+        if (extraTri) extraTri.textContent = '▼';
+      }
+
+      // 4) Projects 라벨 고정
       const d = document.querySelector('a[href="data-projects.html"]');
       const l = document.querySelector('a[href="library-projects.html"]');
       if (d) d.textContent = 'Data';
