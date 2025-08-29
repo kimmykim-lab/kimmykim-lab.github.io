@@ -4,56 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Courses | Kimmy Kim</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — Selected coursework in cloud computing, data modeling, programming concepts, library services for children, and research methods." />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
-
-      <input type="checkbox" id="nav-projects" class="nav-toggle">
-      <label for="nav-projects" class="nav-group">
-        <span class="chev" aria-hidden="true">▶</span> Projects
-      </label>
-      <ul class="nav-sub">
-        <li><a href="data-projects.html" class="nav-link">Data</a></li>
-        <li><a href="library-projects.html" class="nav-link">Library</a></li>
-      </ul>
-
-      <input type="checkbox" id="nav-extra" class="nav-toggle">
-      <label for="nav-extra" class="nav-group">
-        <span class="chev" aria-hidden="true">▶</span> Extra Curricular
-      </label>
-      <ul class="nav-sub">
-        <li><a href="community.html" class="nav-link">Community</a></li>
-        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-      </ul>
-
-      <ul class="nav-root">
-        <li><a href="course.html" class="nav-link active">Courses</a></li>
-      </ul>
+      <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
+      <nav class="nav">
+        <button class="nav-toggle" data-target="#projects-sub">
+          <span class="triangle">▶</span><span>Projects</span>
+        </button>
+        <ul id="projects-sub" class="submenu">
+          <li><a href="data-projects.html" data-id="data">Data</a></li>
+          <li><a href="library-projects.html" data-id="library">Library</a></li>
+        </ul>
+        <button class="nav-toggle" data-target="#extra-sub">
+          <span class="triangle">▶</span><span>Extra Curricular</span>
+        </button>
+        <ul id="extra-sub" class="submenu">
+          <li><a href="community.html" data-id="community">Community</a></li>
+          <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
+        </ul>
+        <a href="courses.html" class="top-link" data-id="courses">Courses</a>
+      </nav>
     </aside>
 
     <main class="main">
-      <div class="section-label">
-        <span class="dot"></span>
-        <span>Courses</span>
-      </div>
-
-      <section class="card">
-        <h2 style="margin:0 0 10px;">Selected Coursework</h2>
-        <ul class="bullets">
-          <li><strong>Cloud Computing (IMT 589)</strong> — Azure services, web apps, SQL DB, ML Designer</li>
-          <li><strong>Relational Data Modeling</strong> — ER modeling, normalization, SQL</li>
-          <li><strong>Programming Concepts</strong> — Python/Java/C++ fundamentals for interactive apps</li>
-          <li><strong>Library Services for Children</strong> — inclusive programming &amp; evaluation</li>
-          <li><strong>Research Methods</strong> — literature review, qualitative coding, synthesis</li>
-        </ul>
-        <p class="meta">Note: Full syllabus outlines available upon request.</p>
-      </section>
+      <h2>Courses</h2>
+      <!-- Your content -->
     </main>
   </div>
+
+  <script>
+    (function () {
+      const page = 'courses.html';
+
+      document.querySelectorAll('.nav-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const ul = document.querySelector(btn.dataset.target);
+          const tri = btn.querySelector('.triangle');
+          const open = ul.style.display === 'block';
+          ul.style.display = open ? 'none' : 'block';
+          tri.textContent = open ? '▶' : '▼';
+        });
+      });
+
+      const d = document.querySelector('a[href="data-projects.html"]');
+      const l = document.querySelector('a[href="library-projects.html"]');
+      if (d) d.textContent = 'Data';
+      if (l) l.textContent = 'Library';
+    })();
+  </script>
 </body>
 </html>
