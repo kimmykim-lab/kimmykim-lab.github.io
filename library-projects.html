@@ -3,70 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>📚 Library Projects | Kimmy Kim</title>
+  <title>Library Projects | Kimmy Kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Kimmy Kim — Library Projects: teen mental wellbeing participatory design, mini-storytime program design, and community conversation circles proposal." />
 </head>
 <body>
   <div class="container">
+    <!-- Sidebar (공통, 기본 닫힘) -->
     <aside class="sidebar">
       <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
 
-      <details open>
-        <summary>📁 Projects</summary>
-        <ul class="subnav">
-          <li><a href="data-projects.html">📊 Data</a></li>
-          <li><a class="active" href="library-projects.html">📚 Library</a></li>
-        </ul>
-      </details>
+      <!-- Projects -->
+      <input type="checkbox" id="nav-projects" class="nav-toggle">
+      <label for="nav-projects" class="nav-group">
+        <span class="chev" aria-hidden="true">▶</span> Projects
+      </label>
+      <ul class="nav-sub">
+        <li><a href="data-projects.html" class="nav-link">Data</a></li>
+        <li><a href="library-projects.html" class="nav-link active">Library</a></li>
+      </ul>
 
-      <details open>
-        <summary>💬 Extra Curricular</summary>
-        <ul class="subnav">
-          <li><a href="community.html">🤝 Community</a></li>
-          <li><a href="certifications.html">📜 Certifications</a></li>
-        </ul>
-      </details>
+      <!-- Extra Curricular -->
+      <input type="checkbox" id="nav-extra" class="nav-toggle">
+      <label for="nav-extra" class="nav-group">
+        <span class="chev" aria-hidden="true">▶</span> Extra Curricular
+      </label>
+      <ul class="nav-sub">
+        <li><a href="community.html" class="nav-link">Community</a></li>
+      </ul>
+
+      <!-- Singles -->
+      <ul class="nav-root">
+        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+        <li><a href="course.html" class="nav-link">Courses</a></li>
+      </ul>
     </aside>
 
+    <!-- Main -->
     <main class="main">
-      <div class="header">
-        <span class="badge">📚 Library Projects</span>
-        <div class="btn-row">
-          <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn-outline btn" href="MINJU_KIM_Resume%20(Library).pdf" target="_blank" rel="noopener">Resume – Library</a>
-        </div>
+      <div class="page-actions">
+        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip chip-action" href="Resume%20-%20Library.pdf" target="_blank" rel="noopener">Resume — Library</a>
       </div>
 
-      <section id="nourishing" class="card" style="margin-bottom:16px;">
-        <h1>Nourishing Minds (Year 1–3)</h1>
-        <p class="meta">Teen mental-wellbeing • Participatory design • 9 public libraries</p>
-        <ul class="list">
-          <li>Coded <strong>112+</strong> Year-1 field notes; organized multi-year participation across <strong>9 libraries</strong>.</li>
-          <li>Aligned evidence from teen reflections & transcripts; drafted methods/findings; Year-3 manuscript in preparation.</li>
-          <li><strong>Impact:</strong> Clarified practices that improve teen engagement & safe participation.</li>
-        </ul>
-        <div class="kpis">
-          <span class="pill">112+ coded notes</span><span class="pill">9 libraries</span><span class="pill">Year-3 ms. in prep</span>
-        </div>
-      </section>
+      <div class="section-label">
+        <span class="dot"></span>
+        <span>Library Projects</span>
+      </div>
 
-      <section id="storytime" class="card" style="margin-bottom:16px;">
+      <!-- Project 1 -->
+      <article class="card project">
+        <h2>Nourishing Minds (Year 1–3)</h2>
+        <p class="meta">Teen mental-wellbeing · Participatory design · 9 public libraries</p>
+        <ul class="bullets">
+          <li>Coded <strong>112+</strong> Year-1 field notes; organized multi-year participation across <strong>9 libraries</strong>.</li>
+          <li>Aligned evidence from teen reflections &amp; transcripts; drafted methods/findings; Year-3 manuscript in preparation.</li>
+          <li><strong>Impact:</strong> Clarified practices that improve teen engagement &amp; safe participation.</li>
+        </ul>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card project">
         <h2>Spencer Shaw / Christian Robinson Mini-Storytime</h2>
-        <p class="meta">Children’s services • Program design</p>
-        <ul class="list">
+        <p class="meta">Children’s services · Program design</p>
+        <ul class="bullets">
           <li>Reviewed 10+ picture books; designed inclusive, interactive session plan.</li>
           <li><strong>Outcome:</strong> Ready-to-run kit (book picks, prompts, activities).</li>
         </ul>
-      </section>
+      </article>
 
-      <section id="conversation-circles" class="card">
+      <!-- Project 3 -->
+      <article class="card project">
         <h2>King Library Conversation Circles (Proposal)</h2>
-        <p class="meta">Community language learning • SJPL × SJSU concept</p>
-        <ul class="list">
+        <p class="meta">Community language learning · SJPL × SJSU concept</p>
+        <ul class="bullets">
           <li>Drafted ops (volunteers, levels, topics) + retention metrics.</li>
-          <li><strong>Outcome:</strong> Strategic initiative plan centered on accessibility & sustained participation.</li>
+          <li><strong>Outcome:</strong> Strategic initiative plan centered on accessibility &amp; sustained participation.</li>
         </ul>
-      </section>
+      </article>
     </main>
   </div>
 </body>
