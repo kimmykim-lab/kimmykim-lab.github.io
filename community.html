@@ -3,73 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Community | Kimmy Kim</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Extra Curricular | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — Community & Leadership: Resource Center, KGSA, and storytelling volunteer work." />
+  <meta name="description" content="Kimmy Kim — Extra Curricular: Vinyl Banner Printing Lead (UW Resource Center), KGSA Secretary, iSchool Storytelling Event Volunteer." />
+  <style>
+    /* Local tweaks specific to this page */
+    .main { flex-grow: 1; padding: 60px 80px; }
+    .page-title { font-size: 24px; margin: 0 0 20px; color: #111827; }
+    .card {
+      background: #ffffff; border-radius: 14px; padding: 22px 26px;
+      box-shadow: 0 1px 0 rgba(17,24,39,0.04), 0 6px 20px rgba(17,24,39,0.06);
+      margin-bottom: 22px;
+    }
+    .card h2 { margin: 0 0 6px; font-size: 22px; color: #111827; }
+    .card .subline { margin: 0 0 12px; color: #6b7280; font-size: 14px; }
+    .badge {
+      display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px;
+      background: #eef2ff; color: #4f46e5; margin-left: 6px; vertical-align: middle;
+    }
+    .card ul { margin: 10px 0 0 18px; }
+    .card li { margin: 8px 0; line-height: 1.55; }
+    .flex-row { display: flex; gap: 16px; align-items: flex-start; }
+    .thumb {
+      width: 120px; height: 120px; object-fit: cover; border-radius: 10px; flex-shrink: 0;
+    }
+    @media (max-width: 680px) {
+      .main { padding: 28px 18px; }
+      .flex-row { flex-direction: column; }
+      .thumb { width: 100%; height: auto; }
+    }
+    .link { color: #4f46e5; text-decoration: none; }
+    .link:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
   <div class="container">
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
-
-      <input type="checkbox" id="nav-projects" class="nav-toggle">
-      <label for="nav-projects" class="nav-group">
-        <span class="chev" aria-hidden="true">▶</span> Projects
-      </label>
-      <ul class="nav-sub">
-        <li><a href="data-projects.html" class="nav-link">Data</a></li>
-        <li><a href="library-projects.html" class="nav-link">Library</a></li>
-      </ul>
-
-      <input type="checkbox" id="nav-extra" class="nav-toggle">
-      <label for="nav-extra" class="nav-group">
-        <span class="chev" aria-hidden="true">▶</span> Extra Curricular
-      </label>
-      <ul class="nav-sub">
-        <li><a href="community.html" class="nav-link active">Community</a></li>
-        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-      </ul>
-
-      <ul class="nav-root">
-        <li><a href="course.html" class="nav-link">Courses</a></li>
+      <h1><a href="index.html" class="link" style="color:#e0e0e0;text-decoration:none;">Kimmy Kim</a></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="data-projects.html">Data Projects</a></li>
+        <li><a href="library-projects.html">Library Projects</a></li>
+        <li><a href="community.html" class="active">Community</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="course.html">Courses</a></li>
       </ul>
     </aside>
 
+    <!-- Main -->
     <main class="main">
-      <div class="section-label">
-        <span class="dot"></span>
-        <span>Community</span>
-      </div>
+      <h1 class="page-title">Extra Curricular</h1>
 
-      <article class="card project">
-        <h2>Student Assistant — UW Resource Center</h2>
-        <p class="meta">Seattle, WA · Sep 2024 – Present</p>
-        <ul class="bullets">
-          <li>Built Excel dashboards → data accuracy <strong>+15%</strong>; fewer inventory errors.</li>
-          <li>Automated reporting → processing time <strong>−20%</strong>.</li>
-          <li>Launched Vinyl Banner Printing with C2; Forms + tracking → turnaround <strong>−25%</strong>, served <strong>200+ RSOs</strong>.</li>
-          <li>Managed <strong>500+ </strong>equipment &amp; RSO records; <strong>100% compliance</strong>; retrieval time <strong>−20%</strong>.</li>
-          <li>Guided <strong>200+ students/quarter</strong>; accessibility satisfaction <strong>+15%</strong>.</li>
-          <li>Streamlined workflows for <strong>120+ RSOs</strong> → record-management efficiency ↑.</li>
+      <!-- Vinyl Banner Printing -->
+      <section class="card">
+        <h2>Vinyl Banner Printing Lead (UW Resource Center)</h2>
+        <p class="subline">
+          <a class="link" href="https://hub.washington.edu/get-involved/the-sorc/" target="_blank" rel="noopener">UW Resource Center — Vinyl Banner Printing</a>
+          <span class="badge">현재 업데이트 진행중</span>
+        </p>
+        <ul>
+          <li>Launched a new vinyl banner printing service with Creative Communications (C2), serving <strong>200+ RSOs</strong>.</li>
+          <li>Designed Microsoft Forms for reservations and built <strong>Excel-based request-tracking dashboards</strong> to enable data-driven service design.</li>
+          <li>Reduced request turnaround time by <strong>25%</strong> through digital forms and automated workflow tracking.</li>
+          <li>Developed a dedicated Resource Center website section (guidelines, examples, CTAs) to improve visibility and self-service access.</li>
+          <li>Created sample banner posters and lightweight promo assets to accelerate adoption by campus organizations.</li>
         </ul>
-      </article>
+      </section>
 
-      <article class="card project">
+      <!-- KGSA -->
+      <section class="card">
         <h2>KGSA Secretary (UW)</h2>
-        <ul class="bullets">
-          <li>Participation <strong>~30%↑</strong> via targeted outreach &amp; structured agendas.</li>
-          <li>Standardized comms (templates/branding) → faster approvals &amp; clearer CTAs.</li>
+        <p class="subline">
+          <a class="link" href="https://huskylink.washington.edu/organization/kgsa" target="_blank" rel="noopener">KGSA — HuskyLink</a>
+        </p>
+        <ul>
+          <li>Increased participation by <strong>~30%</strong> through structured agendas and targeted outreach.</li>
+          <li>Standardized communications (templates/branding) → faster approvals and clearer CTAs.</li>
         </ul>
-      </article>
+      </section>
 
-      <article class="card project">
+      <!-- Storytelling Event Volunteer -->
+      <section class="card">
         <h2>Storytelling Event Volunteer (iSchool)</h2>
-        <ul class="bullets">
-          <li>Concise promos + accessible flow → attendance <strong>~15%↑</strong>.</li>
-          <li>Created a lightweight playbook (timeline, roles, assets) for continuity.</li>
-        </ul>
-      </article>
+        <p class="subline">
+          <a class="link" href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">
+            Christian Robinson Storytelling Event — UW iSchool
+          </a>
+        </p>
+        <div class="flex-row">
+          <img src="VolunteerPhoto.jpg" alt="Storytelling Event — Volunteer at UW iSchool" class="thumb" />
+          <div>
+            <ul>
+              <li>Concise promotions and accessible event flow boosted attendance by <strong>~15%</strong>.</li>
+              <li>Built a lightweight playbook (timeline, roles, assets) to ensure continuity for future events.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
     </main>
   </div>
 </body>
