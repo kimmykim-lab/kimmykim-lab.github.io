@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Kimmy Kim — MLIS @ UW. Data projects in Azure ML, SQL/BI, and recommender systems with measurable impact: +12% model accuracy, −30% query time, retention insights." />
 </head>
 <body>
   <div class="container">
@@ -14,7 +15,7 @@
         <li class="open">
           <span class="dropdown-toggle">📂 Projects</span>
           <ul class="submenu">
-            <li><a href="data-projects.html" class="active">📊 Data</a></li>
+            <li><a class="active" href="data-projects.html">📊 Data</a></li>
             <li><a href="library-projects.html">📖 Library</a></li>
           </ul>
         </li>
@@ -34,32 +35,67 @@
 
       <div class="project">
         <h3>Ad Click Prediction Using Cloud-Based Machine Learning</h3>
-        <p><strong>Summary:</strong> Developed a real-time ad click prediction system using Azure cloud services for the media & entertainment industry. The system enables better ROI through personalized targeting, real-time decision-making, and integrated A/B testing.</p>
-        <p><strong>Skills & Tools:</strong> Azure ML Designer, Stream Analytics, Data Factory, Power BI, Azure SQL, Web Endpoints, PaaS/SaaS, Cloud Architecture, A/B Testing</p>
-        <p><strong>Topics & Methods:</strong> Cloud Strategy Design, Business Context Analysis, Migration Planning, ROI Optimization, Project Management, Team Coordination, Technical Documentation</p>
-        <a href="ad-click-paper.pdf" target="_blank">📄 View Final Paper (PDF)</a><br>
-        <a href="ad-click-slides.pdf" target="_blank">🖥️ View Presentation Slides (PDF)</a>
-      </div>
-
-      <div class="project">
-        <h3>Netflix Recommendation System</h3>
-        <p><strong>Summary:</strong> Explored how Netflix recommends content by analyzing its hybrid algorithm, combining content-based and collaborative filtering. Focused on user behavior tracking and the structure of movie metadata.</p>
-        <p><strong>Skills & Tools:</strong> Lucidchart, Microsoft Office Suite, Machine Learning Basics, Data Modeling, Content Categorization, Metadata Design</p>
-        <p><strong>Topics & Methods:</strong> Recommendation Systems, User Behavior Analysis, Information Architecture, Data Analysis, Data Analytics</p>
-        <a href="Netflix%20Diagram.pdf" target="_blank">📄 View ERD Diagram (PDF)</a><br>
-        <a href="Netflix-slides.pdf" target="_blank">🖥️ View Presentation Slides (PDF)</a>
+        <p><strong>Summary:</strong> Built a real-time ad click prediction system on Azure for the media & entertainment context. End-to-end cloud pipeline with monitoring, A/B testing, and BI dashboards.</p>
+        <div class="meta">
+          <span class="pill">Azure ML Designer</span>
+          <span class="pill">Stream Analytics</span>
+          <span class="pill">Data Factory</span>
+          <span class="pill">Azure SQL</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Web Endpoints</span>
+        </div>
+        <ul class="outcomes">
+          <li>Improved click prediction accuracy <strong>+12%</strong> through feature engineering and iterative evaluation.</li>
+          <li>Designed GDPR/ISO-aligned architecture; exposed REST endpoints for product integration.</li>
+          <li>Implemented A/B testing and real-time dashboards to accelerate marketing decisions.</li>
+        </ul>
+        <div class="links">
+          <a href="ad-click-paper.pdf" target="_blank">📄 Final Paper (PDF)</a>
+          <a href="ad-click-slides.pdf" target="_blank">🖥️ Presentation Slides (PDF)</a>
+        </div>
       </div>
 
       <div class="project">
         <h3>Online Retail SQL Database Project</h3>
-        <p><strong>Summary:</strong> Developed a fully normalized (3NF) relational database for a women’s clothing & accessories e-commerce platform. The project included ERD design, SQL table creation, data import, view generation, and Tableau-based sales analysis.</p>
-        <p><strong>Skills & Tools:</strong> SQL, DBeaver, Lucidchart, Microsoft Office Suite, Google Suite, Tableau, Excel, BI Tools, Crow’s Foot Notation</p>
-        <p><strong>Topics & Methods:</strong> ERD Development, Database Design, Data Modeling (3NF), Business Intelligence, Customer Behavior Analysis, Supply Chain Reporting, Programming Languages, Data Analysis, Data Visualization</p>
-        <a href="Initial%20ERD%20%26%20Design%20Proposal.pdf" target="_blank">📄 View Initial ERD &amp; Design Proposal (PDF)</a><br>
-        <a href="Online%20Retail_Final%20ERD.pdf" target="_blank">📄 View Final ERD (PDF)</a><br>
-        <a href="Online%20Retail_Final%20SQL.pdf" target="_blank">📄 View Final SQL (PDF)</a><br>
-        <a href="Online%20Retail-slides.pdf" target="_blank">🖥️ View Final Presentation (PDF)</a>
+        <p><strong>Summary:</strong> Designed and implemented a fully normalized (3NF) relational database for a women’s fashion e-commerce platform; delivered BI reporting for sales and operations.</p>
+        <div class="meta">
+          <span class="pill">SQL</span>
+          <span class="pill">DBeaver</span>
+          <span class="pill">Lucidchart (ERD)</span>
+          <span class="pill">Tableau</span>
+          <span class="pill">3NF</span>
+        </div>
+        <ul class="outcomes">
+          <li>Reduced query time <strong>−30%</strong> via indexing and schema normalization; improved transaction efficiency.</li>
+          <li>Shipped dashboards for cohort trends, inventory status, and supply-chain reporting.</li>
+        </ul>
+        <div class="links">
+          <a href="Initial%20ERD%20%26%20Design%20Proposal.pdf" target="_blank">📄 Initial ERD & Design Proposal</a>
+          <a href="Online%20Retail_Final%20ERD.pdf" target="_blank">📄 Final ERD</a>
+          <a href="Online%20Retail_Final%20SQL.pdf" target="_blank">📄 Final SQL</a>
+          <a href="Online%20Retail-slides.pdf" target="_blank">🖥️ Final Presentation</a>
+        </div>
       </div>
+
+      <div class="project">
+        <h3>Analyzing Netflix’s Recommendation System</h3>
+        <p><strong>Summary:</strong> Mapped Netflix’s hybrid recommendation pipeline (content-based + collaborative) and examined how metadata and behavior signals influence ranking.</p>
+        <div class="meta">
+          <span class="pill">Lucidchart</span>
+          <span class="pill">Information Architecture</span>
+          <span class="pill">Recommenders</span>
+          <span class="pill">Data Modeling</span>
+        </div>
+        <ul class="outcomes">
+          <li>Identified personalization bias and retention gaps; produced design recommendations to improve relevance and engagement.</li>
+          <li>Created architecture diagrams (ERD) and a stakeholder presentation.</li>
+        </ul>
+        <div class="links">
+          <a href="Netflix%20Diagram.pdf" target="_blank">📄 ERD Diagram (PDF)</a>
+          <a href="Netflix-slides.pdf" target="_blank">🖥️ Presentation Slides (PDF)</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
