@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Community & Leadership | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Extra Curricular: Vinyl Banner Printing Lead (UW Resource Center), KGSA Secretary, iSchool Storytelling Event Volunteer." />
 </head>
 <body>
   <div class="container">
+    <!-- === Sidebar === -->
     <aside class="sidebar">
       <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
       <nav class="nav">
+        <!-- Projects -->
         <button class="nav-toggle" data-target="#projects-sub">
           <span class="triangle">▶</span><span>Projects</span>
         </button>
@@ -18,30 +21,88 @@
           <li><a href="data-projects.html" data-id="data">Data</a></li>
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
+
+        <!-- Extra Curricular -->
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
-          <li><a href="community.html" data-id="community">Community</a></li>
+          <li><a href="community.html" class="active" data-id="community">Community</a></li>
           <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
         </ul>
+
+        <!-- Singles -->
         <a href="courses.html" class="top-link" data-id="courses">Courses</a>
       </nav>
     </aside>
 
+    <!-- === Main === -->
     <main class="main">
-      <h2>Community & Leadership</h2>
-      <!-- Your content -->
+      <h1 class="page-title">Community &amp; Leadership</h1>
+
+      <!-- Vinyl Banner Printing -->
+      <section class="card">
+        <h2>Vinyl Banner Printing Lead (UW Resource Center)</h2>
+        <p class="subline">
+          <a class="link" href="https://hub.washington.edu/get-involved/the-sorc/" target="_blank" rel="noopener">UW Resource Center — Vinyl Banner Printing</a>
+          <span class="badge">Currently being updated</span>
+        </p>
+        <ul>
+          <li>Launched a new vinyl banner printing service with Creative Communications (C2), serving 200+ RSOs.</li>
+          <li>Designed Microsoft Forms for reservations and built Excel-based request-tracking dashboards to enable data-driven service design.</li>
+          <li>Reduced request turnaround time by 25% through digital forms and automated workflow tracking.</li>
+          <li>Developed a dedicated Resource Center website section (guidelines, examples, CTAs) to improve visibility and self-service access.</li>
+          <li>Created sample banner posters and lightweight promo assets to accelerate adoption by campus organizations.</li>
+        </ul>
+      </section>
+
+      <!-- KGSA -->
+      <section class="card">
+        <h2>KGSA Secretary (UW)</h2>
+        <p class="subline">
+          <a class="link" href="https://huskylink.washington.edu/organization/kgsa" target="_blank" rel="noopener">KGSA — HuskyLink</a>
+        </p>
+        <ul>
+          <li>Increased participation by 30% through structured agendas and targeted outreach.</li>
+          <li>Standardized communications (templates/branding) → faster approvals and clearer CTAs.</li>
+        </ul>
+      </section>
+
+      <!-- Storytelling Event Volunteer -->
+      <section class="card">
+        <h2>Storytelling Event Volunteer (iSchool)</h2>
+        <p class="subline">
+          <a class="link" href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">
+            Christian Robinson Storytelling Event — UW iSchool
+          </a>
+        </p>
+        <div class="flex-row">
+          <img src="VolunteerPhoto.jpg" alt="Storytelling Event — Volunteer at UW iSchool" class="thumb" />
+          <div>
+            <ul>
+              <li>Concise promotions and accessible event flow boosted attendance by 15%.</li>
+              <li>Built a lightweight playbook (timeline, roles, assets) to ensure continuity for future events.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <p>© <span id="year"></span> Kimmy Kim · Community</p>
+      </footer>
     </main>
   </div>
 
   <script>
-    (function () {
-      const page = 'community.html';
+    // 푸터 연도
+    document.getElementById('year').textContent = new Date().getFullYear();
 
+    (function () {
+      // 1) 기본: 서브메뉴 접기
       document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
       document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
 
+      // 2) 토글 동작
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
@@ -52,6 +113,17 @@
         });
       });
 
+      // 3) 현재 페이지(Community) 활성화 & Extra Curricular 자동 펼침
+      const currentLink = document.querySelector('a[href="community.html"]');
+      if (currentLink) {
+        currentLink.classList.add('active');
+        const extraSub = document.querySelector('#extra-sub');
+        const extraTri = document.querySelector('button[data-target="#extra-sub"] .triangle');
+        if (extraSub) extraSub.style.display = 'block';
+        if (extraTri) extraTri.textContent = '▼';
+      }
+
+      // 4) 라벨 고정
       const d = document.querySelector('a[href="data-projects.html"]');
       const l = document.querySelector('a[href="library-projects.html"]');
       if (d) d.textContent = 'Data';
