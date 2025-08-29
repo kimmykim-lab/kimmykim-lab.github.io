@@ -9,34 +9,49 @@
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar (matches data-projects.html) -->
+    <!-- === Sidebar (same structure as data-projects.html) === -->
     <aside class="sidebar">
-      <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
+      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
+
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="data-projects.html">Data Projects</a></li>
-          <li><a href="library-projects.html" class="active">Library Projects</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="certifications.html">Certifications</a></li>
-          <li><a href="course.html">Courses</a></li>
+        <!-- Projects group -->
+        <input id="tg-projects" class="nav-toggle" type="checkbox" checked>
+        <label class="nav-group" for="tg-projects">
+          <span class="chev">▶</span> Projects
+        </label>
+        <ul class="nav-sub">
+          <li><a class="nav-link" href="data-projects.html">Data Projects</a></li>
+          <li><a class="nav-link active" href="library-projects.html">Library Projects</a></li>
         </ul>
-        <hr />
-        <ul>
-          <li><a href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="Resume-Data.pdf" target="_blank" rel="noopener">Resume — Data</a></li>
-          <li><a href="Resume-Library.pdf" target="_blank" rel="noopener">Resume — Library</a></li>
+
+        <!-- Extra Curricular group -->
+        <input id="tg-extra" class="nav-toggle" type="checkbox">
+        <label class="nav-group" for="tg-extra">
+          <span class="chev">▶</span> Extra Curricular
+        </label>
+        <ul class="nav-sub">
+          <li><a class="nav-link" href="community.html">Community</a></li>
+          <li><a class="nav-link" href="certifications.html">Certifications</a></li>
+        </ul>
+
+        <!-- Courses (single) -->
+        <ul class="nav-root">
+          <li><a class="nav-link" href="course.html">Courses</a></li>
         </ul>
       </nav>
     </aside>
 
-    <!-- Main -->
+    <!-- === Main === -->
     <main class="main">
+      <!-- top-right chips (match data page) -->
+      <div class="page-actions">
+        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip chip-action" href="Resume-Library.pdf" target="_blank" rel="noopener">Resume — Library</a>
+      </div>
+
       <header class="page-header">
-        <h1>Library Projects</h1>
-        <p class="page-intro">
-          Selected projects with measurable outcomes and linked deliverables. Non-project/draft content removed for clarity.
-        </p>
+        <div class="section-label"><span class="dot"></span>Library Projects</div>
+        <p class="page-intro">Selected projects with measurable outcomes and linked deliverables. Non-project/draft content removed for clarity.</p>
       </header>
 
       <!-- Card 1 -->
@@ -134,7 +149,7 @@
   </div>
 
   <script>
-    // footer year update (same as data-projects.html)
+    // footer year update (same as data page)
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
