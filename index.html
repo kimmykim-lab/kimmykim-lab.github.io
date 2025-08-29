@@ -4,13 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kimmy Kim | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Kimmy Kim — MLIS student at the UW iSchool. Passionate about data analytics, educational technology, and youth library services. Preparing for PhD applications and data-focused roles." />
 </head>
 <body>
   <div class="container">
+    <!-- === Sidebar (공통) === -->
     <aside class="sidebar">
       <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
       <nav class="nav">
+        <!-- Projects -->
         <button class="nav-toggle" data-target="#projects-sub">
           <span class="triangle">▶</span><span>Projects</span>
         </button>
@@ -19,6 +23,7 @@
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
 
+        <!-- Extra Curricular -->
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
@@ -27,20 +32,90 @@
           <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
         </ul>
 
+        <!-- Singles -->
         <a href="courses.html" class="top-link" data-id="courses">Courses</a>
       </nav>
     </aside>
 
+    <!-- === Main === -->
     <main class="main">
-      <h2>Welcome</h2>
-      <p>This is the homepage.</p>
+      <!-- Hero / Intro -->
+      <section class="card" style="display:flex; align-items:flex-start; gap:24px;">
+        <!-- Profile Photo -->
+        <img src="Photo_Kimmy.jpg" alt="Kimmy Kim — Data & Library practitioner"
+             class="rounded" style="width:160px; height:auto; flex-shrink:0;">
+
+        <!-- Text -->
+        <div>
+          <h2 style="margin:0 0 12px;">Hi 👋🏻 I’m Kimmy Kim!</h2>
+          <p class="meta" style="margin:0 0 8px;">
+            I’m a Master’s student at the UW iSchool, passionate about combining
+            <strong>data analytics and social impact</strong>.
+          </p>
+          <p class="meta" style="margin:0 0 12px;">
+            I love creating inclusive, measurable systems that help people—especially
+            kids and communities—connect with information.
+          </p>
+
+          <h3 style="margin:16px 0 6px;">Research &amp; Professional Interests</h3>
+          <p class="meta" style="margin:0 0 16px;">
+            Data Analytics and Visualization · Artificial Intelligence in Education ·
+            Educational Technology and Learning Analytics · Data Science for Social Good ·
+            Data Management · Children and Youth Services
+          </p>
+
+          <h3 style="margin:16px 0 6px;">Contact Me</h3>
+          <p class="meta" style="margin:0 0 12px;">
+            📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu
+          </p>
+          <div class="btn-row">
+            <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume — Data</a>
+            <a class="btn" href="MINJU_KIM_Resume%20(Library).pdf" target="_blank" rel="noopener">Resume — Library</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Academic Background -->
+      <section class="card">
+        <h2 style="margin:0 0 10px;">My Academic Background</h2>
+        <p class="meta" style="margin:0;">
+          I studied Library and Information Science as an undergraduate in Korea, and I am now pursuing my
+          Master of Library and Information Science at the UW iSchool. Through this journey, I developed a strong
+          interest in how data can transform education and library services.
+        </p>
+      </section>
+
+      <!-- My Goal -->
+      <section class="card">
+        <h2 style="margin:0 0 10px;">My Goal</h2>
+        <p class="meta" style="margin:0;">
+          Through my studies, including courses in Cloud Computing, SQL, and Data Analysis, I began exploring the
+          intersection of <strong>education, data, and AI</strong> — with the goal of designing systems that improve
+          learning and community engagement.
+        </p>
+      </section>
+
+      <!-- My Pursuing Values -->
+      <section class="card">
+        <h2 style="margin:0 0 10px;">My Pursuing Values</h2>
+        <ul class="bullets" style="margin-top:6px;">
+          <li><strong>Inclusive</strong> — I design systems and programs that center diverse voices, especially children and communities.</li>
+          <li><strong>Analytical</strong> — I use data to measure outcomes and improve decisions.</li>
+          <li><strong>Collaborative</strong> — I thrive on co-design and teamwork across disciplines and backgrounds.</li>
+          <li><strong>Practical</strong> — I focus on building systems that actually work in real settings.</li>
+        </ul>
+      </section>
     </main>
   </div>
 
   <script>
     (function () {
-      const page = location.pathname.split('/').pop() || 'index.html';
+      // 1) 기본: 서브메뉴 접기
+      document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
+      document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
 
+      // 2) 토글 동작
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
@@ -51,34 +126,8 @@
         });
       });
 
-      const map = {
-        'data-projects.html': ['#projects-sub','data'],
-        'library-projects.html': ['#projects-sub','library'],
-        'community.html': ['#extra-sub','community'],
-        'certifications.html': ['#extra-sub','certifications'],
-        'courses.html': [null,'courses'],
-        'index.html': [null,null]
-      };
-      const cfg = map[page] || [null,null];
-
-      if (page === 'community.html') {
-        document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
-        document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
-      } else if (cfg[0]) {
-        const btn = document.querySelector(`.nav-toggle[data-target="${cfg[0]}"]`);
-        if (btn) {
-          const ul = document.querySelector(cfg[0]);
-          const tri = btn.querySelector('.triangle');
-          ul.style.display = 'block';
-          tri.textContent = '▼';
-        }
-      }
-
-      if (cfg[1]) {
-        const active = document.querySelector(`[data-id="${cfg[1]}"]`);
-        if (active) active.classList.add('active');
-      }
-
+      // 3) 현재 페이지가 index이므로 active는 지정하지 않음.
+      //    단, 라벨 텍스트(Data/Library) 고정
       const d = document.querySelector('a[href="data-projects.html"]');
       const l = document.querySelector('a[href="library-projects.html"]');
       if (d) d.textContent = 'Data';
