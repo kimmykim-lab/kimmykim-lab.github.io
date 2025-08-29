@@ -18,6 +18,7 @@
           <li><a href="data-projects.html" data-id="data">Data</a></li>
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
+
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
@@ -25,20 +26,24 @@
           <li><a href="community.html" data-id="community">Community</a></li>
           <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
         </ul>
+
         <a href="courses.html" class="top-link" data-id="courses">Courses</a>
       </nav>
     </aside>
 
     <main class="main">
       <h2>Data Projects</h2>
-      <!-- Your content -->
+      <!-- content -->
     </main>
   </div>
 
   <script>
     (function () {
-      const page = 'data-projects.html';
+      // 1) 모든 하위 메뉴 접기(요청 동작)
+      document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
+      document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
 
+      // 2) 클릭 시에만 펼치기
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
@@ -49,15 +54,7 @@
         });
       });
 
-      const btn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
-      if (btn) {
-        const ul = document.querySelector('#projects-sub');
-        const tri = btn.querySelector('.triangle');
-        ul.style.display = 'block';
-        tri.textContent = '▼';
-      }
-      document.querySelector('[data-id="data"]').classList.add('active');
-
+      // 3) 라벨 고정
       const d = document.querySelector('a[href="data-projects.html"]');
       const l = document.querySelector('a[href="library-projects.html"]');
       if (d) d.textContent = 'Data';
