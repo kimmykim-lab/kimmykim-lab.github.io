@@ -5,115 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Data projects by Kimmy Kim — ad click prediction pipeline, Netflix recommendation analysis, SQL retail database. Outcomes with measurable impact and linked deliverables." />
 </head>
 <body>
   <div class="container">
-    <!-- === Sidebar === -->
     <aside class="sidebar">
-      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
-
-      <nav>
-        <!-- Projects -->
-        <input id="tg-projects" class="nav-toggle" type="checkbox" checked>
-        <label class="nav-group" for="tg-projects">
-          <span class="chev">▶</span> Projects
-        </label>
-        <ul class="nav-sub">
-          <li><a class="nav-link active" href="data-projects.html">Data Projects</a></li>
-          <li><a class="nav-link" href="library-projects.html">Library Projects</a></li>
+      <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
+      <nav class="nav">
+        <button class="nav-toggle" data-target="#projects-sub">
+          <span class="triangle">▶</span> <span>Projects</span>
+        </button>
+        <ul id="projects-sub" class="submenu">
+          <li><a href="data-projects.html" data-id="data">Data</a></li>
+          <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
-
-        <!-- Extra Curricular -->
-        <input id="tg-extra" class="nav-toggle" type="checkbox">
-        <label class="nav-group" for="tg-extra">
-          <span class="chev">▶</span> Extra Curricular
-        </label>
-        <ul class="nav-sub">
-          <li><a class="nav-link" href="community.html">Community</a></li>
-          <li><a class="nav-link" href="certifications.html">Certifications</a></li>
+        <button class="nav-toggle" data-target="#extra-sub">
+          <span class="triangle">▶</span> <span>Extra Curricular</span>
+        </button>
+        <ul id="extra-sub" class="submenu">
+          <li><a href="community.html" data-id="community">Community</a></li>
+          <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
         </ul>
-
-        <!-- Courses -->
-        <ul class="nav-root">
-          <li><a class="nav-link" href="course.html">Courses</a></li>
-        </ul>
+        <a href="courses.html" class="top-link" data-id="courses">Courses</a>
       </nav>
     </aside>
 
-    <!-- === Main === -->
     <main class="main">
-      <!-- Top-right chips -->
-      <div class="page-actions">
-        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="chip chip-action" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume — Data</a>
-      </div>
-
-      <header class="page-header">
-        <div class="section-label"><span class="dot"></span>Data Projects</div>
-      </header>
-
-      <!-- Card 1 -->
-      <section class="project-card">
-        <div class="project-head">
-          <h2 class="project-title">Ad Click Prediction Using Cloud ML</h2>
-          <p class="project-meta">Azure ML Designer · Python · Real-time architecture</p>
-        </div>
-        <ul class="project-points">
-          <li>Built an end-to-end pipeline (ingest → preprocess → train/score → endpoint) tailored for ad-click prediction in media &amp; entertainment.</li>
-          <li>Deployed a prototype using Azure Language resource + ML pipeline; evaluated with 10k+ ad events in testing.</li>
-          <li><strong>Impact:</strong> Instant scoring shortened campaign decision cycles by ~30% and produced a reusable ML pipeline template.</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn" href="ad-click-slides.pdf" target="_blank" rel="noopener">Slides</a>
-          <a class="btn" href="ad-click-paper.pdf" target="_blank" rel="noopener">Paper</a>
-        </div>
-      </section>
-
-      <!-- Card 2 -->
-      <section class="project-card">
-        <div class="project-head">
-          <h2 class="project-title">Netflix Recommendation Analysis</h2>
-          <p class="project-meta">EDA · System diagram · Evaluation framework</p>
-        </div>
-        <ul class="project-points">
-          <li>Mapped data schema and key signals (popularity, recency, genre affinity) to align with recommendation goals.</li>
-          <li>Produced evaluation diagram and stakeholder-ready slides for model assessment &amp; communication.</li>
-          <li><strong>Outcome:</strong> Clear evaluation criteria that improved model interpretability for non-technical teams.</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn" href="Netflix%20Diagram.pdf" target="_blank" rel="noopener">System Diagram</a>
-          <a class="btn" href="Netflix-slides.pdf" target="_blank" rel="noopener">Slides</a>
-        </div>
-      </section>
-
-      <!-- Card 3 -->
-      <section class="project-card">
-        <div class="project-head">
-          <h2 class="project-title">Online Shopping Retail Database (ERD → Queries)</h2>
-          <p class="project-meta">MySQL · ERD · SQL</p>
-        </div>
-        <ul class="project-points">
-          <li>Designed a normalized schema for customers, orders, and products with relationships &amp; constraints.</li>
-          <li>Developed 20+ optimized queries (basket analysis, RFM segmentation) against a 5k+ transaction dataset.</li>
-          <li><strong>Outcome:</strong> Delivered actionable customer-segment insights with final ERD &amp; production-ready SQL scripts.</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn" href="Online%20Retail-slides.pdf" target="_blank" rel="noopener">Slides</a>
-          <a class="btn" href="Online%20Retail_Final%20ERD.pdf" target="_blank" rel="noopener">Final ERD</a>
-          <a class="btn" href="Online%20Retail_Final%20SQL.pdf" target="_blank" rel="noopener">SQL Scripts</a>
-          <a class="btn" href="Initial%20ERD%20&amp;%20Design%20Proposal.pdf" target="_blank" rel="noopener">Initial Proposal</a>
-        </div>
-      </section>
-
-      <footer class="page-footer">
-        <p>© <span id="year"></span> Kimmy Kim · Data Projects</p>
-      </footer>
+      <h2>Data Projects</h2>
+      <!-- 데이터 프로젝트 컨텐츠 -->
     </main>
   </div>
 
+  <!-- same script as index -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){ const s=document.createElement('script'); s.src=''; })();
+  </script>
+  <script>
+    (function () {
+      const page = 'data-projects.html';
+      const toggleBtns = document.querySelectorAll('.nav-toggle');
+      toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = document.querySelector(btn.dataset.target);
+          const tri = btn.querySelector('.triangle');
+          const isOpen = target.style.display === 'block';
+          target.style.display = isOpen ? 'none' : 'block';
+          tri.textContent = isOpen ? '▶' : '▼';
+        });
+      });
+      function openMenu(sel){ const btn=document.querySelector(sel); const ul=document.querySelector(btn.dataset.target); const tri=btn.querySelector('.triangle'); ul.style.display='block'; tri.textContent='▼'; }
+      // open Projects, highlight Data
+      openMenu('.nav-toggle[data-target="#projects-sub"]');
+      document.querySelector('[data-id="data"]').classList.add('active');
+      // keep labels fixed
+      document.querySelector('a[href="data-projects.html"]').textContent='Data';
+      document.querySelector('a[href="library-projects.html"]').textContent='Library';
+    })();
   </script>
 </body>
 </html>
