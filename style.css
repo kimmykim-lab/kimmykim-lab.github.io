@@ -1,6 +1,3 @@
-/* ===== (선택) 둥근 톤을 위한 웹폰트 사용 시 주석 해제 ===== */
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap'); */
-
 /* ===== Base ===== */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -20,7 +17,7 @@ body {
 /* ===== Layout ===== */
 .container { display: flex; min-height: 100vh; }
 .sidebar {
-  width: 240px;                 /* 모바일에서도 고정 폭 유지 → 오른쪽 밀림 방지 */
+  width: 240px;
   background-color: #4c1d95;
   color: #ffffff;
   padding: 28px 22px;
@@ -31,7 +28,7 @@ body {
   padding: 60px 80px;
 }
 
-/* ===== Sidebar (안정화) ===== */
+/* ===== Sidebar ===== */
 .sidebar h1 {
   font-size: 22px;
   margin: 0 0 20px 0;
@@ -39,29 +36,27 @@ body {
   letter-spacing: 0.2px;
 }
 
-/* 기본 링크 톤: 파란색 X, pill X */
 .sidebar a,
 .sidebar a:visited {
   color: #e6e6e6;
   text-decoration: none;
+  display: block;
+  background: none !important;
+  border: 0 !important;
+  padding: 0 !important;
 }
 .sidebar a:hover,
-.sidebar a.active {
-  color: #ffffff;              /* 가벼운 화이트 강조 */
-}
+.sidebar a.active { color: #ffffff; }
 
-/* 리스트를 단순 블록 흐름으로 복귀 */
 .sidebar ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: block;              /* flex 사용 X → 불필요한 줄바꿈/오버플로우 방지 */
+  display: block;
 }
 
-/* 모든 li 기본 간격: 항목 간 6px */
-.sidebar li { margin: 6px 0; }
+.sidebar li { margin: 6px 0; } /* 모든 항목 간격 균일 */
 
-/* 제목(Projects / Extra Curricular)이 strong, b, .section-title, .toggle 중 어느 형태든 대응 */
 .sidebar li strong,
 .sidebar li b,
 .sidebar .section-title,
@@ -69,31 +64,55 @@ body {
   display: block;
   font-weight: 700;
   color: #ffffff;
-  margin: 16px 0 12px 0;       /* 제목 위 16px, 아래 12px → "제목 ↔ 첫 항목" 더 넓게 */
-  line-height: 1.2;
+  margin: 16px 0 12px 0; /* 제목 ↔ 항목 사이 여유 */
+  line-height: 1.25;
 }
 
-/* 혹시 하위 리스트 구조가 있는 경우(있어도 없어도 안전) */
 .sidebar ul ul {
-  margin: 0;                   /* 좌측 들여쓰기/여백 최소화(원하면 10~12px로 조절 가능) */
-  padding-left: 0;
+  margin: 0;
+  padding-left: 0; /* 과도한 들여쓰기 방지 */
 }
 .sidebar ul ul li { margin: 6px 0; }
 
 /* ===== Content ===== */
-.main h1 { font-size: 32px; margin: 0 0 16px 0; font-weight: 800; }
-.main h2 { font-size: 22px; margin: 28px 0 12px 0; font-weight: 800; }
-.main p  { font-size: 16px; line-height: 1.7; margin: 0 0 14px 0; }
+.main h1 {
+  font-size: 32px;
+  margin: 0 0 16px 0;
+  font-weight: 800;
+}
+.main h2 {
+  font-size: 22px;
+  margin: 28px 0 14px 0;
+  font-weight: 800;
+}
+.main p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 14px 0;
+}
 
 .card {
   background: #ffffff;
   border-radius: 16px;
   padding: 28px;
   box-shadow: 0 10px 18px rgba(17, 24, 39, 0.06);
+  margin-bottom: 28px; /* 카드 간 여백 */
 }
+.card:last-child { margin-bottom: 0; }
 
-.hero { display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: center; }
-.profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; display: block; }
+.hero {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
 
 .tags { display: flex; flex-wrap: wrap; gap: 10px; }
 .tag {
@@ -107,32 +126,46 @@ body {
 }
 
 /* ===== Footer ===== */
-.footer { margin-top: 40px; color: #6b7280; font-size: 14px; }
-
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .main { padding: 48px 48px; }
+.footer {
+  margin-top: 40px;
+  color: #6b7280;
+  font-size: 14px;
 }
 
-@media (max-width: 768px) {
+/* ===== Mobile-only (≤767px) ===== */
+@media (max-width: 767px) {
   body { font-size: 14px; line-height: 1.6; }
-  .main { padding: 28px 20px; }
 
-  /* 모바일에서도 사이드바 고정 폭 → 화면 밀림 방지 */
-  .sidebar { width: 220px; padding: 24px 18px; }
-  .sidebar h1 { font-size: 20px; margin-bottom: 16px; }
-
-  /* 간격 규칙 동일 유지(제목 아래 12px, 항목 간 6px) */
+  .sidebar {
+    width: 220px;
+    padding: 24px 18px;
+  }
+  .sidebar h1 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
   .sidebar li { margin: 6px 0; }
   .sidebar li strong,
   .sidebar li b,
   .sidebar .section-title,
-  .sidebar .toggle { margin: 16px 0 12px 0; }
+  .sidebar .toggle {
+    margin: 16px 0 12px 0;
+  }
 
-  .hero { grid-template-columns: 96px 1fr; gap: 18px; }
-  .profile-img { width: 96px; height: 96px; }
+  .main { padding: 28px 20px; }
+  .hero {
+    grid-template-columns: 96px 1fr;
+    gap: 18px;
+  }
+  .profile-img {
+    width: 96px;
+    height: 96px;
+  }
   .main h1 { font-size: 26px; }
   .main h2 { font-size: 18px; }
-  .main p  { font-size: 14px; line-height: 1.65; }
-  .tag { font-size: 13px; padding: 6px 12px; }
+  .main p { font-size: 14px; line-height: 1.65; }
+  .tag {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
 }
