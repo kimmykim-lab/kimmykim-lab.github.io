@@ -17,7 +17,7 @@ img { max-width: 100%; height: auto; display: block; }
   --text: #111827;
   --muted: #6b7280;
 
-  --brand: #5b21b6;              /* Primary (sidebar 보라색과 톤 맞춤) */
+  --brand: #5b21b6;
   --brand-contrast: #ffffff;
 
   --chip-bg: #ede9fe;
@@ -65,10 +65,10 @@ li{ margin: 6px 0; }
   min-height: 100vh;
 }
 
-/* Sidebar */
+/* Sidebar (desktop) */
 .sidebar{
   width: var(--sidebar-w);
-  background: #4c1d95;     /* 진한 보라 */
+  background: #4c1d95;
   color: #e9e9ff;
   padding: 24px 18px;
   position: sticky;
@@ -110,8 +110,7 @@ li{ margin: 6px 0; }
   margin: 6px 0 14px 18px;
   padding-left: 0;
   list-style: none;
-  /* JS에서 열기 전 FOUC 방지 (기본 접힘) */
-  display: none;
+  display: none; /* default closed; JS toggles open */
 }
 .submenu a{
   display:block;
@@ -119,112 +118,4 @@ li{ margin: 6px 0; }
   padding: 4px 0;
   font-size: 14px;
 }
-.submenu a:hover{ color:#fff; text-decoration: underline; }
-
-.top-link{
-  display:block; margin-top: 6px; color:#e9e9ff; font-weight:600;
-}
-.top-link:hover{ color:#fff; }
-
-/* Active highlight */
-.nav .submenu a.active{ font-weight:700; color:#a78bfa; }
-.top-link.active{ font-weight: 800; color:#fff; }
-
-/* Main */
-.main{
-  flex: 1;
-  padding: 40px 48px;
-}
-@media (max-width: 760px){
-  .sidebar{ position: static; height:auto; width: 100%; }
-  .main{ padding: 28px 18px; }
-}
-
-/* ===== 4) Section header / chips ===== */
-.page-header{
-  display:flex; align-items:center; justify-content:space-between;
-  margin: 4px 0 18px;
-}
-.section-label{
-  display:inline-flex; gap:8px; align-items:center; font-weight:700;
-}
-.section-label .dot{
-  width:8px; height:8px; border-radius:50%; background:#8b5cf6; display:inline-block;
-}
-
-.page-actions{
-  display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; margin-bottom: 12px;
-}
-.chip{
-  display:inline-flex; align-items:center; padding:6px 10px; border-radius:999px; font-size:12px;
-}
-.chip-action{ background:var(--chip-bg); color:var(--chip-text); }
-.chip-action:hover{ filter:brightness(0.96); text-decoration: none; }
-
-/* ===== 5) Cards (통합 룩) ===== */
-.card, .project-card{
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-1);
-  padding: 20px 22px;
-  margin: 0 0 18px;
-}
-
-.card h1, .project-card h1{ margin:0 0 8px; }
-
-.card h2,
-.project-card .project-title{
-  font-size: clamp(18px, 2.4vw, 24px);
-  margin: 0 0 6px;
-}
-
-.card .subline,
-.project-card .project-meta{
-  color: var(--muted); font-size: 14px; margin: 0 0 10px;
-}
-
-.project-points, .card ul{ margin: 10px 0 0 18px; }
-.project-points li, .card li{ margin: 7px 0; line-height: 1.55; }
-
-/* ===== 6) Attachment Buttons ===== */
-.btn-row{
-  display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;
-}
-.btn{
-  display:inline-block; text-decoration:none; font-weight:600;
-  padding:8px 12px; border-radius:999px;
-  background: var(--brand); color: var(--brand-contrast);
-  box-shadow: 0 2px 8px rgba(91,33,182,.25);
-}
-.btn:hover{ filter:brightness(0.96); text-decoration: none; }
-.btn:active{ transform: translateY(1px); }
-
-/* ===== 7) Images / Media ===== */
-/* 모든 페이지 공통 썸네일/프로필 크기 제한 */
-.thumb, .media-img, .rounded{
-  max-width: 180px; max-height: 140px;
-  width: auto; height: auto; object-fit: cover;
-  border-radius: var(--radius-sm);
-}
-@media (max-width:760px){
-  .thumb, .media-img, .rounded{ max-width: 100%; max-height: 200px; }
-}
-
-/* ===== 8) Certifications (텍스트만 카드) ===== */
-.cert-list{ display:grid; gap:16px; }
-.cert{
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-1);
-  padding:18px 22px;
-}
-.cert h3{ margin:0 0 6px; font-size: 18px; }
-.issuer{ margin: 0 0 4px; color: var(--muted); font-size: 14px; }
-.meta{ margin: 0; color: var(--muted); font-size: 13px; }
-
-/* ===== 9) Footer ===== */
-.page-footer{
-  color: var(--muted);
-  font-size: 13px;
-  margin-top: 18px;
-}
+.subm
