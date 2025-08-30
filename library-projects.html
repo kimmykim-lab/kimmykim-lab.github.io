@@ -26,7 +26,7 @@
           <li><a class="nav-link" href="community.html" data-id="community">Community</a></li>
           <li><a class="nav-link" href="certifications.html" data-id="certifications">Certifications</a></li>
         </ul>
-        <a href="course.html" class="top-link" data-id="courses">Courses</a>
+        <!-- Courses link removed -->
       </nav>
     </aside>
 
@@ -128,10 +128,10 @@
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
-          const tri = btn.querySelector('.triangle');
+          const tri = document.querySelector('.triangle', btn) || btn.querySelector('.triangle');
           const open = ul.style.display === 'block';
           ul.style.display = open ? 'none' : 'block';
-          tri.textContent = open ? '▶' : '▼';
+          (btn.querySelector('.triangle')||tri).textContent = open ? '▶' : '▼';
         });
       });
       const d = document.querySelector('a[href="data-projects.html"]'); if (d) d.textContent = 'Data';
