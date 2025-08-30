@@ -5,79 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kimmy Kim | Home</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — MLIS student at the UW iSchool. Passionate about data analytics, educational technology, and youth library services." />
+  <meta name="description" content="Kimmy Kim — MLIS @ UW iSchool. Data analytics × education & youth services. Projects in cloud ML, databases, and community programs." />
+  <style>
+    .hero { display:flex; gap:24px; align-items:flex-start; }
+    .hero img.rounded { width:140px; height:140px; border-radius:50%; object-fit:cover; }
+    .hero h2 { margin:0 0 12px; font-size:28px; }
+    .section { margin-top:18px; }
+    .chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+    .chip-pill { padding:8px 12px; border-radius:999px; background:#ede9fe; color:#4c1d95; font-size:13px; }
+    .btn-row { display:flex; gap:10px; margin-top:12px; }
+  </style>
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
       <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
-      <nav class="nav">
-        <button class="nav-toggle" data-target="#projects-sub">
-          <span class="triangle">▶</span><span>Projects</span>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" data-target="#projects-sub" aria-expanded="false" aria-controls="projects-sub">
+          <span class="triangle" aria-hidden="true">▶</span><span>Projects</span>
         </button>
-        <ul id="projects-sub" class="submenu">
+        <ul id="projects-sub" class="submenu" hidden>
           <li><a href="data-projects.html" data-id="data">Data</a></li>
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
-        <button class="nav-toggle" data-target="#extra-sub">
-          <span class="triangle">▶</span><span>Extra Curricular</span>
+        <button class="nav-toggle" data-target="#extra-sub" aria-expanded="false" aria-controls="extra-sub">
+          <span class="triangle" aria-hidden="true">▶</span><span>Extra Curricular</span>
         </button>
-        <ul id="extra-sub" class="submenu">
+        <ul id="extra-sub" class="submenu" hidden>
           <li><a href="community.html" data-id="community">Community</a></li>
           <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
         </ul>
-        <!-- Courses link removed -->
       </nav>
     </aside>
 
     <main class="main">
-      <!-- Intro card -->
-      <section class="card" style="display:flex; align-items:flex-start; gap:24px;">
-        <img src="Photo_Kimmy.jpg" alt="Kimmy Kim — Data & Library practitioner" class="rounded">
+      <!-- Hero -->
+      <section class="card hero">
+        <img src="Photo_Kimmy.jpg" alt="Portrait of Kimmy Kim" class="rounded" />
         <div>
-          <h2 style="margin:0 0 12px;">Hi 👋🏻 I’m Kimmy Kim!</h2>
-          <p class="meta" style="margin:0 0 8px;">
-            I’m a Master’s student at the UW iSchool, passionate about combining
-            <strong>data analytics and social impact</strong>.
-          </p>
-          <p class="meta" style="margin:0 0 12px;">
-            I love creating inclusive, measurable systems that help people—especially kids and communities—connect with information.
-          </p>
+          <h2>Hi 👋🏻 I’m Kimmy Kim!</h2>
+          <p class="meta">I’m a Master’s student at the UW iSchool, passionate about combining <strong>data analytics and social impact</strong>. I build inclusive, measurable systems that help people—especially kids and communities—connect with information.</p>
 
-          <h3 style="margin:16px 0 6px;">Research &amp; Professional Interests</h3>
-          <p class="meta" style="margin:0 0 16px;">
-            Data Analytics and Visualization · AI in Education · Learning Analytics · Data Science for Social Good ·
-            Data Management · Children and Youth Services
-          </p>
+          <div class="section">
+            <h3 class="h3">Research &amp; Professional Interests</h3>
+            <div class="chips" aria-label="Interests">
+              <span class="chip-pill">Data Analytics & Viz</span>
+              <span class="chip-pill">AI in Education</span>
+              <span class="chip-pill">Learning Analytics</span>
+              <span class="chip-pill">Data Management</span>
+              <span class="chip-pill">Youth Services</span>
+            </div>
+          </div>
 
-          <h3 style="margin:16px 0 6px;">Contact</h3>
-          <p class="meta" style="margin:0 0 12px;">📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu</p>
-
-          <div class="btn-row">
-            <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume — Data</a>
-            <a class="btn" href="MINJU_KIM_Resume%20(Library).pdf" target="_blank" rel="noopener">Resume — Library</a>
+          <div class="section">
+            <h3 class="h3">Contact</h3>
+            <p class="meta">📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu</p>
+            <div class="btn-row">
+              <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume — Data</a>
+              <a class="btn" href="MINJU_KIM_Resume%20(Library).pdf" target="_blank" rel="noopener">Resume — Library</a>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- Background -->
       <section class="card">
-        <h2 style="margin:0 0 10px;">My Academic Background</h2>
-        <p class="meta">I studied Library and Information Science in Korea and am now pursuing my MLIS at the UW iSchool, focusing on how data can transform education and library services.</p>
+        <h2>My Academic Background</h2>
+        <p class="meta">
+          I studied Library & Information Science in Korea and am now pursuing my MLIS at the UW iSchool, focusing on how <strong>data analytics</strong> can drive innovation in education and information systems.
+          <br><em>Relevant Coursework:</em> Cloud Computing, Data Science, Database Systems, Research Methods.
+        </p>
       </section>
 
+      <!-- Goal -->
       <section class="card">
-        <h2 style="margin:0 0 10px;">My Goal</h2>
+        <h2>My Goal</h2>
         <p class="meta">I explore the intersection of <strong>education, data, and AI</strong> to design systems that improve learning and community engagement.</p>
       </section>
 
+      <!-- Values -->
       <section class="card">
-        <h2 style="margin:0 0 10px;">My Values</h2>
+        <h2>My Values</h2>
         <ul>
-          <li><strong>Inclusive</strong> : center diverse voices, especially children and communities.</li>
-          <li><strong>Analytical</strong> : measure outcomes and inform decisions with data.</li>
-          <li><strong>Collaborative</strong> : co-design and teamwork across disciplines.</li>
-          <li><strong>Practical</strong> : build systems that actually work in real settings.</li>
+          <li><strong>Inclusive</strong> — center diverse voices, especially children and communities.</li>
+          <li><strong>Analytical</strong> — measure outcomes and inform decisions with data.</li>
+          <li><strong>Collaborative</strong> — co‑design and teamwork across disciplines.</li>
+          <li><strong>Practical</strong> — build systems that actually work in real settings.</li>
         </ul>
       </section>
     </main>
@@ -85,33 +99,19 @@
 
   <script>
     (function () {
-      // collapse default
-      document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
-      document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
-
-      // toggles
+      document.querySelectorAll('.submenu').forEach(u => u.setAttribute('hidden',''));
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
           const tri = btn.querySelector('.triangle');
-          const open = ul.style.display === 'block';
-          ul.style.display = open ? 'none' : 'block';
-          tri.textContent = open ? '▶' : '▼';
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          if (expanded) { ul.setAttribute('hidden',''); tri.textContent = '▶'; }
+          else { ul.removeAttribute('hidden'); tri.textContent = '▼'; }
         });
       });
-
-      // label normalization
       const d = document.querySelector('a[href="data-projects.html"]'); if (d) d.textContent = 'Data';
       const l = document.querySelector('a[href="library-projects.html"]'); if (l) l.textContent = 'Library';
-
-      // active mapping
-      const page = location.pathname.split('/').pop() || 'index.html';
-      const openSub = (sel,id) => { const b=document.querySelector(`.nav-toggle[data-target="${sel}"]`), u=document.querySelector(sel); if(b&&u){u.style.display='block'; b.querySelector('.triangle').textContent='▼';} const a=document.querySelector(`[data-id="${id}"]`); if(a) a.classList.add('active'); };
-      if (page==='data-projects.html') openSub('#projects-sub','data');
-      else if (page==='library-projects.html') openSub('#projects-sub','library');
-      else if (page==='community.html') openSub('#extra-sub','community');
-      else if (page==='certifications.html') openSub('#extra-sub','certifications');
-      // course.html branch removed
     })();
   </script>
 </body>
