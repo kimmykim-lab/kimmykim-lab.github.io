@@ -24,14 +24,14 @@
         <button class="nav-toggle" data-target="#projects-sub" aria-expanded="false" aria-controls="projects-sub">
           <span class="triangle" aria-hidden="true">▶</span><span>Projects</span>
         </button>
-        <ul id="projects-sub" class="submenu" hidden>
+        <ul id="projects-sub" class="submenu">
           <li><a href="data-projects.html" data-id="data">Data</a></li>
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
         <button class="nav-toggle" data-target="#extra-sub" aria-expanded="false" aria-controls="extra-sub">
           <span class="triangle" aria-hidden="true">▶</span><span>Extra Curricular</span>
         </button>
-        <ul id="extra-sub" class="submenu" hidden>
+        <ul id="extra-sub" class="submenu">
           <li><a href="community.html" data-id="community">Community</a></li>
           <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
         </ul>
@@ -99,17 +99,21 @@
 
   <script>
     (function () {
-      document.querySelectorAll('.submenu').forEach(u => u.setAttribute('hidden',''));
+      // collapse default
+      document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
+      document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
+
+      // toggles
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
           const tri = btn.querySelector('.triangle');
-          const expanded = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!expanded));
-          if (expanded) { ul.setAttribute('hidden',''); tri.textContent = '▶'; }
-          else { ul.removeAttribute('hidden'); tri.textContent = '▼'; }
+          const open = ul.style.display === 'block';
+          ul.style.display = open ? 'none' : 'block';
+          tri.textContent = open ? '▶' : '▼';
         });
       });
+
       const d = document.querySelector('a[href="data-projects.html"]'); if (d) d.textContent = 'Data';
       const l = document.querySelector('a[href="library-projects.html"]'); if (l) l.textContent = 'Library';
     })();
