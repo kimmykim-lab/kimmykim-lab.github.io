@@ -1,78 +1,89 @@
+/* ===== (선택) 둥근 톤을 위한 웹폰트 사용 시 주석 해제 ===== */
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap'); */
+
 /* ===== Base ===== */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
-               Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic",
-               Arial, sans-serif;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "SF Pro Text",
+               "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo",
+               "Malgun Gothic", Arial, sans-serif;
   background-color: #f9f9f9;
   color: #1f2937;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* ===== Layout ===== */
 .container { display: flex; min-height: 100vh; }
 .sidebar {
-  width: 240px;
+  width: 240px;                 /* 모바일에서도 고정 폭 유지 → 오른쪽 밀림 방지 */
   background-color: #4c1d95;
   color: #ffffff;
   padding: 28px 22px;
+  flex-shrink: 0;
 }
 .main {
   flex: 1;
   padding: 60px 80px;
 }
 
-/* ===== Sidebar ===== */
+/* ===== Sidebar (안정화) ===== */
 .sidebar h1 {
   font-size: 22px;
-  margin: 0 0 22px 0;
+  margin: 0 0 20px 0;
+  font-weight: 800;
+  letter-spacing: 0.2px;
 }
-.sidebar a {
+
+/* 기본 링크 톤: 파란색 X, pill X */
+.sidebar a,
+.sidebar a:visited {
   color: #e6e6e6;
   text-decoration: none;
-  display: block;
 }
 .sidebar a:hover,
-.sidebar a.active { color: #38bdf8; }
+.sidebar a.active {
+  color: #ffffff;              /* 가벼운 화이트 강조 */
+}
 
+/* 리스트를 단순 블록 흐름으로 복귀 */
 .sidebar ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  display: block;              /* flex 사용 X → 불필요한 줄바꿈/오버플로우 방지 */
 }
-.sidebar li { margin: 0; }
 
+/* 모든 li 기본 간격: 항목 간 6px */
+.sidebar li { margin: 6px 0; }
+
+/* 제목(Projects / Extra Curricular)이 strong, b, .section-title, .toggle 중 어느 형태든 대응 */
+.sidebar li strong,
+.sidebar li b,
 .sidebar .section-title,
 .sidebar .toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: block;
   font-weight: 700;
   color: #ffffff;
-  padding: 2px 0;
+  margin: 16px 0 12px 0;       /* 제목 위 16px, 아래 12px → "제목 ↔ 첫 항목" 더 넓게 */
+  line-height: 1.2;
 }
 
+/* 혹시 하위 리스트 구조가 있는 경우(있어도 없어도 안전) */
 .sidebar ul ul {
-  gap: 10px;
-  margin-top: 6px;
-  padding-left: 12px;
+  margin: 0;                   /* 좌측 들여쓰기/여백 최소화(원하면 10~12px로 조절 가능) */
+  padding-left: 0;
 }
-
-.sidebar ul ul a {
-  font-weight: 500;
-  font-size: 16px;
-}
+.sidebar ul ul li { margin: 6px 0; }
 
 /* ===== Content ===== */
-.main h1 { font-size: 32px; margin: 0 0 16px 0; }
-.main h2 { font-size: 22px; margin: 28px 0 12px 0; }
-.main p { font-size: 16px; line-height: 1.7; margin: 0 0 14px 0; }
+.main h1 { font-size: 32px; margin: 0 0 16px 0; font-weight: 800; }
+.main h2 { font-size: 22px; margin: 28px 0 12px 0; font-weight: 800; }
+.main p  { font-size: 16px; line-height: 1.7; margin: 0 0 14px 0; }
 
 .card {
   background: #ffffff;
@@ -92,15 +103,8 @@ body {
   background: #ede9fe;
   color: #4c1d95;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
 }
-
-/* ===== Links ===== */
-a.inline-link { color: #4c1d95; text-decoration: none; }
-a.inline-link:hover { text-decoration: underline; }
-
-/* ===== Images ===== */
-img.responsive { max-width: 100%; height: auto; display: block; }
 
 /* ===== Footer ===== */
 .footer { margin-top: 40px; color: #6b7280; font-size: 14px; }
@@ -112,16 +116,23 @@ img.responsive { max-width: 100%; height: auto; display: block; }
 
 @media (max-width: 768px) {
   body { font-size: 14px; line-height: 1.6; }
-  .sidebar { width: 100%; padding: 18px 16px; }
-  .sidebar h1 { font-size: 20px; margin-bottom: 16px; }
-  .sidebar ul { gap: 12px; }
-  .sidebar ul ul { gap: 10px; margin-top: 6px; padding-left: 10px; }
-  .sidebar ul ul a { font-size: 15px; }
   .main { padding: 28px 20px; }
+
+  /* 모바일에서도 사이드바 고정 폭 → 화면 밀림 방지 */
+  .sidebar { width: 220px; padding: 24px 18px; }
+  .sidebar h1 { font-size: 20px; margin-bottom: 16px; }
+
+  /* 간격 규칙 동일 유지(제목 아래 12px, 항목 간 6px) */
+  .sidebar li { margin: 6px 0; }
+  .sidebar li strong,
+  .sidebar li b,
+  .sidebar .section-title,
+  .sidebar .toggle { margin: 16px 0 12px 0; }
+
   .hero { grid-template-columns: 96px 1fr; gap: 18px; }
   .profile-img { width: 96px; height: 96px; }
   .main h1 { font-size: 26px; }
   .main h2 { font-size: 18px; }
-  .main p { font-size: 14px; line-height: 1.65; }
+  .main p  { font-size: 14px; line-height: 1.65; }
   .tag { font-size: 13px; padding: 6px 12px; }
 }
