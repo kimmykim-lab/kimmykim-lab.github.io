@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reflection — DFW | Kimmy Kim</title>
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="description" content="Reflections for Kimmy Kim's Directed Fieldwork (DFW)—weekly or milestone notes with placeholders." />
+</head>
+<body>
+  <div class="container">
+    <!-- ===== Sidebar (same as root index.html, plus DFW links) ===== -->
+    <aside class="sidebar">
+      <h1><a href="/index.html" class="brand">Kimmy Kim</a></h1>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" data-target="#projects-sub" aria-expanded="false" aria-controls="projects-sub">
+          <span class="triangle" aria-hidden="true">▶</span><span>Projects</span>
+        </button>
+        <ul id="projects-sub" class="submenu">
+          <li><a href="/data-projects.html" data-id="data">Data</a></li>
+          <li><a href="/library-projects.html" data-id="library">Library</a></li>
+        </ul>
+
+        <button class="nav-toggle" data-target="#extra-sub" aria-expanded="false" aria-controls="extra-sub">
+          <span class="triangle" aria-hidden="true">▶</span><span>Extra Curricular</span>
+        </button>
+        <ul id="extra-sub" class="submenu">
+          <li><a href="/community.html" data-id="community">Community</a></li>
+          <li><a href="/certifications.html" data-id="certifications">Certifications</a></li>
+
+          <!-- DFW group -->
+          <li style="margin-top:8px; font-weight:700; color:#d4ccff; font-size:13px;">Directed Field Work (DFW)</li>
+          <li><a href="/dfw/" data-id="dfw">DFW — Landing</a></li>
+          <li><a href="/dfw/learning-outcomes/" data-id="dfw-loa">Learning Outcomes Agreement</a></li>
+          <li><a href="/dfw/reflection/" data-id="dfw-reflection">Reflection (placeholder)</a></li>
+          <li><a href="/dfw/midpoint/" data-id="dfw-midpoint">Midpoint deliverable (placeholder)</a></li>
+          <li><a href="/dfw/final/" data-id="dfw-final">Final deliverable (placeholder)</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ===== Main ===== -->
+    <main class="main">
+      <section class="card">
+        <div class="page-header">
+          <div class="section-label"><span class="dot"></span> <span>Reflection</span></div>
+          <div class="page-actions">
+            <a class="chip chip-action" href="/dfw/">Back to DFW Landing</a>
+          </div>
+        </div>
+        <p class="meta">
+          Short reflections capturing process, insights, blockers, and next steps. Entries will be updated across the quarter.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Entries</h2>
+        <ul>
+          <li>
+            <strong>Week 01 — Getting started</strong> —
+            <em>placeholder</em><br>
+            <span class="meta">Setup repository, finalize LOA, align goals with site supervisor.</span>
+          </li>
+          <li>
+            <strong>Week 04 — Mid-journey notes</strong> —
+            <em>placeholder</em><br>
+            <span class="meta">Progress summary, early findings, adjustments to plan.</span>
+          </li>
+          <li>
+            <strong>Week 10 — Wrap-up</strong> —
+            <em>placeholder</em><br>
+            <span class="meta">Key outcomes, lessons learned, next steps.</span>
+          </li>
+        </ul>
+        <p class="page-footer">© <script>document.write(new Date().getFullYear())</script> Kimmy Kim</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== Scripts (same behavior as dfw/index.html) ===== -->
+  <script>
+    (function () {
+      // collapse by default
+      document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
+      document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
+
+      // toggles
+      document.querySelectorAll('.nav-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const ul  = document.querySelector(btn.dataset.target);
+          const tri = btn.querySelector('.triangle');
+          const open = ul.style.display === 'block';
+          ul.style.display = open ? 'none' : 'block';
+          tri.textContent  = open ? '▶' : '▼';
+        });
+      });
+
+      // keep original link labels if you had JS changing them
+      const d = document.querySelector('a[href="/data-projects.html"]'); if (d) d.textContent = 'Data';
+      const l = document.querySelector('a[href="/library-projects.html"]'); if (l) l.textContent = 'Library';
+
+      // --- DFW pages: auto-expand Extra Curricular and highlight current link
+      const path = location.pathname.replace(/\/index\.html$/, '/'); // /dfw/reflection/index.html → /dfw/reflection/
+      if (path.startsWith('/dfw/')) {
+        const extraBtn = document.querySelector('button[data-target="#extra-sub"]');
+        const extraUl  = document.querySelector('#extra-sub');
+        const tri      = extraBtn?.querySelector('.triangle');
+        if (extraUl) extraUl.style.display = 'block';
+        if (tri)     tri.textContent = '▼';
+
+        document.querySelectorAll('#extra-sub a').forEach(a => {
+          const href = a.getAttribute('href')?.replace(/\/index\.html$/, '/');
+          if (href === path) a.classList.add('active');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
