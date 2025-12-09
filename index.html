@@ -31,6 +31,14 @@
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
 
+        <button class="nav-toggle" data-target="#research-sub" aria-expanded="false" aria-controls="research-sub">
+          <span class="triangle" aria-hidden="true">▶</span><span>Research Experience</span>
+        </button>
+        <ul id="research-sub" class="submenu">
+          <li><a href="research.html#independent" data-id="research-independent">Independent</a></li>
+          <li><a href="research.html#faculty" data-id="research-faculty">Faculty-Led</a></li>
+        </ul>
+
         <button class="nav-toggle" data-target="#extra-sub" aria-expanded="false" aria-controls="extra-sub">
           <span class="triangle" aria-hidden="true">▶</span><span>Extra Curricular</span>
         </button>
@@ -47,7 +55,11 @@
 
         <div>
           <h2>Hi 👋🏻 I’m Kimmy Kim!</h2>
-          <p class="meta">I’m a Master’s student at the UW iSchool, passionate about combining <strong>data analytics and social impact</strong>. I build inclusive, measurable systems that help people, especially kids and communities, connect with information.</p>
+          <p class="meta">
+            I’m a Master’s student at the UW iSchool, passionate about combining
+            <strong>data analytics and social impact</strong>. I build inclusive, measurable systems that help people,
+            especially kids and communities, connect with information.
+          </p>
 
           <div class="section">
             <h3 class="h3">Research & Professional Interests</h3>
@@ -76,14 +88,17 @@
       <section class="card">
         <h2>My Academic Background</h2>
         <p class="meta">
-          I studied Library & Information Science in Korea and am now pursuing my MLIS at the UW iSchool, focusing on how <strong>data analytics</strong> can drive innovation in education and information systems.
+          I studied Library & Information Science in Korea and am now pursuing my MLIS at the UW iSchool,
+          focusing on how <strong>data analytics</strong> can drive innovation in education and information systems.
           <br><em>Relevant Coursework:</em> Cloud Computing, Data Science, Database Systems, Research Methods.
         </p>
       </section>
 
       <section class="card">
         <h2>My Goal</h2>
-        <p class="meta">I explore the intersection of <strong>education, data, and AI</strong> to design systems that improve learning and community engagement.</p>
+        <p class="meta">
+          I explore the intersection of <strong>education, data, and AI</strong> to design systems that improve learning and community engagement.
+        </p>
       </section>
 
       <section class="card">
@@ -113,11 +128,19 @@
         });
       });
 
-      const d = document.querySelector('a[href="data-projects.html"]'); 
+      const d = document.querySelector('a[href="data-projects.html"]');
       if (d) d.textContent = 'Data';
 
-      const l = document.querySelector('a[href="library-projects.html"]'); 
+      const l = document.querySelector('a[href="library-projects.html"]');
       if (l) l.textContent = 'Library';
+
+      // Research Experience 항상 펼쳐두기
+      const rbtn = document.querySelector('.nav-toggle[data-target="#research-sub"]');
+      const rul = document.querySelector('#research-sub');
+      if (rbtn && rul) {
+        rul.style.display = 'block';
+        rbtn.querySelector('.triangle').textContent = '▼';
+      }
     })();
   </script>
 
