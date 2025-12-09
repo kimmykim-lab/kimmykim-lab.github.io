@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kimmy Kim | Home</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kimmy Kim — MLIS @ UW iSchool. Data analytics × education & youth services. Projects in cloud ML, databases, and community programs." />
+  <meta name="description" content="Kimmy Kim, MLIS student at UW iSchool. Data analytics, learning analytics, and youth services. Projects in cloud ML, databases, and community programs." />
   <style>
     .hero { display:flex; gap:24px; align-items:flex-start; }
     .hero img.rounded { width:140px; height:140px; border-radius:50%; object-fit:cover; object-position: top center; }
@@ -16,10 +16,12 @@
     .btn-row { display:flex; gap:10px; margin-top:12px; }
   </style>
 </head>
+
 <body>
   <div class="container">
     <aside class="sidebar">
       <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
+
       <nav class="nav" aria-label="Primary">
         <button class="nav-toggle" data-target="#projects-sub" aria-expanded="false" aria-controls="projects-sub">
           <span class="triangle" aria-hidden="true">▶</span><span>Projects</span>
@@ -28,6 +30,7 @@
           <li><a href="data-projects.html" data-id="data">Data</a></li>
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
+
         <button class="nav-toggle" data-target="#extra-sub" aria-expanded="false" aria-controls="extra-sub">
           <span class="triangle" aria-hidden="true">▶</span><span>Extra Curricular</span>
         </button>
@@ -39,15 +42,15 @@
     </aside>
 
     <main class="main">
-      <!-- Hero -->
       <section class="card hero">
         <img src="Photo_Kimmy.jpg" alt="Portrait of Kimmy Kim" class="rounded" />
+
         <div>
           <h2>Hi 👋🏻 I’m Kimmy Kim!</h2>
-          <p class="meta">I’m a Master’s student at the UW iSchool, passionate about combining <strong>data analytics and social impact</strong>. I build inclusive, measurable systems that help people—especially kids and communities—connect with information.</p>
+          <p class="meta">I’m a Master’s student at the UW iSchool, passionate about combining <strong>data analytics and social impact</strong>. I build inclusive, measurable systems that help people, especially kids and communities, connect with information.</p>
 
           <div class="section">
-            <h3 class="h3">Research &amp; Professional Interests</h3>
+            <h3 class="h3">Research & Professional Interests</h3>
             <div class="chips" aria-label="Interests">
               <span class="chip-pill">Data Analytics & Viz</span>
               <span class="chip-pill">AI in Education</span>
@@ -60,16 +63,16 @@
           <div class="section">
             <h3 class="h3">Contact</h3>
             <p class="meta">📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu</p>
+
             <div class="btn-row">
               <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="btn" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume — Data</a>
-              <a class="btn" href="MINJU_KIM_Resume%20(Library).pdf" target="_blank" rel="noopener">Resume — Library</a>
+              <a class="btn" href="MINJU_KIM_Resume_Data.pdf" target="_blank" rel="noopener">Resume - Data</a>
+              <a class="btn" href="MINJU_KIM_Resume_Library.pdf" target="_blank" rel="noopener">Resume - Library</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Background -->
       <section class="card">
         <h2>My Academic Background</h2>
         <p class="meta">
@@ -78,20 +81,18 @@
         </p>
       </section>
 
-      <!-- Goal -->
       <section class="card">
         <h2>My Goal</h2>
         <p class="meta">I explore the intersection of <strong>education, data, and AI</strong> to design systems that improve learning and community engagement.</p>
       </section>
 
-      <!-- Values -->
       <section class="card">
         <h2>My Values</h2>
         <ul>
-          <li><strong>Inclusive</strong> — center diverse voices, especially children and communities.</li>
-          <li><strong>Analytical</strong> — measure outcomes and inform decisions with data.</li>
-          <li><strong>Collaborative</strong> — co‑design and teamwork across disciplines.</li>
-          <li><strong>Practical</strong> — build systems that actually work in real settings.</li>
+          <li><strong>Inclusive</strong>, center diverse voices, especially children and communities.</li>
+          <li><strong>Analytical</strong>, measure outcomes and support decisions with data.</li>
+          <li><strong>Collaborative</strong>, co-design and teamwork across disciplines.</li>
+          <li><strong>Practical</strong>, build systems that actually work in real settings.</li>
         </ul>
       </section>
     </main>
@@ -99,11 +100,9 @@
 
   <script>
     (function () {
-      // collapse default
       document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
       document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
 
-      // toggles
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
@@ -114,9 +113,13 @@
         });
       });
 
-      const d = document.querySelector('a[href="data-projects.html"]'); if (d) d.textContent = 'Data';
-      const l = document.querySelector('a[href="library-projects.html"]'); if (l) l.textContent = 'Library';
+      const d = document.querySelector('a[href="data-projects.html"]'); 
+      if (d) d.textContent = 'Data';
+
+      const l = document.querySelector('a[href="library-projects.html"]'); 
+      if (l) l.textContent = 'Library';
     })();
   </script>
+
 </body>
 </html>
