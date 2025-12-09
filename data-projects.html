@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Ad click prediction pipeline, Netflix recommendation analysis, SQL retail database, AI PKM, information architecture, Asian American literature data storytelling." />
+  <meta name="description" content="Ad click prediction pipeline, Netflix recommendation analysis, SQL retail database, information architecture, Asian American literature data storytelling." />
 </head>
 <body>
   <div class="container">
@@ -19,6 +19,14 @@
           <li><a class="nav-link active" href="data-projects.html" data-id="data">Data</a></li>
           <li><a class="nav-link" href="library-projects.html" data-id="library">Library</a></li>
         </ul>
+
+        <button class="nav-toggle" data-target="#research-sub">
+          <span class="triangle">▶</span><span>Research Experience</span>
+        </button>
+        <ul id="research-sub" class="submenu">
+          <li><a class="nav-link" href="research.html" data-id="research">Research</a></li>
+        </ul>
+
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
@@ -39,7 +47,6 @@
         <div class="section-label"><span class="dot"></span>Data Projects</div>
       </header>
 
-      <!-- 1. Ad Click -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Ad Click Prediction Using Cloud ML</h2>
@@ -56,7 +63,6 @@
         </div>
       </section>
 
-      <!-- 2. Netflix -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Netflix Recommendation Analysis</h2>
@@ -73,7 +79,6 @@
         </div>
       </section>
 
-      <!-- 3. Online Retail -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Online Shopping Retail Database (ERD to Queries)</h2>
@@ -92,7 +97,6 @@
         </div>
       </section>
 
-      <!-- 4. Foodie -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Foodie Fanatic Information Architecture Redesign</h2>
@@ -111,7 +115,6 @@
         </div>
       </section>
 
-      <!-- 5. Asian American Literature -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Recognizing the Development of Asian American Literature</h2>
@@ -126,23 +129,6 @@
         <div class="btn-row">
           <a class="btn" href="https://medium.com/@kimmy.minju.kim/recognizing-the-development-of-asian-american-literature-23015e6a7d10?postPublishedType=initial" target="_blank" rel="noopener">Medium Article</a>
           <a class="btn" href="LIS572_Final%20Project_Data%20Analysis%20+%20Viz.R" target="_blank" rel="noopener">R Script</a>
-        </div>
-      </section>
-
-      <!-- 6. AI for PKM -->
-      <section class="project-card">
-        <div class="project-head">
-          <h2 class="project-title">AI for Personal Knowledge Management (PKM)</h2>
-          <p class="project-meta">AI for learning · PKM · Markdown to infographic · Web app prototype</p>
-        </div>
-        <ul class="project-points">
-          <li>Designing an AI supported PKM system that analyzes notes, course materials, and reflections to surface learning insights for students.</li>
-          <li>Prototyping workflows for summarization, topic extraction, and learning pattern visualization using Obsidian style markdown data.</li>
-          <li>Exploring a pipeline where markdown files are transformed into infographic images that can be rendered in a lightweight web app.</li>
-          <li><strong>Status:</strong> In progress.</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn" href="https://markdown-vis.vercel.app/" target="_blank" rel="noopener">Demo</a>
         </div>
       </section>
 
@@ -174,6 +160,8 @@
       if (d) d.textContent = 'Data';
       const l = document.querySelector('a[href="library-projects.html"]');
       if (l) l.textContent = 'Library';
+
+      // open Projects and mark Data active
       const btn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
       const ul = document.querySelector('#projects-sub');
       if (btn && ul) {
