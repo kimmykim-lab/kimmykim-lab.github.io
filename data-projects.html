@@ -169,20 +169,12 @@
       const l = document.querySelector('a[href="library-projects.html"]');
       if (l) l.textContent = 'Library';
 
-      // Projects - Data 페이지에서는 항상 열어두기
+      // Projects 서브메뉴를 이 페이지에서는 기본으로 열어두기
       const pbtn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
       const pul = document.querySelector('#projects-sub');
       if (pbtn && pul) {
         pul.style.display = 'block';
         pbtn.querySelector('.triangle').textContent = '▼';
-      }
-
-      // Research Experience 항상 열어두기
-      const rbtn = document.querySelector('.nav-toggle[data-target="#research-sub"]');
-      const rul = document.querySelector('#research-sub');
-      if (rbtn && rul) {
-        rul.style.display = 'block';
-        rbtn.querySelector('.triangle').textContent = '▼';
       }
 
       const active = document.querySelector('[data-id="data"]');
