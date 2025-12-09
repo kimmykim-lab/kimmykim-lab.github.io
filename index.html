@@ -23,24 +23,23 @@
       <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
 
       <nav class="nav" aria-label="Primary">
-        <button class="nav-toggle" data-target="#projects-sub" aria-expanded="false" aria-controls="projects-sub">
-          <span class="triangle" aria-hidden="true">▶</span><span>Projects</span>
+        <button class="nav-toggle" data-target="#projects-sub">
+          <span class="triangle">▶</span><span>Projects</span>
         </button>
         <ul id="projects-sub" class="submenu">
           <li><a href="data-projects.html" data-id="data">Data</a></li>
           <li><a href="library-projects.html" data-id="library">Library</a></li>
         </ul>
 
-        <button class="nav-toggle" data-target="#research-sub" aria-expanded="false" aria-controls="research-sub">
-          <span class="triangle" aria-hidden="true">▶</span><span>Research Experience</span>
+        <button class="nav-toggle" data-target="#research-sub">
+          <span class="triangle">▶</span><span>Research Experience</span>
         </button>
         <ul id="research-sub" class="submenu">
-          <li><a href="research.html#independent" data-id="research-independent">Independent</a></li>
-          <li><a href="research.html#faculty" data-id="research-faculty">Faculty-Led</a></li>
+          <li><a href="research.html" data-id="research">Research Overview</a></li>
         </ul>
 
-        <button class="nav-toggle" data-target="#extra-sub" aria-expanded="false" aria-controls="extra-sub">
-          <span class="triangle" aria-hidden="true">▶</span><span>Extra Curricular</span>
+        <button class="nav-toggle" data-target="#extra-sub">
+          <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
           <li><a href="community.html" data-id="community">Community</a></li>
@@ -57,14 +56,14 @@
           <h2>Hi 👋🏻 I’m Kimmy Kim!</h2>
           <p class="meta">
             I’m a Master’s student at the UW iSchool, passionate about combining
-            <strong>data analytics and social impact</strong>. I build inclusive, measurable systems that help people,
-            especially kids and communities, connect with information.
+            <strong>data analytics and social impact</strong>. I build inclusive, measurable systems that help people
+            especially children and communities, connect with information.
           </p>
 
           <div class="section">
-            <h3 class="h3">Research & Professional Interests</h3>
-            <div class="chips" aria-label="Interests">
-              <span class="chip-pill">Data Analytics & Viz</span>
+            <h3 class="h3">Research and Professional Interests</h3>
+            <div class="chips">
+              <span class="chip-pill">Data Analytics and Visualization</span>
               <span class="chip-pill">AI in Education</span>
               <span class="chip-pill">Learning Analytics</span>
               <span class="chip-pill">Data Management</span>
@@ -77,9 +76,9 @@
             <p class="meta">📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu</p>
 
             <div class="btn-row">
-              <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="btn" href="MINJU_KIM_Resume_Data.pdf" target="_blank" rel="noopener">Resume - Data</a>
-              <a class="btn" href="MINJU_KIM_Resume_Library.pdf" target="_blank" rel="noopener">Resume - Library</a>
+              <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank">LinkedIn</a>
+              <a class="btn" href="MINJU_KIM_Resume_Data.pdf" target="_blank">Resume - Data</a>
+              <a class="btn" href="MINJU_KIM_Resume_Library.pdf" target="_blank">Resume - Library</a>
             </div>
           </div>
         </div>
@@ -88,7 +87,7 @@
       <section class="card">
         <h2>My Academic Background</h2>
         <p class="meta">
-          I studied Library & Information Science in Korea and am now pursuing my MLIS at the UW iSchool,
+          I studied Library and Information Science in Korea and am now pursuing my MLIS at the UW iSchool,
           focusing on how <strong>data analytics</strong> can drive innovation in education and information systems.
           <br><em>Relevant Coursework:</em> Cloud Computing, Data Science, Database Systems, Research Methods.
         </p>
@@ -104,10 +103,10 @@
       <section class="card">
         <h2>My Values</h2>
         <ul>
-          <li><strong>Inclusive</strong>, center diverse voices, especially children and communities.</li>
-          <li><strong>Analytical</strong>, measure outcomes and support decisions with data.</li>
+          <li><strong>Inclusive</strong>, centering diverse voices especially children and communities.</li>
+          <li><strong>Analytical</strong>, measuring outcomes and supporting decisions with data.</li>
           <li><strong>Collaborative</strong>, co-design and teamwork across disciplines.</li>
-          <li><strong>Practical</strong>, build systems that actually work in real settings.</li>
+          <li><strong>Practical</strong>, building systems that work in real settings.</li>
         </ul>
       </section>
     </main>
@@ -116,8 +115,6 @@
   <script>
     (function () {
       document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
-      document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent = '▶');
-
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
@@ -127,14 +124,7 @@
           tri.textContent = open ? '▶' : '▼';
         });
       });
-
-      const d = document.querySelector('a[href="data-projects.html"]');
-      if (d) d.textContent = 'Data';
-
-      const l = document.querySelector('a[href="library-projects.html"]');
-      if (l) l.textContent = 'Library';
     })();
   </script>
-
 </body>
 </html>
