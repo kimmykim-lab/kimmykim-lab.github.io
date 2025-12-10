@@ -16,17 +16,21 @@
           <span class="triangle">▶</span><span>Projects</span>
         </button>
         <ul id="projects-sub" class="submenu">
-          <li><a href="data-projects.html" data-id="data">Data</a></li>
-          <li><a href="library-projects.html" data-id="library">Library</a></li>
+          <li><a href="data-projects.html" class="nav-link">Data</a></li>
+          <li><a href="library-projects.html" class="nav-link">Library</a></li>
         </ul>
+
+        <a href="research.html" class="nav-toggle nav-link">
+          <span class="triangle">▶</span><span>Research</span>
+        </a>
+
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
-          <li><a href="community.html" data-id="community">Community</a></li>
-          <li><a href="certifications.html" class="active" data-id="certifications">Certifications</a></li>
+          <li><a href="community.html" class="nav-link">Community</a></li>
+          <li><a href="certifications.html" class="nav-link active">Certifications</a></li>
         </ul>
-        <!-- Courses link removed -->
       </nav>
     </aside>
 
@@ -55,25 +59,30 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
     (function(){
-      document.querySelectorAll('.submenu').forEach(s=>s.style.display='none');
-      document.querySelectorAll('.nav-toggle .triangle').forEach(t=>t.textContent='▶');
-      document.querySelectorAll('.nav-toggle').forEach(btn=>{
-        btn.addEventListener('click',()=>{
-          const ul=document.querySelector(btn.dataset.target);
-          const tri=btn.querySelector('.triangle');
-          const open=ul.style.display==='block';
-          ul.style.display=open?'none':'block';
-          tri.textContent=open?'▶':'▼';
+      document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
+
+      document.querySelectorAll('.nav-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.dataset.target;
+          if (!target) return;
+          const ul = document.querySelector(target);
+          if (!ul) return;
+          const tri = btn.querySelector('.triangle');
+          const open = ul.style.display === 'block';
+          ul.style.display = open ? 'none' : 'block';
+          if (tri) tri.textContent = open ? '▶' : '▼';
         });
       });
-      const d=document.querySelector('a[href="data-projects.html"]'); if(d) d.textContent='Data';
-      const l=document.querySelector('a[href="library-projects.html"]'); if(l) l.textContent='Library';
-      // open Extra Curricular + mark Certifications
-      const btn=document.querySelector('.nav-toggle[data-target="#extra-sub"]');
-      const ul=document.querySelector('#extra-sub');
-      if(btn&&ul){ ul.style.display='block'; btn.querySelector('.triangle').textContent='▼'; }
-      const active=document.querySelector('[data-id="certifications"]'); if(active) active.classList.add('active');
+
+      const ebtn = document.querySelector('.nav-toggle[data-target="#extra-sub"]');
+      const eul = document.querySelector('#extra-sub');
+      if (ebtn && eul) {
+        eul.style.display = 'block';
+        const tri = ebtn.querySelector('.triangle');
+        if (tri) tri.textContent = '▼';
+      }
     })();
   </script>
 </body>
