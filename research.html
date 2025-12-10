@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research Experience | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Research experience in AI supported personal knowledge management and teen mental health support in public libraries." />
 </head>
 
 <body>
@@ -17,75 +18,68 @@
           <span class="triangle">▶</span><span>Projects</span>
         </button>
         <ul id="projects-sub" class="submenu">
-          <li><a href="data-projects.html" data-id="data">Data</a></li>
-          <li><a href="library-projects.html" data-id="library">Library</a></li>
+          <li><a class="nav-link" href="data-projects.html">Data</a></li>
+          <li><a class="nav-link" href="library-projects.html">Library</a></li>
         </ul>
 
-        <button class="nav-toggle" data-target="#research-sub">
-          <span class="triangle">▶</span><span>Research Experience</span>
-        </button>
-        <ul id="research-sub" class="submenu">
-          <li><a class="nav-link active" href="research.html" data-id="research">Research Overview</a></li>
-        </ul>
+        <a href="research.html" class="nav-link nav-section active">Research Experience</a>
 
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
-          <li><a href="community.html">Community</a></li>
-          <li><a href="certifications.html">Certifications</a></li>
+          <li><a class="nav-link" href="community.html">Community</a></li>
+          <li><a class="nav-link" href="certifications.html">Certifications</a></li>
         </ul>
       </nav>
     </aside>
 
     <main class="main">
       <div class="page-actions">
-        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank">LinkedIn</a>
-        <a class="chip chip-action" href="MINJU_KIM_Resume.pdf" target="_blank">Resume - Research</a>
+        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip chip-action" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume - Research</a>
       </div>
 
       <header class="page-header">
         <div class="section-label"><span class="dot"></span>Research Experience</div>
       </header>
 
-      <!-- PKM -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">AI for Personal Knowledge Management (PKM)</h2>
-          <p class="project-meta">Independent research, AI for learning, PKM, markdown to infographic pipeline</p>
+          <p class="project-meta">Independent research · AI for learning · Personal knowledge management</p>
         </div>
         <ul>
           <li>Designing an AI supported PKM system that analyzes notes, course materials, and reflections to surface learning insights for students.</li>
-          <li>Prototyping workflows for summarization, topic extraction, and learning pattern visualization using Obsidian style markdown data.</li>
-          <li>Exploring a pipeline where markdown files are transformed into infographic images rendered through a lightweight web app.</li>
+          <li>Prototyping workflows for summarization, topic extraction, and learning pattern visualization using markdown based notes.</li>
+          <li>Exploring a pipeline where markdown files are transformed into infographic images that can be rendered in a lightweight web app.</li>
           <li><strong>Status:</strong> In progress.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" href="https://markdown-vis.vercel.app/" target="_blank">Demo</a>
+          <a class="btn" href="https://markdown-vis.vercel.app/" target="_blank" rel="noopener">Demo</a>
         </div>
       </section>
 
-      <!-- Teens project -->
       <section class="project-card">
         <div class="project-head">
-          <h2 class="project-title">How Teens Co-designed Mental Health Support in Public Libraries</h2>
-          <p class="project-meta">Faculty-led research, teen mental wellbeing, participatory design</p>
+          <h2 class="project-title">How Teens Co-designed Mental Health Support in Public Libraries (Year 1-3)</h2>
+          <p class="project-meta">Faculty led research · Teen mental wellbeing · Participatory design · Nine public libraries</p>
         </div>
         <ul>
-          <li>Coded more than 112 field notes and organized multi-year participation data across 9 public libraries.</li>
-          <li>Consolidated more than 200 teen reflections and activity transcripts, aligning evidence with research claims.</li>
-          <li>Supported Year 3 manuscript development informed by peer-reviewed publications.</li>
-          <li><strong>Impact:</strong> Informed program models increasing engagement and safe participation by more than 20 percent.</li>
+          <li>Coded more than one hundred twelve field notes from year one and organized multi year participation data across nine libraries.</li>
+          <li>Consolidated more than two hundred teen reflections and activity transcripts, aligning evidence with research claims.</li>
+          <li>Supported year three manuscript development informed by peer reviewed publications.</li>
+          <li><strong>Impact:</strong> Informed program models that increased engagement and safe participation by more than twenty percent based on staff reports.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" href="Project%20Drive-Folder%20Overview.xlsx" target="_blank">Drive Folder</a>
-          <a class="btn" href="Project%20Folder_Final.xlsx" target="_blank">Project Folder</a>
-          <a class="btn" href="Year%201-Final%20Coding.xlsx" target="_blank">Year 1 Coding</a>
+          <a class="btn" href="Project%20Drive-Folder%20Overview.xlsx" target="_blank" rel="noopener">Drive Folder Overview</a>
+          <a class="btn" href="Project%20Folder_Final.xlsx" target="_blank" rel="noopener">Project Folder (Final)</a>
+          <a class="btn" href="Year%201-Final%20Coding.xlsx" target="_blank" rel="noopener">Year 1 Final Coding</a>
         </div>
       </section>
 
       <footer class="page-footer">
-        <p>© <span id="year"></span> Kimmy Kim · Research</p>
+        <p>© <span id="year"></span> Kimmy Kim · Research Experience</p>
       </footer>
     </main>
   </div>
@@ -95,15 +89,28 @@
 
     (function () {
       document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
+
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
           const tri = btn.querySelector('.triangle');
-          const open = ul.style.display === 'block';
-          ul.style.display = open ? 'none' : 'block';
-          tri.textContent = open ? '▶' : '▼';
+          const open = ul && ul.style.display === 'block';
+          if (ul) {
+            ul.style.display = open ? 'none' : 'block';
+          }
+          if (tri) {
+            tri.textContent = open ? '▶' : '▼';
+          }
         });
       });
+
+      const pbtn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
+      const pul = document.querySelector('#projects-sub');
+      if (pbtn && pul) {
+        pul.style.display = 'block';
+        const tri = pbtn.querySelector('.triangle');
+        if (tri) tri.textContent = '▼';
+      }
     })();
   </script>
 </body>
