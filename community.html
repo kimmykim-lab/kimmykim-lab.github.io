@@ -16,16 +16,20 @@
           <span class="triangle">▶</span><span>Projects</span>
         </button>
         <ul id="projects-sub" class="submenu">
-          <li><a href="data-projects.html" data-id="data">Data</a></li>
-          <li><a href="library-projects.html" data-id="library">Library</a></li>
+          <li><a href="data-projects.html" class="nav-link">Data</a></li>
+          <li><a href="library-projects.html" class="nav-link">Library</a></li>
         </ul>
+
+        <a href="research.html" class="nav-toggle nav-link">
+          <span class="triangle">▶</span><span>Research</span>
+        </a>
 
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
-          <li><a href="community.html" data-id="community">Community</a></li>
-          <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
+          <li><a href="community.html" class="nav-link active">Community</a></li>
+          <li><a href="certifications.html" class="nav-link">Certifications</a></li>
         </ul>
       </nav>
     </aside>
@@ -33,7 +37,6 @@
     <main class="main">
       <h1 class="page-title">Community &amp; Leadership</h1>
 
-      <!-- 1. Directed Fieldwork (FIRST CARD) -->
       <section class="card">
         <h2>Directed Fieldwork - Elementary School Libraries</h2>
         <p class="subline">
@@ -50,12 +53,11 @@
         </ul>
       </section>
 
-      <!-- 2. Vinyl Banner Lead -->
       <section class="card">
         <h2>Vinyl Banner Printing Lead (UW Resource Center)</h2>
         <p class="subline">
           <a href="https://hub.washington.edu/get-involved/the-sorc/vinyl-banner-printing/" target="_blank" rel="noopener">
-            UW Resource Center — Vinyl Banner Printing
+            UW Resource Center · Vinyl Banner Printing
           </a>
         </p>
         <ul>
@@ -66,12 +68,11 @@
         </ul>
       </section>
 
-      <!-- 3. KGSA Secretary -->
       <section class="card">
         <h2>KGSA Secretary (UW)</h2>
         <p class="subline">
           <a href="https://huskylink.washington.edu/organization/kgsa" target="_blank" rel="noopener">
-            KGSA — HuskyLink
+            KGSA · HuskyLink
           </a>
         </p>
         <ul>
@@ -81,12 +82,11 @@
         </ul>
       </section>
 
-      <!-- 4. Storytelling Volunteer -->
       <section class="card">
         <h2>Storytelling Event Volunteer (iSchool)</h2>
         <p class="subline">
           <a href="https://ischool.uw.edu/news/2024/10/illustrator-christian-robinson-share-power-stories" target="_blank" rel="noopener">
-            Christian Robinson Storytelling Event — UW iSchool
+            Christian Robinson Storytelling Event · UW iSchool
           </a>
         </p>
         <div style="display:flex; gap:16px; align-items:flex-start;">
@@ -109,34 +109,28 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     (function(){
-      document.querySelectorAll('.submenu').forEach(s => s.style.display='none');
-      document.querySelectorAll('.nav-toggle .triangle').forEach(t => t.textContent='▶');
+      document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
 
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
-          const ul = document.querySelector(btn.dataset.target);
+          const target = btn.dataset.target;
+          if (!target) return;
+          const ul = document.querySelector(target);
+          if (!ul) return;
           const tri = btn.querySelector('.triangle');
           const open = ul.style.display === 'block';
           ul.style.display = open ? 'none' : 'block';
-          tri.textContent = open ? '▶' : '▼';
+          if (tri) tri.textContent = open ? '▶' : '▼';
         });
       });
 
-      const d = document.querySelector('a[href="data-projects.html"]');
-      if(d) d.textContent = 'Data';
-
-      const l = document.querySelector('a[href="library-projects.html"]');
-      if(l) l.textContent = 'Library';
-
-      const btn = document.querySelector('.nav-toggle[data-target="#extra-sub"]');
-      const ul = document.querySelector('#extra-sub');
-      if(btn && ul){
-        ul.style.display='block';
-        btn.querySelector('.triangle').textContent='▼';
+      const ebtn = document.querySelector('.nav-toggle[data-target="#extra-sub"]');
+      const eul = document.querySelector('#extra-sub');
+      if (ebtn && eul) {
+        eul.style.display = 'block';
+        const tri = ebtn.querySelector('.triangle');
+        if (tri) tri.textContent = '▼';
       }
-
-      const active = document.querySelector('[data-id="community"]');
-      if(active) active.classList.add('active');
     })();
   </script>
 </body>
