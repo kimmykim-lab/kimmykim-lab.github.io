@@ -5,113 +5,316 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research Experience | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Research experience in AI supported personal knowledge management and teen mental health support in public libraries." />
+  <meta name="description" content="Research experience in learning analytics, AI for personal knowledge management, and teen mental health in public libraries." />
+  <style>
+    .page {
+      display: flex;
+      min-height: 100vh;
+      background: #f5f7ff;
+    }
+    .sidebar {
+      width: 260px;
+      background: #4b1fa4;
+      color: #ffffff;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .brand {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .nav {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+    .nav-toggle {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: #ffffff;
+      font: inherit;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      padding: 4px 0;
+    }
+    .triangle {
+      font-size: 0.7rem;
+      transform: translateY(1px);
+    }
+    .submenu {
+      list-style: none;
+      padding-left: 18px;
+      margin: 4px 0 8px;
+      display: none;
+    }
+    .submenu li a {
+      display: block;
+      padding: 2px 0;
+      color: #e3d7ff;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+    .submenu li a:hover {
+      color: #ffffff;
+    }
+    .nav-label-current {
+      margin-top: 8px;
+      font-weight: 600;
+      color: #ffffff;
+      padding: 4px 0;
+      font-size: 0.95rem;
+    }
+
+    .main {
+      flex: 1;
+      padding: 32px 40px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 16px;
+    }
+    .title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .title-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #7c3aed;
+    }
+    .page-header h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #4b1f93;
+    }
+    .page-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pill-link {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #ede7ff;
+      color: #5b21b6;
+      font-size: 0.85rem;
+      text-decoration: none;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .pill-link:hover {
+      background: #e0d4ff;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 22px 24px 20px;
+      box-shadow: 0 14px 45px rgba(15, 23, 42, 0.08);
+      margin-bottom: 18px;
+    }
+    .card-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #111827;
+      margin: 0;
+    }
+    .card-subtitle {
+      font-size: 0.86rem;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+    .tag-row {
+      margin-top: 4px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+    .card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.5;
+    }
+    .chip-row {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chip {
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      background: #ede9fe;
+      color: #4c1d95;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .chip:hover {
+      background: #ddd6fe;
+    }
+    .status {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .status span {
+      font-weight: 400;
+    }
+    footer {
+      margin-top: 24px;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+      }
+      .main {
+        padding: 20px 16px 32px;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".nav-toggle").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var targetId = btn.getAttribute("data-target");
+          var target = document.querySelector(targetId);
+          if (!target) return;
+          var expanded = target.style.display === "block";
+          target.style.display = expanded ? "none" : "block";
+          var tri = btn.querySelector(".triangle");
+          if (tri) {
+            tri.textContent = expanded ? "▶" : "▼";
+          }
+        });
+      });
+    });
+  </script>
 </head>
-
 <body>
-  <div class="container">
+  <div class="page">
     <aside class="sidebar">
-      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
+      <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
+      <nav class="nav">
+        <div>
+          <button class="nav-toggle" data-target="#projects-sub">
+            <span class="triangle">▶</span><span>Projects</span>
+          </button>
+          <ul id="projects-sub" class="submenu">
+            <li><a href="data-projects.html">Data</a></li>
+            <li><a href="library-projects.html">Library</a></li>
+          </ul>
+        </div>
 
-      <nav>
-        <button class="nav-toggle" data-target="#projects-sub">
-          <span class="triangle">▶</span><span>Projects</span>
-        </button>
-        <ul id="projects-sub" class="submenu">
-          <li><a class="nav-link" href="data-projects.html">Data</a></li>
-          <li><a class="nav-link" href="library-projects.html">Library</a></li>
-        </ul>
+        <div class="nav-label-current">Research</div>
 
-        <a href="research.html" class="nav-link nav-section active">Research Experience</a>
-
-        <button class="nav-toggle" data-target="#extra-sub">
-          <span class="triangle">▶</span><span>Extra Curricular</span>
-        </button>
-        <ul id="extra-sub" class="submenu">
-          <li><a class="nav-link" href="community.html">Community</a></li>
-          <li><a class="nav-link" href="certifications.html">Certifications</a></li>
-        </ul>
+        <div>
+          <button class="nav-toggle" data-target="#extra-sub">
+            <span class="triangle">▶</span><span>Extra Curricular</span>
+          </button>
+          <ul id="extra-sub" class="submenu">
+            <li><a href="community.html">Community &amp; Leadership</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+          </ul>
+        </div>
       </nav>
     </aside>
 
     <main class="main">
-      <div class="page-actions">
-        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="chip chip-action" href="MINJU_KIM_Resume.pdf" target="_blank" rel="noopener">Resume - Research</a>
-      </div>
-
       <header class="page-header">
-        <div class="section-label"><span class="dot"></span>Research Experience</div>
+        <div class="title-wrap">
+          <div class="title-dot"></div>
+          <h2>Research Experience</h2>
+        </div>
+        <div class="page-actions">
+          <a href="https://www.linkedin.com" class="pill-link">LinkedIn</a>
+          <a href="MINJU KIM_CV.pdf" class="pill-link">Minju Kim_CV</a>
+        </div>
       </header>
 
-      <section class="project-card">
-        <div class="project-head">
-          <h2 class="project-title">AI for Personal Knowledge Management (PKM)</h2>
-          <p class="project-meta">Independent research · AI for learning · Personal knowledge management</p>
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">AI for Personal Knowledge Management (PKM)</h3>
+            <div class="card-subtitle">Independent research · AI for learning · Personal knowledge management</div>
+            <div class="tag-row">Learning analytics · Generative AI · Visualization</div>
+          </div>
         </div>
         <ul>
           <li>Designing an AI supported PKM system that analyzes notes, course materials, and reflections to surface learning insights for students.</li>
           <li>Prototyping workflows for summarization, topic extraction, and learning pattern visualization using markdown based notes.</li>
           <li>Exploring a pipeline where markdown files are transformed into infographic images that can be rendered in a lightweight web app.</li>
-          <li><strong>Status:</strong> In progress.</li>
+          <li class="status">Status: <span>In progress.</span></li>
         </ul>
-        <div class="btn-row">
-          <a class="btn" href="https://markdown-vis.vercel.app/" target="_blank" rel="noopener">Demo</a>
+        <div class="chip-row">
+          <a href="https://markdown-vis.vercel.app" class="chip">Demo</a>
         </div>
       </section>
 
-      <section class="project-card">
-        <div class="project-head">
-          <h2 class="project-title">How Teens Co-designed Mental Health Support in Public Libraries (Year 1-3)</h2>
-          <p class="project-meta">Faculty led research · Teen mental wellbeing · Participatory design · Nine public libraries</p>
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">How Teens Co-designed Mental Health Support in Public Libraries </h3>
+            <div class="card-subtitle">Faculty led research · Teen mental wellbeing · Participatory design · Nine public libraries</div>
+          </div>
         </div>
         <ul>
           <li>Coded more than one hundred twelve field notes from year one and organized multi year participation data across nine libraries.</li>
           <li>Consolidated more than two hundred teen reflections and activity transcripts, aligning evidence with research claims.</li>
           <li>Supported year three manuscript development informed by peer reviewed publications.</li>
-          <li><strong>Impact:</strong> Informed program models that increased engagement and safe participation by more than twenty percent based on staff reports.</li>
+          <li><span class="status">Impact:</span> Informed program models that increased engagement and safe participation by more than twenty percent based on staff reports.</li>
         </ul>
-        <div class="btn-row">
-          <a class="btn" href="Project%20Drive-Folder%20Overview.xlsx" target="_blank" rel="noopener">Drive Folder Overview</a>
-          <a class="btn" href="Project%20Folder_Final.xlsx" target="_blank" rel="noopener">Project Folder (Final)</a>
-          <a class="btn" href="Year%201-Final%20Coding.xlsx" target="_blank" rel="noopener">Year 1 Final Coding</a>
+        <div class="chip-row">
+          <a href="#" class="chip">Drive Folder Overview</a>
+          <a href="#" class="chip">Project Folder (Final)</a>
+          <a href="#" class="chip">Year 1 Final Coding</a>
         </div>
       </section>
 
-      <footer class="page-footer">
-        <p>© <span id="year"></span> Kimmy Kim · Research Experience</p>
+      <footer>
+        © 2025 Kimmy Kim · Research Experience
       </footer>
     </main>
   </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    (function () {
-      document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
-
-      document.querySelectorAll('.nav-toggle').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const ul = document.querySelector(btn.dataset.target);
-          const tri = btn.querySelector('.triangle');
-          const open = ul && ul.style.display === 'block';
-          if (ul) {
-            ul.style.display = open ? 'none' : 'block';
-          }
-          if (tri) {
-            tri.textContent = open ? '▶' : '▼';
-          }
-        });
-      });
-
-      const pbtn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
-      const pul = document.querySelector('#projects-sub');
-      if (pbtn && pul) {
-        pul.style.display = 'block';
-        const tri = pbtn.querySelector('.triangle');
-        if (tri) tri.textContent = '▼';
-      }
-    })();
-  </script>
 </body>
 </html>
