@@ -11,9 +11,9 @@
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h1 class="brand"><a href="index.html">Kimmy Kim</a></h1>
+      <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
 
-      <nav>
+      <nav class="nav">
         <button class="nav-toggle" data-target="#projects-sub">
           <span class="triangle">▶</span><span>Projects</span>
         </button>
@@ -22,7 +22,9 @@
           <li><a class="nav-link" href="library-projects.html">Library</a></li>
         </ul>
 
-        <a href="research.html" class="nav-link nav-section">Research Experience</a>
+        <a href="research.html" class="nav-toggle nav-link">
+          <span class="triangle">▶</span><span>Research</span>
+        </a>
 
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
@@ -101,7 +103,7 @@
         </div>
         <ul>
           <li>Ran content inventory and open and closed card sorting for recipes, cookware, and classes.</li>
-          <li>Designed a multi level navigation model connecting kitchenware, recipes, articles, and classes.</li>
+          <li>Designed a multi-level navigation model connecting kitchenware, recipes, articles, and classes.</li>
           <li>Created annotated wireframes defining layout, labels, and key interactions.</li>
           <li><strong>Outcome:</strong> Produced a cleaner taxonomy that reduces cognitive load and supports task based exploration.</li>
         </ul>
@@ -143,18 +145,18 @@
 
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
-          const ul = document.querySelector(btn.dataset.target);
+          const target = btn.dataset.target;
+          if (!target) return;
+          const ul = document.querySelector(target);
+          if (!ul) return;
           const tri = btn.querySelector('.triangle');
-          const open = ul && ul.style.display === 'block';
-          if (ul) {
-            ul.style.display = open ? 'none' : 'block';
-          }
-          if (tri) {
-            tri.textContent = open ? '▶' : '▼';
-          }
+          const open = ul.style.display === 'block';
+          ul.style.display = open ? 'none' : 'block';
+          if (tri) tri.textContent = open ? '▶' : '▼';
         });
       });
 
+      // Data 페이지에서는 Projects 메뉴를 기본으로 열기
       const pbtn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
       const pul = document.querySelector('#projects-sub');
       if (pbtn && pul) {
