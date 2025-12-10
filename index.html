@@ -31,7 +31,9 @@
           <li><a href="library-projects.html" class="nav-link">Library</a></li>
         </ul>
 
-        <a href="research.html" class="nav-link nav-section">Research Experience</a>
+        <button class="nav-toggle" data-target="#research-sub">
+          <span class="triangle">▶</span><span>Research</span>
+        </button>
 
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
@@ -55,27 +57,27 @@
             especially children and communities, connect with information in measurable and inclusive ways.
           </p>
 
-        <div class="section">
-          <h3 class="h3">Research and Professional Interests</h3>
-          <div class="chips">
-            <span class="chip-pill">Data analytics and visualization</span>
-            <span class="chip-pill">AI in education</span>
-            <span class="chip-pill">Learning analytics</span>
-            <span class="chip-pill">Data management</span>
-            <span class="chip-pill">Youth services</span>
+          <div class="section">
+            <h3 class="h3">Research and Professional Interests</h3>
+            <div class="chips">
+              <span class="chip-pill">Data analytics and visualization</span>
+              <span class="chip-pill">AI in education</span>
+              <span class="chip-pill">Learning analytics</span>
+              <span class="chip-pill">Data management</span>
+              <span class="chip-pill">Youth services</span>
+            </div>
           </div>
-        </div>
 
-        <div class="section">
-          <h3 class="h3">Contact</h3>
-          <p class="meta">📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu</p>
+          <div class="section">
+            <h3 class="h3">Contact</h3>
+            <p class="meta">📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu</p>
 
-          <div class="btn-row">
-            <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="MINJU_KIM_Resume_Data.pdf" target="_blank" rel="noopener">Resume - Data</a>
-            <a class="btn" href="MINJU_KIM_Resume_Library.pdf" target="_blank" rel="noopener">Resume - Library</a>
+            <div class="btn-row">
+              <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn" href="MINJU_KIM_Resume_Data.pdf" target="_blank" rel="noopener">Resume - Data</a>
+              <a class="btn" href="MINJU_KIM_Resume_Library.pdf" target="_blank" rel="noopener">Resume - Library</a>
+            </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -115,10 +117,11 @@
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
+          if (!ul) return;
           const tri = btn.querySelector('.triangle');
           const open = ul.style.display === 'block';
           ul.style.display = open ? 'none' : 'block';
-          tri.textContent = open ? '▶' : '▼';
+          if (tri) tri.textContent = open ? '▶' : '▼';
         });
       });
     })();
