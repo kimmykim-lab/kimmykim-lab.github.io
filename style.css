@@ -1,39 +1,23 @@
-/* =========================================================
-   Kimmy Kim — Global Styles (Unified across all pages)
-   - Sidebar layout + toggles
-   - Card sections + button attachments
-   - Consistent typographic scale
-   - Media sizing guards (thumb/rounded)
-   ========================================================= */
-
-/* ===== 0) CSS Reset (light) ===== */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 img { max-width: 100%; height: auto; display: block; }
 
-/* ===== 1) Design Tokens ===== */
 :root{
   --bg: #f4f6fb;
   --text: #111827;
   --muted: #6b7280;
-
   --brand: #5b21b6;
   --brand-contrast: #ffffff;
-
   --chip-bg: #ede9fe;
   --chip-text: #5b21b6;
-
   --card-bg: #ffffff;
   --shadow-1: 0 1px 0 rgba(17,24,39,0.04), 0 6px 20px rgba(17,24,39,0.06);
-
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 10px;
-
   --sidebar-w: 260px;
 }
 
-/* ===== 2) Base ===== */
 body{
   background: var(--bg);
   color: var(--text);
@@ -50,22 +34,18 @@ h3{ font-size: clamp(17px, 2vw, 20px); }
 p{ margin: 0 0 10px; }
 .meta{ color: var(--muted); font-size: 14px; }
 
-/* Links */
 a{ color:#6d28d9; text-decoration: none; }
 a:hover{ text-decoration: underline; }
 
-/* Lists */
 ul{ padding-left: 18px; margin: 8px 0; }
 li{ margin: 6px 0; }
 
-/* ===== 3) Layout ===== */
 .container{
   display: flex;
   gap: 0;
   min-height: 100vh;
 }
 
-/* Sidebar */
 .sidebar{
   width: var(--sidebar-w);
   background: #4c1d95;
@@ -102,7 +82,10 @@ li{ margin: 6px 0; }
 .nav-toggle:hover{ filter: brightness(1.08); }
 
 .triangle{
-  display:inline-block; width: 14px; text-align:center; margin-right: 2px;
+  display:inline-block;
+  width: 14px;
+  text-align:center;
+  margin-right: 2px;
   font-weight: 700;
 }
 
@@ -110,7 +93,7 @@ li{ margin: 6px 0; }
   margin: 6px 0 14px 18px;
   padding-left: 0;
   list-style: none;
-  display: none; /* 기본 접힘 */
+  display: none;
 }
 .submenu a{
   display:block;
@@ -121,42 +104,59 @@ li{ margin: 6px 0; }
 .submenu a:hover{ color:#fff; text-decoration: underline; }
 
 .top-link{
-  display:block; margin-top: 6px; color:#e9e9ff; font-weight:600;
+  display:block;
+  margin-top: 6px;
+  color:#e9e9ff;
+  font-weight:600;
 }
 .top-link:hover{ color:#fff; }
 
-/* Active highlight */
 .nav .submenu a.active{ font-weight:700; color:#a78bfa; }
 .top-link.active{ font-weight: 800; color:#fff; }
 
-/* Main */
 .main{
   flex: 1;
   padding: 40px 48px;
 }
 
-/* ===== 4) Section header / chips ===== */
 .page-header{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   margin: 4px 0 18px;
 }
+
 .section-label{
-  display:inline-flex; gap:8px; align-items:center; font-weight:700;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-weight:700;
 }
 .section-label .dot{
-  width:8px; height:8px; border-radius:50%; background:#8b5cf6; display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#8b5cf6;
+  display:inline-block;
 }
 
 .page-actions{
-  display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; margin-bottom: 12px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  margin-bottom: 12px;
 }
 .chip{
-  display:inline-flex; align-items:center; padding:6px 10px; border-radius:999px; font-size:12px;
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
 }
 .chip-action{ background:var(--chip-bg); color:var(--chip-text); }
 .chip-action:hover{ filter:brightness(0.96); text-decoration: none; }
 
-/* ===== 5) Cards ===== */
 .card, .project-card{
   background: var(--card-bg);
   border-radius: var(--radius-lg);
@@ -175,33 +175,42 @@ li{ margin: 6px 0; }
 
 .card .subline,
 .project-card .project-meta{
-  color: var(--muted); font-size: 14px; margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 10px;
 }
 
 .project-points, .card ul{ margin: 10px 0 0 18px; }
 .project-points li, .card li{ margin: 7px 0; line-height: 1.55; }
 
-/* ===== 6) Attachment Buttons ===== */
 .btn-row{
-  display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:12px;
 }
 .btn{
-  display:inline-block; text-decoration:none; font-weight:600;
-  padding:8px 12px; border-radius:999px;
-  background: var(--brand); color: var(--brand-contrast);
+  display:inline-block;
+  text-decoration:none;
+  font-weight:600;
+  padding:8px 12px;
+  border-radius:999px;
+  background: var(--brand);
+  color: var(--brand-contrast);
   box-shadow: 0 2px 8px rgba(91,33,182,.25);
 }
 .btn:hover{ filter:brightness(0.96); text-decoration: none; }
 .btn:active{ transform: translateY(1px); }
 
-/* ===== 7) Images / Media ===== */
 .thumb, .media-img, .rounded{
-  max-width: 180px; max-height: 140px;
-  width: auto; height: auto; object-fit: cover;
+  max-width: 180px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
   border-radius: var(--radius-sm);
 }
 
-/* ===== 8) Certifications ===== */
 .cert-list{ display:grid; gap:16px; }
 .cert{
   background: var(--card-bg);
@@ -213,17 +222,13 @@ li{ margin: 6px 0; }
 .issuer{ margin: 0 0 4px; color: var(--muted); font-size: 14px; }
 .meta{ margin: 0; color: var(--muted); font-size: 13px; }
 
-/* ===== 9) Footer ===== */
 .page-footer{
   color: var(--muted);
   font-size: 13px;
   margin-top: 18px;
 }
 
-/* ===== 10) Mobile-only strong compression (desktop unchanged) ===== */
 @media (max-width: 760px){
-
-  /* 레이아웃: 좌우 2컬럼 → 세로 스택 */
   .container{ flex-direction: column; }
   .sidebar{
     position: static;
@@ -233,7 +238,6 @@ li{ margin: 6px 0; }
   }
   .main{ padding: 14px 14px; }
 
-  /* 네비게이션 컴팩트 */
   .nav{ margin-top: 6px; }
   .nav-toggle{ padding: 4px 2px; font-size: 13.5px; gap: 6px; }
   .triangle{ width: 12px; }
@@ -241,7 +245,6 @@ li{ margin: 6px 0; }
   .submenu a{ font-size: 13px; padding: 2px 0; }
   .top-link{ margin-top: 4px; font-size: 14px; }
 
-  /* 첫 카드(히어로) 집중 압축 */
   .card:first-of-type,
   .project-card:first-of-type{
     padding: 12px 12px;
@@ -265,14 +268,17 @@ li{ margin: 6px 0; }
     margin-bottom: 6px;
   }
   .card:first-of-type p,
-  .project-card:first-of-type p{ font-size: 14px; margin-bottom: 6px; }
+  .project-card:first-of-type p{
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
 
-  /* 공통 카드·텍스트 더 촘촘하게 */
   .card, .project-card, .cert{
     padding: 14px 14px;
     margin: 0 0 12px;
     border-radius: 12px;
-    box-shadow: 0 1px 0 rgba(17,24,39,0.04), 0 4px 14px rgba(17,24,39,0.05);
+    box-shadow: 0 1px 0 rgba(17,24,39,0.04),
+                0 4px 14px rgba(17,24,39,0.05);
   }
   h1{ font-size: clamp(19px, 5.4vw, 23px); }
   h2{ font-size: clamp(17px, 4.8vw, 20px); }
@@ -284,7 +290,6 @@ li{ margin: 6px 0; }
   .project-points, .card ul{ margin: 6px 0 0 16px; }
   .project-points li, .card li{ margin: 5px 0; }
 
-  /* 액션 영역 */
   .page-actions{ gap: 6px; margin-bottom: 6px; }
   .chip{ padding: 4px 8px; font-size: 11px; }
   .btn-row{ gap: 6px; margin-top: 6px; }
@@ -294,20 +299,17 @@ li{ margin: 6px 0; }
     box-shadow: 0 1px 6px rgba(91,33,182,.2);
   }
 
-  /* 이미지 상한치 더 낮춤 */
   .thumb, .media-img, .rounded{
     max-width: 130px;
     max-height: 100px;
   }
 
-  /* 헤더/푸터 간격 최소화 */
   .page-header{ margin: 2px 0 10px; }
   .section-label{ gap: 6px; }
   .section-label .dot{ width: 6px; height: 6px; }
   .page-footer{ font-size: 12px; margin-top: 10px; }
 }
 
-/* 초소형 기기(예: iPhone SE) 보정 */
 @media (max-width: 390px){
   .main{ padding: 12px 12px; }
   .card:first-of-type .rounded,
@@ -320,4 +322,23 @@ li{ margin: 6px 0; }
   .card:first-of-type h1,
   .project-card:first-of-type h1{ font-size: 18px; }
   .btn{ font-size: 13px; padding: 5px 9px; }
+}
+
+.section-label,
+.page-title{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:700;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color:#4b1f93;
+}
+
+.section-label .dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#8b5cf6;
 }
