@@ -27,23 +27,18 @@
           <span class="triangle">▶</span><span>Projects</span>
         </button>
         <ul id="projects-sub" class="submenu">
-          <li><a href="data-projects.html" data-id="data">Data</a></li>
-          <li><a href="library-projects.html" data-id="library">Library</a></li>
+          <li><a href="data-projects.html" class="nav-link">Data</a></li>
+          <li><a href="library-projects.html" class="nav-link">Library</a></li>
         </ul>
 
-        <button class="nav-toggle" data-target="#research-sub">
-          <span class="triangle">▶</span><span>Research Experience</span>
-        </button>
-        <ul id="research-sub" class="submenu">
-          <li><a href="research.html" data-id="research">Research Overview</a></li>
-        </ul>
+        <a href="research.html" class="nav-link nav-section">Research Experience</a>
 
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
         </button>
         <ul id="extra-sub" class="submenu">
-          <li><a href="community.html" data-id="community">Community</a></li>
-          <li><a href="certifications.html" data-id="certifications">Certifications</a></li>
+          <li><a href="community.html" class="nav-link">Community</a></li>
+          <li><a href="certifications.html" class="nav-link">Certifications</a></li>
         </ul>
       </nav>
     </aside>
@@ -53,60 +48,61 @@
         <img src="Photo_Kimmy.jpg" alt="Portrait of Kimmy Kim" class="rounded" />
 
         <div>
-          <h2>Hi 👋🏻 I’m Kimmy Kim!</h2>
+          <h2>Hi 👋🏻 I am Kimmy Kim</h2>
           <p class="meta">
-            I’m a Master’s student at the UW iSchool, passionate about combining
-            <strong>data analytics and social impact</strong>. I build inclusive, measurable systems that help people
-            especially children and communities, connect with information.
+            I am a Master student at the UW iSchool, interested in combining
+            <strong>data analytics and social impact</strong>. I work on systems that help people,
+            especially children and communities, connect with information in measurable and inclusive ways.
           </p>
 
-          <div class="section">
-            <h3 class="h3">Research and Professional Interests</h3>
-            <div class="chips">
-              <span class="chip-pill">Data Analytics and Visualization</span>
-              <span class="chip-pill">AI in Education</span>
-              <span class="chip-pill">Learning Analytics</span>
-              <span class="chip-pill">Data Management</span>
-              <span class="chip-pill">Youth Services</span>
-            </div>
+        <div class="section">
+          <h3 class="h3">Research and Professional Interests</h3>
+          <div class="chips">
+            <span class="chip-pill">Data analytics and visualization</span>
+            <span class="chip-pill">AI in education</span>
+            <span class="chip-pill">Learning analytics</span>
+            <span class="chip-pill">Data management</span>
+            <span class="chip-pill">Youth services</span>
           </div>
+        </div>
 
-          <div class="section">
-            <h3 class="h3">Contact</h3>
-            <p class="meta">📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu</p>
+        <div class="section">
+          <h3 class="h3">Contact</h3>
+          <p class="meta">📩 kimmy.minju.kim@gmail.com / kimmy99@uw.edu</p>
 
-            <div class="btn-row">
-              <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank">LinkedIn</a>
-              <a class="btn" href="MINJU_KIM_Resume_Data.pdf" target="_blank">Resume - Data</a>
-              <a class="btn" href="MINJU_KIM_Resume_Library.pdf" target="_blank">Resume - Library</a>
-            </div>
+          <div class="btn-row">
+            <a class="btn" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="MINJU_KIM_Resume_Data.pdf" target="_blank" rel="noopener">Resume - Data</a>
+            <a class="btn" href="MINJU_KIM_Resume_Library.pdf" target="_blank" rel="noopener">Resume - Library</a>
           </div>
+        </div>
         </div>
       </section>
 
       <section class="card">
-        <h2>My Academic Background</h2>
+        <h2>My academic background</h2>
         <p class="meta">
           I studied Library and Information Science in Korea and am now pursuing my MLIS at the UW iSchool,
-          focusing on how <strong>data analytics</strong> can drive innovation in education and information systems.
-          <br><em>Relevant Coursework:</em> Cloud Computing, Data Science, Database Systems, Research Methods.
+          focusing on how <strong>data analytics</strong> can support education and information systems.
+          <br><em>Relevant coursework:</em> Cloud computing, data science, database systems, research methods.
         </p>
       </section>
 
       <section class="card">
-        <h2>My Goal</h2>
+        <h2>My goal</h2>
         <p class="meta">
-          I explore the intersection of <strong>education, data, and AI</strong> to design systems that improve learning and community engagement.
+          I explore the intersection of <strong>education, data, and AI</strong> to design systems that improve learning
+          experiences and community engagement.
         </p>
       </section>
 
       <section class="card">
-        <h2>My Values</h2>
+        <h2>My values</h2>
         <ul>
-          <li><strong>Inclusive</strong>, centering diverse voices especially children and communities.</li>
-          <li><strong>Analytical</strong>, measuring outcomes and supporting decisions with data.</li>
-          <li><strong>Collaborative</strong>, co-design and teamwork across disciplines.</li>
-          <li><strong>Practical</strong>, building systems that work in real settings.</li>
+          <li><strong>Inclusive</strong> - centering diverse voices, especially children and communities.</li>
+          <li><strong>Analytical</strong> - measuring outcomes and supporting decisions with data.</li>
+          <li><strong>Collaborative</strong> - working with educators, librarians, and technologists.</li>
+          <li><strong>Practical</strong> - building systems that work in real settings.</li>
         </ul>
       </section>
     </main>
@@ -115,6 +111,7 @@
   <script>
     (function () {
       document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
+
       document.querySelectorAll('.nav-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
