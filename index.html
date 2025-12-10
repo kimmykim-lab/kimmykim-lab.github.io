@@ -31,9 +31,9 @@
           <li><a href="library-projects.html" class="nav-link">Library</a></li>
         </ul>
 
-        <button class="nav-toggle" data-target="#research-sub">
+        <a href="research.html" class="nav-toggle nav-link nav-research">
           <span class="triangle">▶</span><span>Research</span>
-        </button>
+        </a>
 
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
@@ -50,9 +50,9 @@
         <img src="Photo_Kimmy.jpg" alt="Portrait of Kimmy Kim" class="rounded" />
 
         <div>
-          <h2>Hi 👋🏻 I am Kimmy Kim</h2>
+          <h2>Hi 👋🏻 I am Minju (Kimmy) Kim</h2>
           <p class="meta">
-            I am a Master student at the UW iSchool, interested in combining
+            I am a Master's student at the UW iSchool, interested in combining
             <strong>data analytics and social impact</strong>. I work on systems that help people,
             especially children and communities, connect with information in measurable and inclusive ways.
           </p>
@@ -115,9 +115,14 @@
       document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
 
       document.querySelectorAll('.nav-toggle').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const ul = document.querySelector(btn.dataset.target);
+        btn.addEventListener('click', (event) => {
+          const target = btn.dataset.target;
+          if (!target) {
+            return;
+          }
+          const ul = document.querySelector(target);
           if (!ul) return;
+
           const tri = btn.querySelector('.triangle');
           const open = ul.style.display === 'block';
           ul.style.display = open ? 'none' : 'block';
