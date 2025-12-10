@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Ad click prediction, Netflix recommendation analysis, SQL retail database, information architecture, and Asian American literature data storytelling." />
+  <meta name="description" content="Ad click prediction, Netflix recommendation analysis, retail SQL database, information architecture, and Asian American literature data storytelling." />
 </head>
 
 <body>
@@ -22,12 +22,7 @@
           <li><a class="nav-link" href="library-projects.html">Library</a></li>
         </ul>
 
-        <button class="nav-toggle" data-target="#research-sub">
-          <span class="triangle">▶</span><span>Research Experience</span>
-        </button>
-        <ul id="research-sub" class="submenu">
-          <li><a class="nav-link" href="research.html">Research Overview</a></li>
-        </ul>
+        <a href="research.html" class="nav-link nav-section">Research Experience</a>
 
         <button class="nav-toggle" data-target="#extra-sub">
           <span class="triangle">▶</span><span>Extra Curricular</span>
@@ -41,101 +36,96 @@
 
     <main class="main">
       <div class="page-actions">
-        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank">LinkedIn</a>
-        <a class="chip chip-action" href="MINJU_KIM_Resume_Data.pdf" target="_blank">Resume - Data</a>
+        <a class="chip chip-action" href="https://www.linkedin.com/in/minju-kim-5b593a318/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip chip-action" href="MINJU_KIM_Resume_Data.pdf" target="_blank" rel="noopener">Resume - Data</a>
       </div>
 
       <header class="page-header">
         <div class="section-label"><span class="dot"></span>Data Projects</div>
       </header>
 
-      <!-- Ad Click Project -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Ad Click Prediction Using Cloud ML</h2>
-          <p class="project-meta">Azure ML Designer · Python · Real-time architecture</p>
+          <p class="project-meta">Azure ML Designer · Python · Real time architecture</p>
         </div>
         <ul>
           <li>Designed an end to end pipeline for ad click prediction, including ingest, preprocess, train, score, and deployment.</li>
           <li>Implemented a prototype using Azure ML and Language services, evaluated on more than ten thousand events.</li>
-          <li><strong>Impact:</strong> Reduced decision cycle by about thirty percent and provided a reusable template for future media analytics.</li>
+          <li><strong>Impact:</strong> Reduced decision cycle by about thirty percent and created a reusable template for media analytics.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" href="ad-click-slides.pdf" target="_blank">Slides</a>
-          <a class="btn" href="ad-click-paper.pdf" target="_blank">Paper</a>
+          <a class="btn" href="ad-click-slides.pdf" target="_blank" rel="noopener">Slides</a>
+          <a class="btn" href="ad-click-paper.pdf" target="_blank" rel="noopener">Paper</a>
         </div>
       </section>
 
-      <!-- Netflix -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Netflix Recommendation Analysis</h2>
-          <p class="project-meta">EDA · System diagram · Evaluation framework</p>
+          <p class="project-meta">Exploratory data analysis · System diagram · Evaluation framework</p>
         </div>
         <ul>
-          <li>Mapped recommendation signals such as popularity, recency, and affinity to platform-level objectives.</li>
-          <li>Designed a system diagram showing interactions among events, item features, and ranking models.</li>
-          <li><strong>Outcome:</strong> Improved interpretability when communicating recommendation quality to non technical stakeholders.</li>
+          <li>Mapped recommendation signals such as popularity, recency, and affinity to platform goals.</li>
+          <li>Designed a system diagram that shows interactions among user events, item features, and ranking models.</li>
+          <li><strong>Outcome:</strong> Helped communicate recommendation quality to non technical stakeholders.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" href="Netflix%20Diagram.pdf" target="_blank">System Diagram</a>
-          <a class="btn" href="Netflix-slides.pdf" target="_blank">Slides</a>
+          <a class="btn" href="Netflix%20Diagram.pdf" target="_blank" rel="noopener">System Diagram</a>
+          <a class="btn" href="Netflix-slides.pdf" target="_blank" rel="noopener">Slides</a>
         </div>
       </section>
 
-      <!-- Retail DB -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Online Shopping Retail Database (ERD to Queries)</h2>
-          <p class="project-meta">MySQL · ERD · SQL</p>
+          <p class="project-meta">MySQL · Entity relationship diagram · SQL</p>
         </div>
         <ul>
-          <li>Designed a normalized schema for an online retail dataset including relationships and constraints.</li>
-          <li>Created over twenty optimized SQL queries for basket analysis and customer segmentation.</li>
-          <li><strong>Outcome:</strong> Delivered actionable insights and reusable SQL assets supported by a refined ERD.</li>
+          <li>Designed a normalized schema with relationships and constraints for an online retail dataset.</li>
+          <li>Created more than twenty SQL queries for basket analysis and customer segmentation.</li>
+          <li><strong>Outcome:</strong> Delivered insights and reusable SQL assets supported by a refined ERD.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" href="Online%20Retail-slides.pdf" target="_blank">Slides</a>
-          <a class="btn" href="Online%20Retail_Final%20ERD.pdf" target="_blank">Final ERD</a>
-          <a class="btn" href="Online%20Retail_Final%20SQL.pdf" target="_blank">SQL Scripts</a>
-          <a class="btn" href="Initial%20ERD%20&amp;%20Design%20Proposal.pdf" target="_blank">Initial Proposal</a>
+          <a class="btn" href="Online%20Retail-slides.pdf" target="_blank" rel="noopener">Slides</a>
+          <a class="btn" href="Online%20Retail_Final%20ERD.pdf" target="_blank" rel="noopener">Final ERD</a>
+          <a class="btn" href="Online%20Retail_Final%20SQL.pdf" target="_blank" rel="noopener">SQL Scripts</a>
+          <a class="btn" href="Initial%20ERD%20&amp;%20Design%20Proposal.pdf" target="_blank" rel="noopener">Initial Proposal</a>
         </div>
       </section>
 
-      <!-- Foodie IA -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Foodie Fanatic Information Architecture Redesign</h2>
           <p class="project-meta">Information architecture · UX and UI · Card sorting · Wireframes</p>
         </div>
         <ul>
-          <li>Conducted content inventory and open and closed card sorting for recipes, cookware, and classes.</li>
+          <li>Ran content inventory and open and closed card sorting for recipes, cookware, and classes.</li>
           <li>Designed a multi level navigation model connecting kitchenware, recipes, articles, and classes.</li>
-          <li>Developed annotated wireframes outlining layout, labels, and interaction patterns.</li>
-          <li><strong>Outcome:</strong> Improved taxonomy and reduced cognitive load through redesigned IA.</li>
+          <li>Created annotated wireframes defining layout, labels, and key interactions.</li>
+          <li><strong>Outcome:</strong> Produced a cleaner taxonomy that reduces cognitive load and supports task based exploration.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" href="Annotated-Navigation%20Model.pdf" target="_blank">Navigation Model</a>
-          <a class="btn" href="UX%20Design.pdf" target="_blank">UX Design</a>
-          <a class="btn" href="Content%20Inventory-%20Categorization.xlsx" target="_blank">Content Inventory</a>
+          <a class="btn" href="Annotated-Navigation%20Model.pdf" target="_blank" rel="noopener">Navigation Model</a>
+          <a class="btn" href="UX%20Design.pdf" target="_blank" rel="noopener">UX Design</a>
+          <a class="btn" href="Content%20Inventory-%20Categorization.xlsx" target="_blank" rel="noopener">Content Inventory</a>
         </div>
       </section>
 
-      <!-- Asian American Literature -->
       <section class="project-card">
         <div class="project-head">
           <h2 class="project-title">Recognizing the Development of Asian American Literature</h2>
           <p class="project-meta">R · Tidyverse · Plotly · Data storytelling</p>
         </div>
         <ul>
-          <li>Analyzed publication patterns and genre distributions using the Post45 Canon dataset.</li>
-          <li>Built interactive visualizations showing yearly title volume, author productivity, and ethnic group representation.</li>
-          <li>Investigated Cambodian and Korean American genre distributions using grouped bar charts.</li>
-          <li><strong>Outcome:</strong> Developed a data driven narrative highlighting representation trends and implications.</li>
+          <li>Analyzed the Post45 Canon of Asian American Literature dataset to study publication and genre trends.</li>
+          <li>Built visualizations of yearly title volume, author productivity, and ethnic group representation.</li>
+          <li>Examined Cambodian and Korean American genre distributions using grouped bar charts.</li>
+          <li><strong>Outcome:</strong> Developed a data driven narrative about representation and authorship patterns.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" href="https://medium.com/@kimmy.minju.kim/recognizing-the-development-of-asian-american-literature-23015e6a7d10" target="_blank">Medium Article</a>
-          <a class="btn" href="LIS572_Final%20Project_Data%20Analysis%20+%20Viz.R" target="_blank">R Script</a>
+          <a class="btn" href="https://medium.com/@kimmy.minju.kim/recognizing-the-development-of-asian-american-literature-23015e6a7d10" target="_blank" rel="noopener">Medium Article</a>
+          <a class="btn" href="LIS572_Final%20Project_Data%20Analysis%20+%20Viz.R" target="_blank" rel="noopener">R Script</a>
         </div>
       </section>
 
@@ -155,16 +145,23 @@
         btn.addEventListener('click', () => {
           const ul = document.querySelector(btn.dataset.target);
           const tri = btn.querySelector('.triangle');
-          const open = ul.style.display === 'block';
-          ul.style.display = open ? 'none' : 'block';
-          tri.textContent = open ? '▶' : '▼';
+          const open = ul && ul.style.display === 'block';
+          if (ul) {
+            ul.style.display = open ? 'none' : 'block';
+          }
+          if (tri) {
+            tri.textContent = open ? '▶' : '▼';
+          }
         });
       });
 
       const pbtn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
       const pul = document.querySelector('#projects-sub');
-      pul.style.display = 'block';
-      pbtn.querySelector('.triangle').textContent = '▼';
+      if (pbtn && pul) {
+        pul.style.display = 'block';
+        const tri = pbtn.querySelector('.triangle');
+        if (tri) tri.textContent = '▼';
+      }
     })();
   </script>
 </body>
