@@ -45,6 +45,7 @@
       gap: 6px;
       cursor: pointer;
       padding: 4px 0;
+      text-decoration: none;
     }
     .triangle {
       font-size: 0.7rem;
@@ -68,7 +69,7 @@
       color: #ffffff;
     }
 
-    .nav-label-current {
+    .nav-current {
       font-weight: 600;
     }
 
@@ -210,14 +211,22 @@
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".submenu").forEach(function (ul) {
+        ul.style.display = "none";
+      });
+
       document.querySelectorAll(".nav-toggle").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var targetId = btn.getAttribute("data-target");
-          var target = document.querySelector(targetId);
-          if (!target) return;
-          var expanded = target.style.display === "block";
-          target.style.display = expanded ? "none" : "block";
-          var tri = btn.querySelector(".triangle");
+        btn.addEventListener("click", function (event) {
+          const target = btn.dataset.target;
+          if (!target) {
+            return;
+          }
+          const ul = document.querySelector(target);
+          if (!ul) return;
+
+          const expanded = ul.style.display === "block";
+          ul.style.display = expanded ? "none" : "block";
+          const tri = btn.querySelector(".triangle");
           if (tri) {
             tri.textContent = expanded ? "▶" : "▼";
           }
@@ -241,9 +250,9 @@
           </ul>
         </div>
 
-        <button class="nav-toggle nav-label-current" data-target="#research-sub">
+        <a href="research.html" class="nav-toggle nav-current">
           <span class="triangle">▶</span><span>Research</span>
-        </button>
+        </a>
 
         <div>
           <button class="nav-toggle" data-target="#extra-sub">
@@ -278,7 +287,7 @@
           </div>
         </div>
         <ul>
-          <li>Designing an AI supported PKM system that analyzes notes, course materials, and reflections to surface learning insights for students.</li>
+          <li>Designing an AI-supported PKM system that analyzes notes, course materials, and reflections to surface learning insights for students.</li>
           <li>Prototyping workflows for summarization, topic extraction, and learning pattern visualization using markdown based notes.</li>
           <li>Exploring a pipeline where markdown files are transformed into infographic images that can be rendered in a lightweight web app.</li>
           <li class="status">Status: <span>In progress.</span></li>
