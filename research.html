@@ -160,6 +160,23 @@
       font-weight: 600;
       color: #111827;
       margin: 0;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #047857;
+      background: #ecfdf5;
+      border-radius: 999px;
+      vertical-align: middle;
+      white-space: nowrap;
     }
 
     .card-subtitle {
@@ -329,7 +346,10 @@
       <section class="card">
         <div class="card-header">
           <div>
-            <h3 class="card-title">AI-Driven Learning Analytics System for Personalized Knowledge Management</h3>
+            <h3 class="card-title">
+              AI-Driven Learning Analytics System for Personalized Knowledge Management
+              <span class="status-badge">In Progress</span>
+            </h3>
             <div class="card-subtitle">
               Capstone Project · Learning analytics · Generative AI · Knowledge systems · Visualization
             </div>
@@ -342,11 +362,11 @@
           <li>Prototyped a markdown-to-visualization pipeline that transforms structured learning logs into lightweight, web-renderable infographic outputs.</li>
           <li>Focused on scalable, user-adaptive learning experiences without relying on predefined templates, enabling flexible interaction through conversational interfaces.</li>
           <li>Generated structured learning data outputs to support downstream analysis of user engagement patterns and learning behavior.</li>
-          <li class="status">Status: <span>In Progress</span></li>
         </ul>
 
         <video class="demo-video" controls playsinline preload="metadata">
-        <source src="/assets/description-video-web.mp4" type="video/mp4" />
+          <source src="/assets/description-video-web.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
 
         <p class="demo-caption">
