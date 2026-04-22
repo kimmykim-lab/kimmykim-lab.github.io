@@ -68,11 +68,9 @@
     .submenu li a:hover {
       color: #ffffff;
     }
-
     .nav-current {
       font-weight: 600;
     }
-
     .main {
       flex: 1;
       padding: 32px 40px;
@@ -183,6 +181,14 @@
     .status span {
       font-weight: 400;
     }
+    .demo-video {
+      width: 100%;
+      max-width: 720px;
+      margin-top: 14px;
+      border-radius: 12px;
+      display: block;
+      background: #000;
+    }
     .demo-caption {
       margin-top: 10px;
       font-size: 0.84rem;
@@ -222,11 +228,10 @@
       });
 
       document.querySelectorAll(".nav-toggle").forEach(function (btn) {
-        btn.addEventListener("click", function (event) {
+        btn.addEventListener("click", function () {
           const target = btn.dataset.target;
-          if (!target) {
-            return;
-          }
+          if (!target) return;
+
           const ul = document.querySelector(target);
           if (!ul) return;
 
@@ -300,9 +305,16 @@
           <li>Generated structured learning data outputs to support downstream analysis of user engagement patterns and learning behavior.</li>
           <li class="status">Status: <span>In Progress</span></li>
         </ul>
+
         <div class="chip-row">
-          <a href="assets/description-video.mp4" class="chip" target="_blank" rel="noopener noreferrer">▶ View System Demo</a>
+          <a href="/assets/description-video.mp4" class="chip" target="_blank" rel="noopener noreferrer">▶ View System Demo</a>
         </div>
+
+        <video class="demo-video" controls playsinline preload="metadata">
+          <source src="/assets/description-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
         <p class="demo-caption">Short walkthrough of the AI-driven learning pipeline, from interest detection to quiz generation.</p>
       </section>
 
