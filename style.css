@@ -26,12 +26,16 @@ img { max-width: 100%; height: auto; display: block; }
 body{
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, "Inter", Segoe UI, Roboto, Helvetica, Arial;
+  font-family: system-ui, -apple-system, "Inter", Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-h1,h2,h3{ color: var(--text); margin: 0 0 10px; }
+h1, h2, h3{
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
 h1{ font-size: clamp(22px, 2.5vw, 28px); }
 h2{ font-size: clamp(20px, 2.3vw, 26px); }
 h3{ font-size: clamp(17px, 2vw, 20px); }
@@ -39,11 +43,21 @@ h3{ font-size: clamp(17px, 2vw, 20px); }
 p{ margin: 0 0 10px; }
 .meta{ color: var(--muted); font-size: 14px; }
 
-a{ color:#6d28d9; text-decoration: none; }
+a{
+  color: #6d28d9;
+  text-decoration: none;
+}
+
 a:hover{ text-decoration: underline; }
 
-ul{ padding-left: 18px; margin: 8px 0; }
-li{ margin: 6px 0; }
+ul{
+  padding-left: 18px;
+  margin: 8px 0;
+}
+
+li{
+  margin: 6px 0;
+}
 
 .container{
   display: flex;
@@ -68,7 +82,9 @@ li{ margin: 6px 0; }
   color: #fff;
 }
 
-.nav{ margin-top: 18px; }
+.nav{
+  margin-top: 18px;
+}
 
 .nav-toggle{
   width: 100%;
@@ -86,7 +102,7 @@ li{ margin: 6px 0; }
 
 .triangle{
   width: 14px;
-  text-align:center;
+  text-align: center;
   margin-right: 2px;
   font-weight: 700;
 }
@@ -99,15 +115,15 @@ li{ margin: 6px 0; }
 }
 
 .submenu a{
-  display:block;
-  color:#e9e9ff;
+  display: block;
+  color: #e9e9ff;
   padding: 4px 0;
   font-size: 14px;
 }
 
 .nav .submenu a.active{
-  font-weight:700;
-  color:#a78bfa;
+  font-weight: 700;
+  color: #a78bfa;
 }
 
 .main{
@@ -115,51 +131,64 @@ li{ margin: 6px 0; }
   padding: 40px 48px;
 }
 
+/* Updated page header */
 .page-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin: 4px 0 18px;
+  display: block;
+  margin: 4px 0 28px;
+}
+
+.page-title{
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.page-intro{
+  max-width: 760px;
+  margin: 0;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .section-label{
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  font-weight:700;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.4px;
 }
 
 .section-label .dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#8b5cf6;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8b5cf6;
 }
 
 .page-actions{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin-bottom: 12px;
 }
 
 .chip{
-  display:inline-flex;
-  align-items:center;
-  padding:6px 10px;
-  border-radius:999px;
-  font-size:12px;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
 }
 
 .chip-action{
-  background:var(--chip-bg);
-  color:var(--chip-text);
+  background: var(--chip-bg);
+  color: var(--chip-text);
 }
 
-.card, .project-card{
+.card,
+.project-card{
   background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-1);
@@ -182,50 +211,83 @@ li{ margin: 6px 0; }
   margin: 0 0 10px;
 }
 
-.project-points, .card ul{ margin: 10px 0 0 18px; }
-.project-points li, .card li{ margin: 7px 0; line-height: 1.55; }
+.project-points,
+.card ul{
+  margin: 10px 0 0 18px;
+}
+
+.project-points li,
+.card li{
+  margin: 7px 0;
+  line-height: 1.55;
+}
 
 .btn-row{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
 }
 
 .btn{
-  display:inline-block;
-  padding:8px 12px;
-  border-radius:999px;
-  font-weight:600;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
   background: var(--brand);
   color: var(--brand-contrast);
   box-shadow: 0 2px 8px rgba(91,33,182,.25);
 }
 
-.thumb, .media-img, .rounded{
+.thumb,
+.media-img,
+.rounded{
   max-width: 180px;
   max-height: 140px;
   object-fit: cover;
   border-radius: var(--radius-sm);
 }
 
-.cert-list{ display:grid; gap:16px; }
+/* Better layout for image + bullets */
+.media-row{
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.media-row ul{
+  margin-top: 0;
+  flex: 1;
+}
+
+.cert-list{
+  display: grid;
+  gap: 16px;
+}
 
 .cert{
   background: var(--card-bg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-1);
-  padding:18px 22px;
+  padding: 18px 22px;
 }
 
 .cert h3{
-  margin:0 0 6px;
+  margin: 0 0 6px;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.issuer{ color: var(--muted); font-size: 14px; }
-.meta{ color: var(--muted); font-size: 13px; }
+.issuer{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.meta{
+  color: var(--muted);
+  font-size: 13px;
+}
 
 .page-footer{
   color: var(--muted);
@@ -234,13 +296,46 @@ li{ margin: 6px 0; }
 }
 
 @media (max-width: 760px){
-  .container{ flex-direction: column; }
-  .sidebar{ width: 100%; height: auto; padding: 10px 12px; }
-  .main{ padding: 14px 14px; }
-  .nav-toggle{ padding: 4px 2px; font-size: 13.5px; }
-  .submenu a{ font-size: 13px; }
+  .container{
+    flex-direction: column;
+  }
 
-  .card, .project-card{
+  .sidebar{
+    width: 100%;
+    height: auto;
+    padding: 10px 12px;
+    position: static;
+  }
+
+  .main{
+    padding: 14px 14px;
+  }
+
+  .nav-toggle{
+    padding: 4px 2px;
+    font-size: 13.5px;
+  }
+
+  .submenu a{
+    font-size: 13px;
+  }
+
+  .page-header{
+    margin: 6px 0 22px;
+  }
+
+  .page-title{
+    margin-bottom: 10px;
+  }
+
+  .page-intro{
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .card,
+  .project-card{
     padding: 14px;
     border-radius: 12px;
   }
@@ -250,16 +345,35 @@ li{ margin: 6px 0; }
     font-size: 13.5px;
   }
 
-  .thumb, .media-img, .rounded{
+  .thumb,
+  .media-img,
+  .rounded{
     max-width: 130px;
     max-height: 100px;
   }
 
-  .page-footer{ font-size: 12px; }
+  .media-row{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-footer{
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 390px){
-  .main{ padding: 12px; }
-  .thumb{ max-width: 80px; max-height: 80px; }
-  .btn{ font-size: 13px; padding: 5px 9px; }
+  .main{
+    padding: 12px;
+  }
+
+  .thumb{
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .btn{
+    font-size: 13px;
+    padding: 5px 9px;
+  }
 }
