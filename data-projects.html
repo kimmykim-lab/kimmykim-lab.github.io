@@ -5,7 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Projects | Kimmy Kim</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Ad click prediction, Netflix recommendation analysis, retail SQL database, information architecture, and Asian American literature data storytelling." />
+  <meta
+    name="description"
+    content="Student Technology Fee funding analysis, data-driven service launch, ad click prediction, database design, recommendation analysis, information architecture, and data storytelling."
+  />
+  <style>
+    .title-with-badge {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #047857;
+      background: #e8f7ef;
+      border-radius: 999px;
+      white-space: nowrap;
+      line-height: 1.1;
+    }
+  </style>
 </head>
 
 <body>
@@ -48,12 +71,47 @@
 
       <section class="project-card">
         <div class="project-head">
+          <div class="title-with-badge">
+            <h2 class="project-title">Student Technology Fee (STF) Funding Analysis & Resource Allocation</h2>
+            <span class="status-badge">In Progress</span>
+          </div>
+          <p class="project-meta">UW Resource Center · Survey Analytics · Budget Planning · Decision Support</p>
+        </div>
+        <ul>
+          <li>Designed and conducted survey research targeting Registered Student Organizations, collecting responses from approximately 65 to 100 participants to assess technology usage and unmet equipment needs.</li>
+          <li>Analyzed survey data to identify demand patterns and usage trends, highlighting interest in equipment such as 3D printers and sticker machines.</li>
+          <li>Translated findings into data-driven recommendations to support a Student Technology Fee proposal for new equipment investment at the Resource Center.</li>
+          <li>Aligned proposed budget priorities with quantified user demand, operational needs, and service expansion goals.</li>
+          <li>Prepared stakeholder-facing proposal materials and presentations to support funding decisions and improve resource accessibility through cross-functional collaboration.</li>
+        </ul>
+      </section>
+
+      <section class="project-card">
+        <div class="project-head">
+          <h2 class="project-title">Data-Driven Service Launch: Vinyl Banner Printing | UW Resource Center</h2>
+          <p class="project-meta">
+            <a href="https://hub.washington.edu/get-involved/the-sorc/vinyl-banner-printing/" target="_blank" rel="noopener">
+              UW Resource Center · Operations Analytics · Service Design
+            </a>
+          </p>
+        </div>
+        <ul>
+          <li>Identified unmet demand for large-format printing by analyzing service requests and student organization needs across 200+ groups.</li>
+          <li>Designed and launched a new vinyl banner printing service based on data-driven demand signals and operational requirements.</li>
+          <li>Built Excel-based tracking systems to monitor request volume, usage patterns, and service performance.</li>
+          <li>Analyzed operational workflows and reduced turnaround time by 25% through submission and processing improvements.</li>
+          <li>Developed standardized guidelines and examples to support scalable, accessible, and user-friendly service delivery.</li>
+        </ul>
+      </section>
+
+      <section class="project-card">
+        <div class="project-head">
           <h2 class="project-title">Ad Click Prediction Using Cloud ML</h2>
           <p class="project-meta">Azure ML Designer · Python · Real time architecture</p>
         </div>
         <ul>
-          <li>Designed an end to end pipeline for ad click prediction, including ingest, preprocess, train, score, and deployment.</li>
-          <li>Implemented a prototype using Azure ML and Language services, evaluated on more than ten thousand events.</li>
+          <li>Designed an end-to-end pipeline for ad click prediction, including ingest, preprocess, train, score, and deployment.</li>
+          <li>Implemented a prototype using Azure ML and Language Services, evaluated on more than ten thousand events.</li>
           <li><strong>Impact:</strong> Reduced decision cycle by about thirty percent and created a reusable template for media analytics.</li>
         </ul>
         <div class="btn-row">
@@ -64,28 +122,12 @@
 
       <section class="project-card">
         <div class="project-head">
-          <h2 class="project-title">Netflix Recommendation Analysis</h2>
-          <p class="project-meta">Exploratory data analysis · System diagram · Evaluation framework</p>
-        </div>
-        <ul>
-          <li>Mapped recommendation signals such as popularity, recency, and affinity to platform goals.</li>
-          <li>Designed a system diagram that shows interactions among user events, item features, and ranking models.</li>
-          <li><strong>Outcome:</strong> Helped communicate recommendation quality to non technical stakeholders.</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn" href="Netflix%20Diagram.pdf" target="_blank" rel="noopener">System Diagram</a>
-          <a class="btn" href="Netflix-slides.pdf" target="_blank" rel="noopener">Slides</a>
-        </div>
-      </section>
-
-      <section class="project-card">
-        <div class="project-head">
           <h2 class="project-title">Online Shopping Retail Database (ERD to Queries)</h2>
           <p class="project-meta">MySQL · Entity relationship diagram · SQL</p>
         </div>
         <ul>
           <li>Designed a normalized schema with relationships and constraints for an online retail dataset.</li>
-          <li>Created more than twenty SQL queries for basket analysis and customer segmentation.</li>
+          <li>Created more than twenty SQL queries for basket analysis, customer segmentation, and transaction-level exploration.</li>
           <li><strong>Outcome:</strong> Delivered insights and reusable SQL assets supported by a refined ERD.</li>
         </ul>
         <div class="btn-row">
@@ -98,19 +140,17 @@
 
       <section class="project-card">
         <div class="project-head">
-          <h2 class="project-title">Foodie Fanatic Information Architecture Redesign</h2>
-          <p class="project-meta">Information architecture · UX and UI · Card sorting · Wireframes</p>
+          <h2 class="project-title">Netflix Recommendation Analysis</h2>
+          <p class="project-meta">Exploratory data analysis · System diagram · Evaluation framework</p>
         </div>
         <ul>
-          <li>Ran content inventory and open and closed card sorting for recipes, cookware, and classes.</li>
-          <li>Designed a multi-level navigation model connecting kitchenware, recipes, articles, and classes.</li>
-          <li>Created annotated wireframes defining layout, labels, and key interactions.</li>
-          <li><strong>Outcome:</strong> Produced a cleaner taxonomy that reduces cognitive load and supports task based exploration.</li>
+          <li>Mapped recommendation signals such as popularity, recency, and affinity to platform goals.</li>
+          <li>Designed a system diagram showing interactions among user events, item features, and ranking models.</li>
+          <li><strong>Outcome:</strong> Helped communicate recommendation quality and model logic to non-technical stakeholders.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn" href="Annotated-Navigation%20Model.pdf" target="_blank" rel="noopener">Navigation Model</a>
-          <a class="btn" href="UX%20Design.pdf" target="_blank" rel="noopener">UX Design</a>
-          <a class="btn" href="Content%20Inventory-%20Categorization.xlsx" target="_blank" rel="noopener">Content Inventory</a>
+          <a class="btn" href="Netflix%20Diagram.pdf" target="_blank" rel="noopener">System Diagram</a>
+          <a class="btn" href="Netflix-slides.pdf" target="_blank" rel="noopener">Slides</a>
         </div>
       </section>
 
@@ -123,11 +163,29 @@
           <li>Analyzed the Post45 Canon of Asian American Literature dataset to study publication and genre trends.</li>
           <li>Built visualizations of yearly title volume, author productivity, and ethnic group representation.</li>
           <li>Examined Cambodian and Korean American genre distributions using grouped bar charts.</li>
-          <li><strong>Outcome:</strong> Developed a data driven narrative about representation and authorship patterns.</li>
+          <li><strong>Outcome:</strong> Developed a data-driven narrative about representation and authorship patterns.</li>
         </ul>
         <div class="btn-row">
           <a class="btn" href="https://medium.com/@kimmy.minju.kim/recognizing-the-development-of-asian-american-literature-23015e6a7d10" target="_blank" rel="noopener">Medium Article</a>
           <a class="btn" href="LIS572_Final%20Project_Data%20Analysis%20+%20Viz.R" target="_blank" rel="noopener">R Script</a>
+        </div>
+      </section>
+
+      <section class="project-card">
+        <div class="project-head">
+          <h2 class="project-title">Foodie Fanatic Information Architecture Redesign</h2>
+          <p class="project-meta">Information architecture · UX and UI · Card sorting · Wireframes</p>
+        </div>
+        <ul>
+          <li>Ran content inventory and open and closed card sorting for recipes, cookware, and classes.</li>
+          <li>Designed a multi-level navigation model connecting kitchenware, recipes, articles, and classes.</li>
+          <li>Created annotated wireframes defining layout, labels, and key interactions.</li>
+          <li><strong>Outcome:</strong> Produced a cleaner taxonomy that reduces cognitive load and supports task-based exploration.</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn" href="Annotated-Navigation%20Model.pdf" target="_blank" rel="noopener">Navigation Model</a>
+          <a class="btn" href="UX%20Design.pdf" target="_blank" rel="noopener">UX Design</a>
+          <a class="btn" href="Content%20Inventory-%20Categorization.xlsx" target="_blank" rel="noopener">Content Inventory</a>
         </div>
       </section>
 
@@ -156,7 +214,6 @@
         });
       });
 
-      // Data 페이지에서는 Projects 메뉴를 기본으로 열기
       const pbtn = document.querySelector('.nav-toggle[data-target="#projects-sub"]');
       const pul = document.querySelector('#projects-sub');
       if (pbtn && pul) {
