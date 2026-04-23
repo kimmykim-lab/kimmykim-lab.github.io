@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="Mockup of redesigned project page">
+  <defs>
+    <style>
+      .bg { fill: #f6f8fc; }
+      .sidebar { fill: #3f1f8f; }
+      .card { fill: #ffffff; stroke: #e4e8f2; stroke-width: 1; }
+      .label { fill: #6d28d9; font: 700 14px 'Inter', 'Arial', sans-serif; letter-spacing: 1px; }
+      .title { fill: #1f2937; font: 700 34px 'Inter', 'Arial', sans-serif; }
+      .h3 { fill: #111827; font: 700 27px 'Inter', 'Arial', sans-serif; }
+      .body { fill: #4b5563; font: 400 18px 'Inter', 'Arial', sans-serif; }
+      .muted { fill: #6b7280; font: 500 16px 'Inter', 'Arial', sans-serif; }
+      .side-main { fill: #f4eeff; font: 700 28px 'Inter', 'Arial', sans-serif; }
+      .side-item { fill: #f4eeff; font: 500 18px 'Inter', 'Arial', sans-serif; }
+      .pill { fill: #ede9fe; stroke: #ddd6fe; }
+      .pill-text { fill: #4c1d95; font: 600 14px 'Inter', 'Arial', sans-serif; }
+      .btn-main { fill: #6d28d9; }
+      .btn-text { fill: #ffffff; font: 600 14px 'Inter', 'Arial', sans-serif; }
+      .btn-outline { fill: #ffffff; stroke: #c4b5fd; stroke-width: 1.5; }
+      .btn-outline-text { fill: #6d28d9; font: 600 14px 'Inter', 'Arial', sans-serif; }
+      .chip { fill: #ecfdf3; }
+      .chip-text { fill: #047857; font: 600 12px 'Inter', 'Arial', sans-serif; }
+      .dot { fill: #8b5cf6; }
+      .bullet { fill: #4b5563; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="900" />
+  <rect class="sidebar" x="0" y="0" width="240" height="900" />
+
+  <text class="side-main" x="28" y="70">Kimmy Kim</text>
+  <text class="side-item" x="28" y="130">¶  Projects</text>
+  <text class="side-item" x="62" y="165" style="font-size:15px; fill:#d9ccff;">Data</text>
+  <text class="side-item" x="62" y="193" style="font-size:15px; fill:#d9ccff;">Library</text>
+  <text class="side-item" x="28" y="245">¶  Research</text>
+  <text class="side-item" x="28" y="295">¶  Community</text>
+  <text class="side-item" x="28" y="345">¶  Certifications</text>
+
+  <text class="label" x="286" y="82">DATA PROJECTS</text>
+  <text class="title" x="286" y="130">Project Portfolio</text>
+  <text class="body" x="286" y="164">A structured selection of analytics work with measurable outcomes.</text>
+
+  <rect class="pill" x="286" y="184" width="78" height="32" rx="16" />
+  <text class="pill-text" x="310" y="205">All</text>
+  <rect class="pill" x="374" y="184" width="84" height="32" rx="16" />
+  <text class="pill-text" x="401" y="205">SQL</text>
+  <rect class="pill" x="468" y="184" width="84" height="32" rx="16" />
+  <text class="pill-text" x="493" y="205">Cloud</text>
+  <rect class="pill" x="562" y="184" width="110" height="32" rx="16" />
+  <text class="pill-text" x="585" y="205">Viz</text>
+
+  <rect class="btn-outline" x="1044" y="182" width="100" height="34" rx="17" />
+  <text class="btn-outline-text" x="1071" y="204">LinkedIn</text>
+  <rect class="btn-main" x="1156" y="182" width="120" height="34" rx="17" />
+  <text class="btn-text" x="1192" y="204">Data CV</text>
+
+  <rect class="card" x="286" y="244" width="990" height="220" rx="16" />
+  <text class="h3" x="314" y="290">Student Technology Fee Funding Analysis</text>
+  <rect class="chip" x="938" y="268" width="88" height="28" rx="14" />
+  <text class="chip-text" x="959" y="287">In Progress</text>
+  <text class="muted" x="314" y="322">UW Resource Center · Survey Analytics · Budget Planning</text>
+  <circle class="bullet" cx="324" cy="356" r="3" />
+  <text class="body" x="338" y="362">Designed and executed survey research for student organizations.</text>
+  <circle class="bullet" cx="324" cy="392" r="3" />
+  <text class="body" x="338" y="398">Mapped demand signals to prioritized equipment recommendations.</text>
+  <circle class="bullet" cx="324" cy="428" r="3" />
+  <text class="body" x="338" y="434">Impact: Enabled evidence-based funding decisions for service expansion.</text>
+  <rect class="btn-main" x="314" y="442" width="132" height="34" rx="17" />
+  <text class="btn-text" x="348" y="464">Case details</text>
+
+  <rect class="card" x="286" y="484" width="476" height="188" rx="16" />
+  <text class="h3" x="314" y="525" style="font-size:23px;">Ad Click Prediction Using Cloud ML</text>
+  <text class="muted" x="314" y="552">Azure ML · Python · Real-time architecture</text>
+  <circle class="bullet" cx="324" cy="584" r="3" />
+  <text class="body" x="338" y="590" style="font-size:16px;">Built end-to-end pipeline from ingest to deployment.</text>
+  <circle class="bullet" cx="324" cy="612" r="3" />
+  <text class="body" x="338" y="618" style="font-size:16px;">Impact: Reduced decision cycle by ~30%.</text>
+  <rect class="btn-outline" x="314" y="630" width="82" height="30" rx="15" />
+  <text class="btn-outline-text" x="340" y="650" style="font-size:13px;">Slides</text>
+  <rect class="btn-outline" x="406" y="630" width="82" height="30" rx="15" />
+  <text class="btn-outline-text" x="436" y="650" style="font-size:13px;">Paper</text>
+
+  <rect class="card" x="800" y="484" width="476" height="188" rx="16" />
+  <text class="h3" x="828" y="525" style="font-size:23px;">Retail Database (ERD to Queries)</text>
+  <text class="muted" x="828" y="552">MySQL · Entity relationship diagram · SQL</text>
+  <circle class="bullet" cx="838" cy="584" r="3" />
+  <text class="body" x="852" y="590" style="font-size:16px;">Designed normalized schema and constraints.</text>
+  <circle class="bullet" cx="838" cy="612" r="3" />
+  <text class="body" x="852" y="618" style="font-size:16px;">Outcome: Reusable SQL assets for analysis tasks.</text>
+  <rect class="btn-outline" x="828" y="630" width="92" height="30" rx="15" />
+  <text class="btn-outline-text" x="853" y="650" style="font-size:13px;">ERD</text>
+  <rect class="btn-outline" x="932" y="630" width="92" height="30" rx="15" />
+  <text class="btn-outline-text" x="961" y="650" style="font-size:13px;">SQL</text>
+
+  <rect class="card" x="286" y="692" width="990" height="150" rx="16" />
+  <text class="h3" x="314" y="730" style="font-size:23px;">Design Notes (Wix-inspired professional system)</text>
+  <text class="body" x="314" y="760" style="font-size:16px;">Consistent card hierarchy · cleaner spacing rhythm · restrained color accents.</text>
+  <text class="body" x="314" y="786" style="font-size:16px;">Reduced visual noise and stronger emphasis on measurable outcomes.</text>
+</svg>
