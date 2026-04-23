@@ -144,6 +144,11 @@ li{
   padding: 40px 48px;
 }
 
+body:not(.home-page) .main{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
 .page-header{
   display: block;
   width: 100%;
@@ -205,8 +210,9 @@ li{
 .project-card{
   background: var(--card-bg);
   border-radius: var(--radius-lg);
+  border: 1px solid #e5e7eb;
   box-shadow: var(--shadow-1);
-  padding: 20px 22px;
+  padding: 22px 24px;
   margin: 0 0 18px;
 }
 
@@ -218,11 +224,23 @@ li{
   margin: 0 0 6px;
 }
 
+.project-card .project-head{
+  margin-bottom: 12px;
+}
+
+.project-card .project-title{
+  font-size: 1.22rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
 .card .subline,
 .project-card .project-meta{
   color: var(--muted);
-  font-size: 14px;
-  margin: 0 0 10px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0;
 }
 
 .project-points,
@@ -232,8 +250,13 @@ li{
 
 .project-points li,
 .card li{
-  margin: 7px 0;
-  line-height: 1.55;
+  margin: 9px 0;
+  line-height: 1.66;
+}
+
+.project-card li strong{
+  color: #312e81;
+  font-weight: 700;
 }
 
 .btn-row{
