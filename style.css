@@ -410,6 +410,10 @@ body.home-page .main{
   padding: 20px 22px;
 }
 
+.home-page .track-card .meta{
+  margin-bottom: 10px;
+}
+
 .home-page .track-title{
   margin: 0 0 8px;
   font-size: 1.15rem;
@@ -434,16 +438,8 @@ body.home-page .main{
   font-weight: 600;
 }
 
-.home-page .text-link{
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #5b21b6;
-}
-
 .home-page .home-featured{
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .home-page .featured-head{
@@ -458,7 +454,7 @@ body.home-page .main{
 
 .home-page .bento-grid{
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -466,11 +462,7 @@ body.home-page .main{
   border: 1px solid #e5e7eb;
   box-shadow: 0 4px 14px rgba(17, 24, 39, 0.05);
   padding: 20px 22px;
-  grid-column: span 4;
-}
-
-.home-page .bento-wide{
-  grid-column: span 6;
+  min-height: 188px;
 }
 
 .home-page .case-tag{
@@ -593,10 +585,9 @@ body.home-page .main{
     grid-template-columns: 1fr;
   }
 
-  .home-page .bento-card,
-  .home-page .bento-wide{
-    grid-column: auto;
+  .home-page .bento-card{
     padding: 18px;
+    min-height: 0;
   }
 }
 
