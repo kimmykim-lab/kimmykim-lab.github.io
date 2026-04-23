@@ -332,8 +332,8 @@ body.home-page .main{
 
 .home-page .home-hero{
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 128px;
-  gap: 22px;
+  grid-template-columns: minmax(0, 1fr) 124px;
+  gap: 14px;
   align-items: start;
   border: 1px solid #e5e7eb;
   box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
@@ -341,8 +341,8 @@ body.home-page .main{
 }
 
 .home-page .hero-avatar{
-  width: 128px;
-  height: 128px;
+  width: 124px;
+  height: 124px;
   border-radius: 14px;
   object-fit: cover;
   object-position: top center;
@@ -374,7 +374,7 @@ body.home-page .main{
 }
 
 .home-page .hero-intro{
-  max-width: 74ch;
+  max-width: none;
   text-wrap: pretty;
   margin-bottom: 10px;
 }
@@ -555,14 +555,14 @@ body.home-page .main{
   }
 
   .home-page .home-hero{
-    grid-template-columns: minmax(0, 1fr) 96px;
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr) 92px;
+    gap: 10px;
     padding: 18px;
   }
 
   .home-page .hero-avatar{
-    width: 96px;
-    height: 96px;
+    width: 92px;
+    height: 92px;
     border-radius: 12px;
   }
 
