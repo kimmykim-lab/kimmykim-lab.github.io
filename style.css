@@ -85,7 +85,7 @@ li{
 
 .sidebar .brand{
   display: inline-block;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 22px;
   color: #fff;
 }
@@ -104,7 +104,7 @@ li{
   border: 0;
   cursor: pointer;
   padding: 8px 4px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 15px;
 }
 
@@ -112,7 +112,7 @@ li{
   width: 14px;
   text-align: center;
   margin-right: 2px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .submenu{
@@ -130,13 +130,13 @@ li{
 }
 
 .nav .submenu a.active{
-  font-weight: 700;
+  font-weight: 600;
   color: #a78bfa;
 }
 
 .nav > .nav-link.active{
   color: #f3e8ff;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .main{
