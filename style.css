@@ -329,17 +329,21 @@ body.home-page .main{
 }
 
 .home-page .hero-card{
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
+  display: block;
   border: 1px solid #e5e7eb;
   box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
   padding: 24px 26px;
 }
 
+.home-page .hero-top{
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
 .home-page .hero-avatar{
-  width: 152px;
-  height: 152px;
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
@@ -349,11 +353,12 @@ body.home-page .main{
 
 .home-page .hero-content{
   flex: 1;
+  min-width: 0;
 }
 
 .home-page .hero-title{
-  margin: 6px 0 10px;
-  font-size: clamp(28px, 3vw, 34px);
+  margin: 4px 0 8px;
+  font-size: clamp(25px, 2.7vw, 31px);
   line-height: 1.2;
 }
 
@@ -371,16 +376,17 @@ body.home-page .main{
 
 .home-page .meta{
   color: #4b5563;
-  font-size: 15.5px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.68;
 }
 
 .home-page .hero-intro{
-  max-width: 68ch;
+  max-width: 62ch;
+  margin-bottom: 12px;
 }
 
 .home-page .section{
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .home-page .chips{
@@ -393,23 +399,27 @@ body.home-page .main{
 .home-page .chip-pill{
   display: inline-flex;
   align-items: center;
-  padding: 7px 12px;
+  padding: 6px 11px;
   border-radius: 999px;
   background: #ede9fe;
   color: #4c1d95;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .home-page .contact-line{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .home-page .contact-divider{
   color: #9ca3af;
+}
+
+.home-page .hero-links{
+  margin-top: 6px;
 }
 
 .home-page .card.home-section{
@@ -438,6 +448,11 @@ body.home-page .main{
 
 .home-page .values-list li{
   margin: 10px 0;
+}
+
+.home-page .btn{
+  padding: 7px 11px;
+  font-size: 12.5px;
 }
 
 @media (max-width: 760px){
@@ -513,24 +528,26 @@ body.home-page .main{
   }
 
   .home-page .hero-card{
-    flex-direction: column;
-    align-items: flex-start;
     padding: 18px;
     gap: 14px;
   }
 
+  .home-page .hero-top{
+    gap: 12px;
+  }
+
   .home-page .hero-avatar{
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
   }
 
   .home-page .hero-title{
-    font-size: clamp(23px, 8vw, 28px);
+    font-size: clamp(22px, 7vw, 27px);
   }
 
   .home-page .meta{
-    font-size: 15px;
-    line-height: 1.65;
+    font-size: 14.5px;
+    line-height: 1.62;
   }
 
   .home-page .card.home-section{
@@ -558,12 +575,16 @@ body.home-page .main{
   }
 
   .home-page .hero-avatar{
-    width: 102px;
-    height: 102px;
+    width: 84px;
+    height: 84px;
+  }
+
+  .home-page .hero-top{
+    flex-direction: column;
   }
 
   .home-page .hero-title{
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .home-page .chip-pill{
