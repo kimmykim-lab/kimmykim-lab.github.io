@@ -131,9 +131,9 @@ li{
   padding: 40px 48px;
 }
 
-/* Updated page header */
 .page-header{
   display: block;
+  width: 100%;
   margin: 4px 0 28px;
 }
 
@@ -143,7 +143,8 @@ li{
 }
 
 .page-intro{
-  max-width: 900px;
+  width: 100%;
+  max-width: none;
   margin: 0;
   color: #374151;
   font-size: 1rem;
@@ -248,7 +249,6 @@ li{
   border-radius: var(--radius-sm);
 }
 
-/* Better layout for image + bullets */
 .media-row{
   display: flex;
   align-items: flex-start;
@@ -321,6 +321,7 @@ li{
   }
 
   .page-header{
+    width: 100%;
     margin: 6px 0 22px;
   }
 
@@ -329,7 +330,8 @@ li{
   }
 
   .page-intro{
-    max-width: 100%;
+    width: 100%;
+    max-width: none;
     font-size: 0.98rem;
     line-height: 1.65;
   }
