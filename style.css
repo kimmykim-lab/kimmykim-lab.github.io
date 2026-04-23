@@ -330,7 +330,7 @@ body.home-page .main{
 
 .home-page .home-hero{
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 108px;
+  grid-template-columns: minmax(0, 1fr) 128px;
   gap: 22px;
   align-items: start;
   border: 1px solid #e5e7eb;
@@ -339,8 +339,8 @@ body.home-page .main{
 }
 
 .home-page .hero-avatar{
-  width: 108px;
-  height: 108px;
+  width: 128px;
+  height: 128px;
   border-radius: 14px;
   object-fit: cover;
   object-position: top center;
@@ -354,7 +354,7 @@ body.home-page .main{
 
 .home-page .hero-title{
   margin: 4px 0 10px;
-  font-size: clamp(30px, 3.1vw, 38px);
+  font-size: clamp(24px, 2.4vw, 33px);
   line-height: 1.2;
 }
 
@@ -367,12 +367,12 @@ body.home-page .main{
 
 .home-page .meta{
   color: #374151;
-  font-size: 15.5px;
-  line-height: 1.72;
+  font-size: 16px;
+  line-height: 1.78;
 }
 
 .home-page .hero-intro{
-  max-width: 58ch;
+  max-width: 66ch;
   margin-bottom: 10px;
 }
 
@@ -552,14 +552,14 @@ body.home-page .main{
   }
 
   .home-page .home-hero{
-    grid-template-columns: minmax(0, 1fr) 86px;
+    grid-template-columns: minmax(0, 1fr) 96px;
     gap: 12px;
     padding: 18px;
   }
 
   .home-page .hero-avatar{
-    width: 86px;
-    height: 86px;
+    width: 96px;
+    height: 96px;
     border-radius: 12px;
   }
 
@@ -568,8 +568,8 @@ body.home-page .main{
   }
 
   .home-page .meta{
-    font-size: 14.5px;
-    line-height: 1.62;
+    font-size: 15px;
+    line-height: 1.7;
   }
 
   .home-page .track-grid{
@@ -611,8 +611,8 @@ body.home-page .main{
   }
 
   .home-page .hero-avatar{
-    width: 72px;
-    height: 72px;
+    width: 82px;
+    height: 82px;
   }
 
   .home-page .hero-title{
@@ -620,7 +620,7 @@ body.home-page .main{
   }
 
   .home-page .home-hero{
-    grid-template-columns: minmax(0, 1fr) 72px;
+    grid-template-columns: minmax(0, 1fr) 82px;
     padding: 16px;
   }
 
