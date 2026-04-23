@@ -91,7 +91,7 @@ li{
 }
 
 .nav{
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .nav-toggle{
@@ -135,8 +135,8 @@ li{
 }
 
 .nav > .nav-link.active{
-  color: #ffffff;
-  font-weight: 800;
+  color: #f3e8ff;
+  font-weight: 700;
 }
 
 .main{

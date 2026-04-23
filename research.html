@@ -16,74 +16,6 @@
       background: #f5f7ff;
     }
 
-    .sidebar {
-      width: 260px;
-      background: #4b1fa4;
-      color: #ffffff;
-      padding: 24px 20px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    .nav {
-      margin-top: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 0.95rem;
-    }
-
-    .nav-toggle {
-      width: 100%;
-      border: none;
-      background: transparent;
-      color: #ffffff;
-      font: inherit;
-      text-align: left;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      padding: 4px 0;
-      text-decoration: none;
-    }
-
-    .triangle {
-      font-size: 0.7rem;
-      transform: translateY(1px);
-    }
-
-    .submenu {
-      list-style: none;
-      padding-left: 18px;
-      margin: 4px 0 8px;
-      display: none;
-    }
-
-    .submenu li a {
-      display: block;
-      padding: 2px 0;
-      color: #e3d7ff;
-      text-decoration: none;
-      font-weight: 400;
-      font-size: 0.9rem;
-    }
-
-    .submenu li a:hover {
-      color: #ffffff;
-    }
-
-    .nav-current {
-      font-weight: 600;
-    }
-
     .main {
       flex: 1;
       padding: 32px 40px;
@@ -256,19 +188,6 @@
         flex-direction: column;
       }
 
-      .sidebar {
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .nav {
-        flex-direction: row;
-        align-items: center;
-        gap: 16px;
-      }
-
       .main {
         padding: 20px 16px 32px;
       }
@@ -304,18 +223,18 @@
   <div class="page">
     <aside class="sidebar">
       <h1><a href="index.html" class="brand">Kimmy Kim</a></h1>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <div>
           <button class="nav-toggle" data-target="#projects-sub">
             <span class="triangle">▶</span><span>Projects</span>
           </button>
           <ul id="projects-sub" class="submenu">
-            <li><a href="data-projects.html">Data</a></li>
-            <li><a href="library-projects.html">Library</a></li>
+            <li><a class="nav-link" href="data-projects.html">Data</a></li>
+            <li><a class="nav-link" href="library-projects.html">Library</a></li>
           </ul>
         </div>
 
-        <a href="research.html" class="nav-toggle nav-current">
+        <a href="research.html" class="nav-toggle nav-link active" aria-current="page">
           <span class="triangle">▶</span><span>Research</span>
         </a>
 
@@ -324,8 +243,8 @@
             <span class="triangle">▶</span><span>Extra Curricular</span>
           </button>
           <ul id="extra-sub" class="submenu">
-            <li><a href="community.html">Community &amp; Leadership</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
+            <li><a class="nav-link" href="community.html">Community &amp; Leadership</a></li>
+            <li><a class="nav-link" href="certifications.html">Certifications</a></li>
           </ul>
         </div>
       </nav>
