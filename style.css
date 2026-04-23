@@ -374,7 +374,8 @@ body.home-page .main{
 }
 
 .home-page .hero-intro{
-  max-width: 66ch;
+  max-width: 74ch;
+  text-wrap: pretty;
   margin-bottom: 10px;
 }
 
